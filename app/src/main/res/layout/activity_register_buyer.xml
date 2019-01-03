@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bj_forgetpwd"
+    tools:context="com.axehome.chemistrywaves.activitys.RegisterBuyerActivity">
+    <RelativeLayout
+        android:id="@+id/rl_registersbuyer_back"
+        android:layout_marginTop="40px"
+        android:layout_width="140px"
+        android:layout_height="90px">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="35px"
+            android:src="@drawable/fanhui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="65px"
+        android:textSize="17sp"
+        android:text="请选择您平时购物的商品"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <GridView
+        android:clickable="true"
+        android:layout_marginTop="90px"
+        android:layout_marginLeft="112px"
+        android:layout_marginRight="112px"
+        android:verticalSpacing="33px"
+        android:horizontalSpacing="26px"
+        android:id="@+id/gv_registerbuyer"
+        android:numColumns="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </GridView>
+   <TextView
+       android:id="@+id/tv_registerbuyer_huanyipi"
+       android:padding="30px"
+       android:layout_marginTop="23px"
+       android:layout_gravity="center"
+       android:text="换一批"
+       android:drawablePadding="10px"
+       android:drawableLeft="@drawable/huanyipi"
+       android:textColor="@color/white"
+       android:textSize="12sp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="200px"
+        android:gravity="right"
+        android:layout_gravity="center"
+        android:id="@+id/tv_registersbuyer_haveaccount"
+        android:padding="10px"
+        android:text="已有账号"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_width="442px"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_registersbuyer_register"
+        android:layout_width="437px"
+        android:layout_height="64px"
+        android:layout_gravity="center"
+
+        android:background="@drawable/shape_czmm"
+        android:gravity="center"
+        android:text="注册"
+        android:textColor="@color/a064264" />
+</LinearLayout>

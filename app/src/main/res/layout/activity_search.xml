@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:background="@drawable/bj_titlebar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/iv_search_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingLeft="35px"
+                android:paddingRight="54px"
+                android:src="@drawable/fanhui" />
+
+            <LinearLayout
+                android:layout_width="573px"
+                android:layout_height="68px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="119px"
+                android:background="@drawable/sousuolan">
+
+                <EditText
+                    android:id="@+id/et_search_cintent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="Please fill in the key words"
+                    android:paddingLeft="44px"
+                    android:textColorHint="@color/b3"
+                    android:textSize="28px"
+                    android:singleLine="true"
+                    android:imeOptions="actionSearch"/>
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="46px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/cc" />
+
+                <ImageView
+                    android:id="@+id/iv_search_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingLeft="16px"
+                    android:paddingRight="22px"
+                    android:src="@drawable/search" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="74px">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="6px"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_search_shidanjingjia"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_search_shidanjingjia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Supplier"
+                    android:textColor="@color/b82db"
+                    android:textSize="32px" />
+
+                <TextView
+                    android:id="@+id/tv_search_shidanjingjialine"
+                    android:layout_width="190px"
+                    android:layout_height="6px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/b82db" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_search_shidancaigou"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_search_shidancaigou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Goods"
+                    android:textColor="@color/be"
+                    android:textSize="32px" />
+
+                <TextView
+                    android:id="@+id/tv_search_shidancaigouline"
+                    android:layout_width="190px"
+                    android:layout_height="6px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/be" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="85px"
+            android:gravity="center_vertical"
+            android:paddingLeft="36px"
+            android:text="Historical search"
+            android:textColor="@color/a66"
+            android:textSize="28px" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/e6" />
+
+        <ListView
+            android:id="@+id/lv_search_lishijilu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+        <TextView
+            android:id="@+id/tv_search_clearhistory"
+            android:layout_width="334px"
+            android:layout_height="73px"
+            android:layout_gravity="center"
+            android:layout_marginTop="81px"
+            android:background="@drawable/shape_qklsjl"
+            android:gravity="center"
+            android:text="Clear history"
+            android:textColor="@color/a99"
+            android:textSize="28px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_search_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/lv_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="14px"
+            android:divider="@color/f2"
+            android:scrollbars="none">
+        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

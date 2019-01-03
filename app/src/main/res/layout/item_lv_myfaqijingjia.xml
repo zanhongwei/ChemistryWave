@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_itemlvmyfaqijingjia_top"
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10px">
+
+        <TextView
+            android:id="@+id/tv_itemlvmyfaqijingjia_oederid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="订单编号：28849942020"
+            android:textColor="@color/a38"
+
+            android:textSize="28px"/>
+
+        <ImageView
+            android:id="@+id/iv_itemlvmyfaqijingjia_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_itemlvmyfaqijingjia_oederid"
+            android:paddingLeft="31px"
+            android:paddingRight="31px"
+            android:src="@drawable/delete"/>
+
+        <TextView
+            android:id="@+id/tv_itemlvmyfaqijingjia_yijianjingjiaz"
+            android:layout_width="150px"
+
+            android:layout_height="46px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="500px"
+            android:background="@drawable/bj_yjjjz"
+            android:gravity="center"
+            android:text="一键竞价者"
+            android:textColor="@color/white"
+            android:textSize="22px"/>
+
+        <RelativeLayout
+
+            android:id="@+id/rl_itemlvmyfaqijingjia_next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10px"
+                android:src="@drawable/arrow_right"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/e8"/>
+
+    <com.zhw.chemistrywave.view.MyListView
+        android:id="@+id/mlv_itemmyfaqijingjia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.zhw.chemistrywave.view.MyListView>
+</LinearLayout>

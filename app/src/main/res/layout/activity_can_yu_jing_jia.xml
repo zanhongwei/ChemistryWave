@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/titlebar"></include>
+
+    <LinearLayout
+        android:id="@+id/ll_baseinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="货物基本信息"
+            android:textColor="@color/t333"
+            android:textSize="30px"/>
+
+        <ImageView
+            android:layout_width="31px"
+            android:layout_height="31px"
+            android:layout_gravity="center"
+            android:layout_marginRight="31px"
+            android:src="@drawable/edit"/>
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:gravity="center_vertical"
+            android:text="货物名称:"
+            android:textColor="@color/textcolorqian"/>
+
+        <TextView
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10px"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/textcolor"/>
+
+
+    </LinearLayout>
+
+    <View
+        style="@style/linescu"></View>
+
+    <LinearLayout
+        android:id="@+id/ll_qualitydetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="品质详情"
+            android:textColor="@color/t333"
+            android:textSize="30px"/>
+
+        <ImageView
+            android:layout_width="31px"
+            android:layout_height="31px"
+            android:layout_gravity="center"
+            android:layout_marginRight="31px"
+            android:src="@drawable/edit"/>
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:id="@+id/ll_metalpercent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="金属含量"
+            android:textColor="@color/t333"
+            android:textSize="30px"/>
+
+        <ImageView
+            android:layout_width="31px"
+            android:layout_height="31px"
+            android:layout_gravity="center"
+            android:layout_marginRight="31px"
+            android:src="@drawable/edit"/>
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:id="@+id/ll_testreport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="检测报告"
+            android:textColor="@color/t333"
+            android:textSize="30px"/>
+
+        <ImageView
+            android:layout_width="31px"
+            android:layout_height="31px"
+            android:layout_gravity="center"
+            android:layout_marginRight="31px"
+            android:src="@drawable/edit"/>
+    </LinearLayout>
+
+    <View
+        style="@style/linescu"></View>
+
+    <LinearLayout
+        android:id="@+id/ll_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="其他"
+            android:textColor="@color/t333"
+            android:textSize="30px"/>
+
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/f7"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/tv_state"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:layout_weight="1"
+            android:background="@null"
+
+            android:text="货物比较少先到先得"
+            android:textColor="@color/textcolorqian"
+            android:textSize="30px"/>
+
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <TextView
+        android:id="@+id/tv_canyuujingjia_commit"
+        android:layout_width="391px"
+        android:layout_height="76px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100px"
+        android:layout_marginTop="150px"
+        android:background="@drawable/shape_yellowbutton"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/white"></TextView>
+</LinearLayout>

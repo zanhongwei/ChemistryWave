@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingLeft="15px"
+    android:paddingRight="15px"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<ImageView
+    android:layout_marginTop="10px"
+    android:id="@+id/iv_shopdetail_logo"
+    android:scaleType="fitXY"
+    app:layout_auto_baseheight="width"
+    android:src="@drawable/goods_fzs"
+    android:layout_width="214px"
+    android:layout_height="214px" />
+    <TextView
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_marginTop="20px"
+        android:id="@+id/iv_shopdetail_goodsname"
+        android:textSize="26px"
+        android:textColor="@color/t333"
+        android:text="4-十二烷氧基苯甲酸十二烷氧基苯甲酸"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/iv_shopdetail_guige"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+        android:text="Specification：100kg/瓶"
+        android:textColor="@color/t333"
+        android:textSize="26px" />
+
+    <TextView
+        android:id="@+id/iv_shopdetail_chundu"
+        android:layout_marginTop="10px"
+        android:textSize="26px"
+        android:textColor="@color/t333"
+        android:text="Purity：99%"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/iv_shopdetail_shichangjia"
+        android:layout_marginTop="10px"
+        android:textSize="26px"
+        android:textColor="@color/t333"
+        android:text="Market price：¥5000/桶"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/iv_shopdetail_shangchengjia"
+        android:layout_marginBottom="20px"
+        android:layout_marginTop="10px"
+        android:textSize="26px"
+        android:textColor="#ff0000"
+        android:text="Shop price：¥3000.00/桶"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

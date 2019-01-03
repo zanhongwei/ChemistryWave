@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.axehome.chemistrywaves.activitys.MyGoodsActivity">
+<include layout="@layout/titlebar"/>
+    <!--<LinearLayout-->
+        <!--android:layout_marginLeft="20px"-->
+        <!--android:gravity="bottom"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="63px">-->
+        <!--<TextView-->
+            <!--android:id="@+id/tv_mygoods_yishangjia"-->
+            <!--android:gravity="center"-->
+            <!--android:text="已上架商品"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="24px"-->
+            <!--android:background="@drawable/bj_yishangjia"-->
+            <!--android:layout_width="146px"-->
+            <!--android:layout_height="45px" />-->
+        <!--<TextView-->
+            <!--android:id="@+id/tv_mygoods_yixiajia"-->
+            <!--android:layout_marginLeft="5px"-->
+            <!--android:gravity="center"-->
+            <!--android:text="已下架商品"-->
+            <!--android:textColor="@color/a32"-->
+            <!--android:textSize="24px"-->
+            <!--android:background="@drawable/bj_white"-->
+            <!--android:layout_width="146px"-->
+            <!--android:layout_height="45px" />-->
+    <!--</LinearLayout>-->
+    <include layout="@layout/item_faqi_tab"/>
+    <ImageView
+        android:visibility="gone"
+        android:scaleType="fitXY"
+        android:src="@drawable/mygoods_line"
+        android:layout_width="match_parent"
+        android:layout_height="2px" />
+    <ListView
+        android:dividerHeight="12px"
+        android:id="@+id/lv_mygoods"
+        android:divider="@drawable/divider_mygoods_f1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+</LinearLayout>

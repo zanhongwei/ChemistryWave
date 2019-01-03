@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="35px"
+    android:paddingBottom="20px"
+    android:paddingLeft="30px"
+    android:paddingRight="30px"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4-十二烷氧基苯甲酸"
+            android:textSize="30px"
+            android:textColor="@color/t333" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/e6"
+            android:layout_marginTop="40px"
+            android:layout_marginBottom="20px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/gonghuoshang_xunpan_hui"
+                android:text="name:"
+                />
+
+            <TextView
+                android:id="@+id/tv_company_name"
+                style="@style/gonghuoshang_xunpan_hui"
+                android:text="化浪有限公司"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20px">
+            <TextView
+                style="@style/gonghuoshang_xunpan_hui"
+                android:text="address:"
+                />
+
+            <TextView
+                android:id="@+id/tv_company_address"
+                style="@style/gonghuoshang_xunpan_hui"
+                android:text="天津市和平区大营门街道"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20px">
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    style="@style/gonghuoshang_xunpan_hui"
+                    android:text="contact name:"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_telephone"
+                    style="@style/gonghuoshang_xunpan_hui"
+                    android:text="9999"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    style="@style/gonghuoshang_xunpan_hui"
+                    android:text="phone:"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    style="@style/gonghuoshang_xunpan_hui"
+                    android:text="12345678901"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20px">
+            <TextView
+                style="@style/gonghuoshang_xunpan_hui"
+                android:text="email:"
+                />
+
+            <TextView
+                android:id="@+id/tv_mail"
+                style="@style/gonghuoshang_xunpan_hui"
+                android:text="123456789@qq.com"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20px">
+            <TextView
+                style="@style/gonghuoshang_xunpan_hui"
+                android:text="remark:"
+                />
+
+            <TextView
+                android:id="@+id/tv_remark"
+                style="@style/gonghuoshang_xunpan_hui"
+                android:text="备注"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30px">
+            <TextView
+                style="@style/gonghuoshang_xunpan_hui"
+                android:text="apply time:"
+                />
+
+            <TextView
+                android:id="@+id/tv_apply_time"
+                style="@style/gonghuoshang_xunpan_hui"
+                android:text="2016-09-08"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_handle_state"
+        android:layout_width="140px"
+        android:layout_height="50px"
+        android:text="Handle"
+        android:textSize="22px"
+        android:textColor="@color/white"
+        android:background="@drawable/tv_handle_bg"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

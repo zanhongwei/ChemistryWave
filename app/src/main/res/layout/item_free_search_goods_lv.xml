@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="20px"
+    android:paddingBottom="20px">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Examining NO："
+            android:textSize="26px"
+            android:textColor="@color/a99"/>
+        <TextView
+            android:id="@+id/tv_detection_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123456789"
+            android:textSize="26px"
+            android:textColor="@color/a99"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待受理"
+            android:textSize="26px"
+            android:textColor="@color/ff5039"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="30px">
+        <TextView
+            android:id="@+id/tv_detection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_marginRight="100px"
+            android:textSize="30px"
+            android:textColor="@color/a4d4d4d"
+            android:text="邻羟基苯甲酸邻羟基苯甲酸邻羟基苯甲酸邻羟基苯甲酸邻羟基苯"
+            android:lineSpacingExtra="5px"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="20px">
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="26px"
+            android:textColor="@color/a99"
+            android:text="2017-03-03 12:20:30"
+            android:gravity="right"/>
+    </LinearLayout>
+
+</LinearLayout>

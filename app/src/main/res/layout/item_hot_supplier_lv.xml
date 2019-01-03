@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_hot_supplier1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20px"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:paddingTop="20px">
+
+        <com.zhw.chemistrywave.view.ShapeImageView
+            android:id="@+id/siv_company_logo1"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_marginLeft="10px"
+            android:scaleType="centerCrop"
+            app:siv_border_color="@color/white"
+            app:siv_border_size="8px"
+            app:siv_shape="oval" />
+
+        <TextView
+            android:id="@+id/tv_sales_num1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/siv_company_logo1"
+            android:layout_below="@+id/siv_company_logo1"
+            android:layout_marginTop="20px"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Total Sales：0 piece"
+            android:textSize="22px" />
+
+        <RelativeLayout
+            android:layout_width="125px"
+            android:layout_height="30px"
+            android:layout_alignLeft="@+id/tv_sales_num1"
+            android:layout_below="@+id/tv_sales_num1"
+            android:layout_marginTop="20px"
+            android:background="@drawable/dengji">
+
+            <TextView
+                android:id="@+id/tv_supplier_grade1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="Grade"
+                android:textColor="#777777"
+                android:textSize="22px" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_company_name1"
+            android:layout_width="154px"
+            android:layout_height="65px"
+            android:layout_marginLeft="10px"
+            android:layout_toRightOf="@+id/siv_company_logo1"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text=""
+            android:textColor="@color/a4d4d4d"
+            android:textSize="26px" />
+
+        <LinearLayout
+            android:id="@+id/ll_imgs1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65px"
+            android:layout_marginRight="25px"
+            android:layout_toRightOf="@+id/tv_company_name1">
+
+            <ImageView
+                android:id="@+id/iv_imag11"
+                android:layout_width="150px"
+                android:layout_height="150px" />
+
+            <View
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/iv_imag12"
+                android:layout_width="150px"
+                android:layout_height="150px" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_imgs1"
+            android:layout_marginLeft="65px"
+            android:layout_marginRight="25px"
+            android:layout_marginTop="16px"
+            android:layout_toRightOf="@+id/tv_company_name1">
+
+            <TextView
+                android:id="@+id/tv_supplier_content11"
+                android:layout_width="150px"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/ef2f2e"
+                android:textSize="18px" />
+
+            <View
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_supplier_content12"
+                android:layout_width="150px"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/ef2f2e"
+                android:textSize="18px" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

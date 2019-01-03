@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlebar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="33px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="48px">
+
+            <TextView
+                android:id="@+id/tv_detail_dingdanbianhao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单编号：28849942020"
+                android:textColor="@color/a38"
+                android:textSize="30px"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="709px"
+            android:layout_height="1px"
+            android:layout_gravity="center"
+            android:background="@color/eb"/>
+
+        <ListView
+
+            android:id="@+id/lv_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="14px">
+
+        </ListView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_detail_chakanyijianjingbiaozhe"
+        android:layout_width="match_parent"
+        android:layout_height="94px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/ff9e00"
+        android:gravity="center"
+        android:text="查看一键竞标者"
+        android:textColor="@color/white"
+        android:textSize="34px"
+        android:visibility="gone"/>
+</RelativeLayout>

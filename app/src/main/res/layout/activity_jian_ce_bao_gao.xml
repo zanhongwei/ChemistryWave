@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/titlebar"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20px"
+                android:text="UV data"
+                android:textColor="@color/textcolorqian" />
+
+            <ImageView
+                android:id="@+id/iv_jiancebaogao_uv"
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:layout_marginLeft="30px"
+                android:scaleType="fitXY"
+                android:src="@drawable/dianjisc" />
+
+            <View
+                style="@style/lines"
+                android:layout_marginTop="20px"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20px"
+                android:text="Chromatograph data"
+                android:textColor="@color/textcolorqian" />
+
+            <ImageView
+                android:id="@+id/iv_jiancebaogao_ceseyi"
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:layout_marginLeft="30px"
+                android:scaleType="fitXY"
+                android:src="@drawable/dianjisc" />
+
+            <View
+                style="@style/lines"
+                android:layout_marginTop="20px"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20px"
+                android:text="Simple picture"
+                android:textColor="@color/textcolorqian" />
+
+            <ImageView
+                android:id="@+id/iv_jiancebaogao_yanpin"
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:layout_marginLeft="30px"
+                android:scaleType="fitXY"
+                android:src="@drawable/dianjisc" />
+
+            <View
+                style="@style/lines"
+                android:layout_marginTop="20px"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20px"
+                android:text="Test report"
+                android:textColor="@color/textcolorqian" />
+
+            <ImageView
+                android:id="@+id/iv_jiancebaogao_jiancebaogao"
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:layout_marginLeft="30px"
+                android:src="@drawable/dianjisc"
+                android:scaleType="fitXY"
+                />
+
+            <View
+                style="@style/lines"
+                android:layout_marginTop="20px"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20px"
+                android:text="Test video"
+                android:textColor="@color/textcolorqian" />
+            <RelativeLayout
+                android:layout_marginLeft="30px"
+                android:layout_width="wrap_content"
+                android:layout_height="200px">
+                <ImageView
+                    android:id="@+id/iv_jiancebaogao_jianceship"
+                    android:layout_width="200px"
+                    android:layout_height="200px"
+
+                    android:src="@drawable/dianjisc"
+                    android:scaleType="fitXY"
+                    />
+                <TextView
+                    android:id="@+id/tv_duration"
+                    android:layout_width="200px"
+                    android:layout_height="60px"
+                    android:layout_alignParentBottom="true"
+
+                    android:background="@drawable/buybuybuy"
+                    android:drawableLeft="@drawable/video_icon"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10px"
+                    android:paddingTop="16px"
+                    android:text="00:00"
+                    android:textColor="@color/white"
+                    android:textSize="22px"
+                     />
+            </RelativeLayout>
+
+
+            <View
+                style="@style/lines"
+                android:layout_marginTop="20px"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20px"
+                android:text="Big goods photo"
+                android:textColor="@color/textcolorqian" />
+
+            <ImageView
+                android:id="@+id/iv_jiancebaogao_dahuotupian"
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:layout_marginLeft="30px"
+                android:src="@drawable/dianjisc"
+                android:scaleType="fitXY"
+                />
+
+            <View
+                style="@style/lines"
+                android:layout_marginTop="20px"></View>
+
+            <TextView
+                android:id="@+id/tv_jiancebaogao_save"
+                android:layout_width="391px"
+                android:layout_height="76px"
+                android:layout_gravity="center"
+                android:layout_marginBottom="60px"
+                android:layout_marginTop="100px"
+                android:background="@drawable/shape_yellowbutton"
+                android:gravity="center"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhw.chemistrywave.activity.HasHandleActivity">
+
+    <include layout="@layout/titlebar"/>
+    <ListView
+        android:id="@+id/lv_has_handle_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/f2"
+        android:dividerHeight="20px"
+        android:scrollbars="none"
+        />
+</LinearLayout>

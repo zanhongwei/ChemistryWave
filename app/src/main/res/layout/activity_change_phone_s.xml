@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.axehome.chemistrywaves.activitys.ChangePhoneActivity">
+    <include layout="@layout/titlebar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="right"
+            android:text="更换新手机号："
+            android:textColor="@color/a33"
+            android:textSize="28px" />
+
+        <EditText
+            android:id="@+id/tv_new_phone"
+            android:layout_width="0px"
+            android:layout_height="70px"
+            android:layout_weight="0.6"
+            android:layout_marginRight="30px"
+            android:background="@drawable/bg_et_myinfomation_detail"
+            android:hint="请输入新手机号"
+            android:paddingLeft="10px"
+            android:textColor="@color/a33"
+            android:textColorHint="@color/c6c6c6"
+            android:textSize="28px"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="right"
+            android:text="验证码："
+            android:textColor="@color/a33"
+            android:textSize="28px"
+            android:layout_gravity="center_vertical"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="70px"
+            android:layout_weight="0.6"
+            android:layout_marginRight="30px">
+            <EditText
+                android:id="@+id/tv_code"
+                android:layout_width="300px"
+                android:layout_height="70px"
+                android:background="@drawable/bg_et_myinfomation_detail"
+                android:hint="请输入验证码"
+                android:paddingLeft="10px"
+                android:textColor="@color/a33"
+                android:textColorHint="@color/c6c6c6"
+                android:textSize="28px"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/tv_getcode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="获取验证码"
+                android:gravity="center"
+                android:textSize="28px"
+                android:textColor="@color/white"
+                android:background="@color/fe771d"
+                android:layout_marginLeft="20px"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <TextView
+        android:clickable="false"
+        android:id="@+id/tv_complete"
+        android:layout_width="302px"
+        android:layout_height="62px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="81px"
+        android:background="@drawable/tv_save_info"
+        android:text="完成"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="28px"/>
+</LinearLayout>

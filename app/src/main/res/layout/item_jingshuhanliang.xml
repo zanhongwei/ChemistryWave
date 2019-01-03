@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="64px"
+        android:layout_marginTop="19px"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="金属含量"
+        android:textColor="@color/a66"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/eb"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="404px"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <!--铅离子：铜离子：-->
+        <LinearLayout
+            style="@style/ll_jingjiadetail">
+
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_tonglizi"
+                style="@style/tv_jingjiadetailpingzhicanshu"
+                android:text="铜离子："/>
+
+            <TextView
+                style="@style/tv_jingjiadetail_line_vertical"/>
+
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_qianlizi"
+                style="@style/tv_jingjiadetail_rightpingzhicanshu"
+                android:text="铅离子："/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/tv_jingjiadetail_line_shuiping"/>
+        <!--锌离子：锡离子：-->
+        <LinearLayout
+            style="@style/ll_jingjiadetail">
+
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_xinlizi"
+                style="@style/tv_jingjiadetailpingzhicanshu"
+                android:text="锌离子："/>
+
+            <TextView
+                style="@style/tv_jingjiadetail_line_vertical"/>
+
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_xilizi"
+                style="@style/tv_jingjiadetail_rightpingzhicanshu"
+                android:text="锡离子："/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/tv_jingjiadetail_line_shuiping"/>
+        <!--镍离子：钴离子：-->
+        <LinearLayout
+            style="@style/ll_jingjiadetail">
+
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_nielizi"
+                style="@style/tv_jingjiadetailpingzhicanshu"
+                android:text="镍离子："/>
+
+            <TextView
+                style="@style/tv_jingjiadetail_line_vertical"/>
+
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_gulizi"
+                style="@style/tv_jingjiadetail_rightpingzhicanshu"
+                android:text="钴离子："/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/tv_jingjiadetail_line_shuiping"/>
+        <!--锑离子：汞离子：-->
+        <LinearLayout
+            style="@style/ll_jingjiadetail">
+
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_tilizi"
+                style="@style/tv_jingjiadetailpingzhicanshu"
+                android:text="锑离子："/>
+
+            <TextView
+                style="@style/tv_jingjiadetail_line_vertical"/>
+
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_gonglizi"
+                style="@style/tv_jingjiadetail_rightpingzhicanshu"
+                android:text="汞离子："/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/tv_jingjiadetail_line_shuiping"/>
+        <!--镉离子：铋离子：：-->
+        <LinearLayout
+            style="@style/ll_jingjiadetail">
+
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_gelizi"
+                style="@style/tv_jingjiadetailpingzhicanshu"
+                android:text="镉离子："/>
+
+            <TextView
+                style="@style/tv_jingjiadetail_line_vertical"/>
+
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_bilizi"
+                style="@style/tv_jingjiadetail_rightpingzhicanshu"
+                android:text="铋离子："/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/tv_jingjiadetail_line_shuiping"/>
+    </LinearLayout>
+</LinearLayout>

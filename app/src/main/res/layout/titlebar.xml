@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130px"
+    android:background="@drawable/bj_titlebar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_titlebar_back"
+            android:layout_width="90px"
+            android:layout_height="match_parent"
+            android:paddingLeft="40px">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/fanhui"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_titlebar_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="90px"
+            android:src="@drawable/line_white"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_titlebar_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="标题"
+            android:textColor="@color/white"
+            android:textSize="36px"/>
+
+        <TextView
+            android:id="@+id/tv_titlebar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="22px"
+            android:drawablePadding="10px"
+            android:paddingLeft="30px"
+            android:text="筛选"
+            android:textColor="@color/white"
+            android:textSize="28px"
+            android:visibility="gone"
+            android:gravity="center"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_titlebar_search"
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="22px"
+                android:src="@drawable/search_white"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

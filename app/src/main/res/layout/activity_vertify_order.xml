@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f2"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar_white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/e6" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/f2"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_person"
+                android:layout_width="match_parent"
+                android:layout_height="176px"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/ll_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="40px"
+                    android:paddingTop="20px"
+                    android:paddingBottom="20px">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="name"
+                            android:textColor="@color/a33"
+                            android:textSize="32px" />
+
+                        <TextView
+                            android:id="@+id/tv_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="100px"
+                            android:text="phone"
+                            android:textColor="@color/a33"
+                            android:textSize="32px" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="address"
+                        android:textSize="30px" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tv_tel_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="telphone"
+                        android:textSize="30px" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="24px"
+                    android:src="@drawable/arrow_right" />
+            </RelativeLayout>
+
+            <com.zhw.chemistrywave.view.MyListView
+                android:id="@+id/mlv_vertufyorder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.zhw.chemistrywave.view.MyListView>
+
+            <LinearLayout
+                android:id="@+id/ll_shopname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30px"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="20px"
+                android:paddingTop="28px"
+                android:paddingBottom="28px">
+
+                <ImageView
+                    android:id="@+id/iv_store_img"
+                    android:layout_width="60px"
+                    android:layout_height="60px" />
+
+                <TextView
+                    android:id="@+id/tv_store_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:text="Harlan"
+                    android:textColor="@color/a33"
+                    android:textSize="26px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_shopcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="26px"
+                android:paddingTop="10px"
+                android:paddingRight="38px"
+                android:paddingBottom="10px">
+
+                <ImageView
+                    android:id="@+id/iv_product_img"
+                    android:layout_width="190px"
+                    android:layout_height="190px" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190px"
+                    android:layout_marginLeft="30px"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_product_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10px"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="goods name"
+                        android:textColor="@color/a1a1a1a"
+                        android:textSize="24px" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tv_product_params"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="selected：“”“”“”"
+                        android:textSize="24px" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="2" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_product_unit_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$0.00"
+                            android:textColor="@color/ef2f2e"
+                            android:textSize="26px" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="x"
+                            android:textColor="@color/a33"
+                            android:textSize="26px" />
+
+                        <TextView
+                            android:id="@+id/tv_product_unit_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:textColor="@color/a33"
+                            android:textSize="26px" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_agreement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="40px"
+                android:paddingBottom="40px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:text="Order Contract"
+                    android:textColor="@color/a1a1a1a"
+                    android:textSize="30px" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agree"
+                    android:textColor="@color/a66"
+                    android:textSize="28px" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="30px"
+                    android:src="@drawable/arrow_right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:background="@color/e6" />
+
+            <LinearLayout
+                android:id="@+id/ll_pay_way"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingTop="40px"
+                android:paddingBottom="40px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:text="Payment method"
+                    android:textColor="@color/a1a1a1a"
+                    android:textSize="30px" />
+
+                <RadioGroup
+                    android:id="@+id/rg_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15px"
+                    android:paddingRight="15px">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/tv_cash"
+                        android:layout_width="160px"
+                        android:layout_height="50px"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiobutton_pay_back"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="Offline"
+                        android:textColor="@color/selector_radio_textview"
+                        android:textSize="24px"
+                        android:checked="true"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tv_financial"
+                        android:layout_width="160px"
+                        android:layout_height="50px"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiobutton_pay_back"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="Escrow"
+                        android:textColor="@color/selector_radio_textview"
+                        android:textSize="24px"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:focusable="false"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tv_e_bank"
+                        android:layout_width="150px"
+                        android:layout_height="50px"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiobutton_pay_back"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="Ebank"
+                        android:textColor="@color/selector_radio_textview"
+                        android:textSize="24px"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:focusable="false"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:visibility="gone" />
+
+                    <RadioButton
+                        android:id="@+id/tv_three_way"
+                        android:layout_width="160px"
+                        android:layout_height="50px"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiobutton_pay_back"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="第三方"
+                        android:textColor="@color/selector_radio_textview"
+                        android:textSize="24px"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:background="@color/e6" />
+
+            <LinearLayout
+                android:id="@+id/ll_platform_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingTop="40px"
+                android:paddingBottom="40px"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:text="平台服务"
+                    android:textColor="@color/a1a1a1a"
+                    android:textSize="30px" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15px"
+                    android:paddingRight="15px">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <CheckBox
+                        android:id="@+id/tv_platform_detection"
+                        android:layout_width="150px"
+                        android:layout_height="50px"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiobutton_pay_back"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="平台检测"
+                        android:textColor="@color/selector_radio_textview"
+                        android:textSize="24px" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <CheckBox
+                        android:id="@+id/tv_free_detection"
+                        android:layout_width="160px"
+                        android:layout_height="50px"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiobutton_pay_back"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="免费监理"
+                        android:textColor="@color/selector_radio_textview"
+                        android:textSize="24px" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="160px"
+                        android:layout_height="50px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="线下支付"
+                        android:textColor="@color/a66"
+                        android:textSize="28px"
+                        android:visibility="invisible" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="160px"
+                        android:layout_height="50px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="供应链金融"
+                        android:textColor="@color/a66"
+                        android:textSize="28px"
+                        android:visibility="invisible" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30px"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="28px"
+                android:paddingBottom="40px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:text="Total amount of goods"
+                    android:textColor="@color/a1a1a1a"
+                    android:textSize="30px" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30px">
+
+                    <View
+                        android:layout_width="0px"
+                        android:layout_height="0px"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tv_product_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="x0"
+                        android:textColor="@color/a66"
+                        android:textSize="26px" />
+
+                    <View
+                        android:layout_width="0px"
+                        android:layout_height="0px"
+                        android:layout_weight="3" />
+
+                    <TextView
+                        android:id="@+id/tv_product_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="@color/ef2f2e"
+                        android:textSize="26px" />
+
+                    <View
+                        android:layout_width="0px"
+                        android:layout_height="0px"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/e6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Total money："
+                        android:textColor="@color/ef2f2e"
+                        android:textSize="30px" />
+
+                    <TextView
+                        android:id="@+id/tv_total_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="30px"
+                        android:gravity="center"
+                        android:text="$0.00"
+                        android:textColor="@color/ef2f2e"
+                        android:textSize="30px" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_pay"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:background="@color/ef2f2e"
+                    android:gravity="center"
+                    android:text="Submit"
+                    android:textColor="@color/white"
+                    android:textSize="30px" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

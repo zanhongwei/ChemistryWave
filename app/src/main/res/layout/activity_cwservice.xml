@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhw.chemistrywave.activity.CWServiceActivity">
+
+    <include layout="@layout/titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="514px"
+                android:background="@drawable/tousujiufenbeijing"
+                android:orientation="vertical"
+                android:paddingTop="54px">
+
+                <TextView
+                    android:id="@+id/tv_title_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="64px"
+                    android:text="About Complaint and Dispute"
+                    android:textColor="@color/white"
+                    android:textSize="40px"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="42px"
+                    android:layout_marginRight="42px"
+                    android:text="There is no doubt that mother is the greatest person in the world. She gives us life and takes care of us all the time. No matter how old we are, we are always her babies in their eyes. As I grow up, I become responsible and feel the great burden of my mother. I am so thankful for the things she did for me."
+                    android:textColor="@color/white"
+                    android:textSize="26px" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="120px"
+                    android:layout_height="1px"
+                    android:layout_marginRight="65px"
+                    android:background="#666666" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Application form"
+                    android:textColor="#666666"
+                    android:textSize="30px" />
+
+                <View
+                    android:layout_width="120px"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="65px"
+                    android:background="#666666" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40px"
+                    android:layout_weight="1"
+                    android:text="Name"
+                    android:textColor="#666666"
+                    android:textSize="30px" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="0px"
+                    android:layout_height="70px"
+                    android:layout_marginRight="44px"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_et_myinfomation_detail"
+                    android:paddingLeft="20px"
+                    android:textColor="#666666"
+                    android:textSize="30px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40px"
+                    android:layout_weight="1"
+                    android:text="Address"
+                    android:textColor="#666666"
+                    android:textSize="30px" />
+
+                <EditText
+                    android:id="@+id/et_address"
+                    android:layout_width="0px"
+                    android:layout_height="70px"
+                    android:layout_marginRight="44px"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_et_myinfomation_detail"
+                    android:paddingLeft="20px"
+                    android:textColor="#666666"
+                    android:textSize="30px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40px"
+                    android:layout_weight="1"
+                    android:text="Contact"
+                    android:textColor="#666666"
+                    android:textSize="30px" />
+
+                <EditText
+                    android:id="@+id/et_telephone"
+                    android:layout_width="0px"
+                    android:layout_height="70px"
+                    android:layout_marginRight="44px"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_et_myinfomation_detail"
+                    android:paddingLeft="20px"
+                    android:textColor="#666666"
+                    android:textSize="30px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40px"
+                    android:layout_weight="1"
+                    android:text="Phone"
+                    android:textColor="#666666"
+                    android:textSize="30px" />
+
+                <EditText
+                    android:id="@+id/et_phone_number"
+                    android:layout_width="0px"
+                    android:layout_height="70px"
+                    android:layout_marginRight="44px"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_et_myinfomation_detail"
+                    android:paddingLeft="20px"
+                    android:textColor="#666666"
+                    android:textSize="30px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40px"
+                    android:layout_weight="1"
+                    android:text="E-mail"
+                    android:textColor="#666666"
+                    android:textSize="30px" />
+
+                <EditText
+                    android:id="@+id/et_company_email"
+                    android:layout_width="0px"
+                    android:layout_height="70px"
+                    android:layout_marginRight="44px"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_et_myinfomation_detail"
+                    android:paddingLeft="20px"
+                    android:textColor="#666666"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40px"
+                    android:layout_weight="1"
+                    android:text="Remarks"
+                    android:textColor="#666666"
+                    android:textSize="30px" />
+
+                <EditText
+                    android:id="@+id/et_remark"
+                    android:layout_width="0px"
+                    android:layout_height="169px"
+                    android:layout_marginRight="44px"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_et_myinfomation_detail"
+                    android:paddingLeft="20px"
+                    android:textColor="#666666"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_commit"
+                android:layout_width="350px"
+                android:layout_height="80px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="100px"
+                android:layout_marginTop="80px"
+                android:background="@drawable/tv_save_info"
+                android:gravity="center"
+                android:text="Commit"
+                android:textColor="@color/white"
+                android:textSize="26px" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/f2"
+    tools:context="com.zhw.chemistrywave.activity.ChangeNickNameActivity">
+
+    <include layout="@layout/titlebar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_margin="40px"
+        android:orientation="vertical"
+        android:paddingTop="70px"
+        android:paddingLeft="50px"
+        android:paddingBottom="70px"
+        android:paddingRight="50px">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:layout_weight="1"
+                android:textSize="30px"
+                android:textColor="@color/a58"/>
+
+            <EditText
+                android:id="@+id/et_contact_person"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:text=""
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/a58"
+                android:textColorHint="@color/d7d7d7"
+                android:background="@null"
+                android:hint="please fill in contact name"
+                android:textSize="30px"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="40px">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:text="phone："
+                android:layout_weight="1"
+                android:textSize="30px"
+                android:textColor="@color/a58"/>
+
+            <EditText
+                android:id="@+id/et_contact_phone"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:text=""
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/a58"
+                android:textColorHint="@color/d7d7d7"
+                android:background="@null"
+                android:hint="please fill in contact number"
+                android:textSize="30px"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="40px">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:text="address："
+                android:layout_weight="1"
+                android:textSize="30px"
+                android:textColor="@color/a58"/>
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:text=""
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/a58"
+                android:textColorHint="@color/d7d7d7"
+                android:background="@null"
+                android:hint="please fill in address"
+                android:textSize="30px"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120px"
+            android:gravity="center_vertical">
+            <View
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/iv_select_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/address_moren_unselected"
+                android:layout_marginRight="10px"/>
+            <TextView
+                android:id="@+id/tv_select_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="default address"
+                android:textColor="#0698eb"
+                android:textSize="24px"/>
+        </LinearLayout>
+
+
+        <Button
+            android:onClick="addAddress"
+            android:layout_width="match_parent"
+            android:layout_height="73px"
+            android:background="#0698eb"
+            android:layout_marginTop="15px"
+            android:text="Complete"
+            android:textColor="@color/white"
+            android:textSize="28px"
+            android:textAllCaps="false"/>
+
+
+
+    </LinearLayout>
+
+
+    <!--<View-->
+        <!--android:layout_width="0px"-->
+        <!--android:layout_height="0px"-->
+        <!--android:layout_weight="1"/>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/btn_commit"-->
+        <!--android:layout_width="600px"-->
+        <!--android:layout_height="90px"-->
+        <!--android:background="@drawable/btn_complete_bg"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:text="完成"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="32px"-->
+        <!--/>-->
+    <!--<View-->
+        <!--android:layout_width="0px"-->
+        <!--android:layout_height="0px"-->
+        <!--android:layout_weight="1"/>-->
+
+</LinearLayout>

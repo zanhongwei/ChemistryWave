@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="88px">
+<ImageView
+    android:id="@+id/iv_itempay_back"
+    android:layout_centerVertical="true"
+    android:padding="30px"
+    android:src="@drawable/fanhui_heise"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    <TextView
+        android:layout_centerInParent="true"
+        android:textSize="38px"
+        android:textColor="@color/t333"
+        android:text="确认支付"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+    <TextView
+        android:background="@color/e6"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+    <RelativeLayout
+
+        android:paddingLeft="36px"
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+        <TextView
+           android:layout_centerVertical="true"
+           android:id="@+id/tv_itempay_xuzhifu"
+            android:textColor="@color/black"
+            android:textSize="30px"
+            android:text="需支付："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_itempay_xuzhifu"
+            android:id="@+id/tv_itempay_money"
+
+            android:textColor="@color/ef2f2e"
+            android:textSize="40px"
+            android:text="30000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+           android:layout_alignBottom="@id/tv_itempay_money"
+            android:layout_toRightOf="@id/tv_itempay_money"
+            android:gravity="bottom"
+            android:textColor="@color/ef2f2e"
+            android:textSize="26px"
+            android:text=".00元"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:background="@color/e6"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+    <TextView
+        android:gravity="center_vertical"
+        android:paddingLeft="35px"
+        android:textSize="28px"
+        android:textColor="@color/a66"
+        android:text="线上支付"
+        android:layout_width="match_parent"
+        android:layout_height="80px" />
+    <LinearLayout
+        android:paddingLeft="115px"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="126px">
+        <ImageView
+            android:id="@+id/iv_itempay_logo"
+            android:src="@drawable/bank_logo_nongye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_marginLeft="23px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_itempay_name"
+                android:textColor="@color/t333"
+                android:textSize="34px"
+                android:text="农业银行支付"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_itempay_weihao"
+                android:layout_marginTop="10px"
+                android:textColor="@color/b3"
+                android:textSize="24px"
+                android:text="尾号4738"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <CheckBox
+            android:id="@+id/cb_itempay"
+            android:layout_marginRight="80px"
+            style="@style/CustomCheckboxThemeDiscountPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:background="@color/e6"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+    <LinearLayout
+        android:id="@+id/ll_itempay_other"
+        android:paddingRight="30px"
+        android:paddingLeft="36px"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="80px">
+        <TextView
+            android:layout_weight="1"
+            android:textSize="28px"
+            android:textColor="@color/a66"
+            android:text="其他银行卡支付"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    <ImageView
+        android:src="@drawable/arrow_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:background="@color/e6"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+    <TextView
+        android:layout_marginTop="220px"
+        android:textColor="@color/white"
+        android:textSize="34px"
+        android:text="确认支付"
+        android:background="@color/ef2f2e"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="100px" />
+</LinearLayout>

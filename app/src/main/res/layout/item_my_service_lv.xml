@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingBottom="30px">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginBottom="20px">
+        <TextView
+            style="@style/gonghuoshang_xunpan_hui"
+            android:text="apply time："/>
+
+        <TextView
+            android:id="@+id/tv_apply_time"
+            style="@style/gonghuoshang_xunpan_hui"
+            android:text="2016-09-08"/>
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/tv_sort"
+            style="@style/gonghuoshang_xunpan_hui"
+            android:text=""/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/e6"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="30px">
+
+        <TextView
+            style="@style/wodefuwuwenziyangshi"
+            android:text="name："/>
+        <TextView
+            android:id="@+id/tv_company_name"
+            style="@style/wodefuwuwenziyangshi"
+            android:text="化浪有限公司"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="30px">
+
+        <TextView
+            style="@style/wodefuwuwenziyangshi"
+            android:text="address："/>
+        <TextView
+            android:id="@+id/tv_company_address"
+            style="@style/wodefuwuwenziyangshi"
+            android:text="天津市和平区大营门街道"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="30px">
+
+        <TextView
+            style="@style/wodefuwuwenziyangshi"
+            android:text="contact name："/>
+        <TextView
+            android:id="@+id/tv_telephone"
+            style="@style/wodefuwuwenziyangshi"
+            android:text="022-6666-9999"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="30px">
+
+        <TextView
+            style="@style/wodefuwuwenziyangshi"
+            android:text="phone："/>
+        <TextView
+            android:id="@+id/tv_phone"
+            style="@style/wodefuwuwenziyangshi"
+            android:text="12345678901"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="30px">
+
+        <TextView
+            style="@style/wodefuwuwenziyangshi"
+            android:text="e-mail："/>
+        <TextView
+            android:id="@+id/tv_email"
+            style="@style/wodefuwuwenziyangshi"
+            android:text="111222333@qq.com"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="30px">
+
+        <TextView
+            style="@style/wodefuwuwenziyangshi"
+            android:text="remark："/>
+        <TextView
+            android:id="@+id/tv_remark"
+            style="@style/wodefuwuwenziyangshi"
+            android:text="12345678901"/>
+    </LinearLayout>
+
+</LinearLayout>

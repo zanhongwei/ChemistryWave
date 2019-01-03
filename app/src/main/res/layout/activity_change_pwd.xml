@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhw.chemistrywave.activity.ChangePwdActivity">
+
+    <include layout="@layout/titlebar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="30px"
+        android:paddingRight="30px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:text="please fill in the current passwords"
+            android:textColor="@color/a80"
+            android:textSize="30px" />
+
+        <EditText
+            android:id="@+id/et_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60px"
+            android:background="@null"
+            android:gravity="center"
+            android:inputType="textPassword"
+            android:text=""
+            android:textColor="#1a1a1a"
+            android:textSize="50px" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginTop="20px"
+            android:background="@color/d9" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="600px"
+        android:layout_height="90px"
+        android:background="@drawable/btn_complete_bg"
+        android:layout_gravity="center_horizontal"
+        android:textAllCaps="false"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="32px"
+        android:layout_marginTop="80px"
+        />
+</LinearLayout>

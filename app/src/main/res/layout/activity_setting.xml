@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ef"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_setting"
+        layout="@layout/titlebar_white"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/include_setting"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4px"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="22px">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civ_setting_headimage"
+                    android:layout_width="104px"
+                    android:layout_height="104px"
+                    android:src="@drawable/headimage_mycenter"
+                    app:layout_auto_baseheight="width" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_setting_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="用户昵称"
+                        android:textColor="@color/a24"
+                        android:textSize="30px" />
+
+                    <TextView
+                        android:id="@+id/tv_setting_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7px"
+                        android:text="用户名：123565655665955"
+                        android:textColor="@color/b3"
+                        android:textSize="26px" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="181px"
+            android:layout_marginTop="16px"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:id="@+id/ll_setting_clearcache"
+                style="@style/ll_setting">
+
+                <TextView
+                    style="@style/tv_setting"
+                    android:text="Clear cache" />
+
+                <TextView
+                    android:id="@+id/tv_setting_cache"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0KB"
+                    android:textColor="@color/a24"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="722px"
+                android:layout_height="1px"
+                android:layout_gravity="center"
+                android:background="@color/d7d7d7" />
+
+            <LinearLayout
+                android:id="@+id/ll_setting_banbenshengji"
+                style="@style/ll_setting">
+
+                <TextView
+                    style="@style/tv_setting"
+                    android:text="Update" />
+
+                <TextView
+                    android:id="@+id/tv_setting_banbenshengji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="this is the lastist version"
+                    android:textColor="@color/a24"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="722px"
+                android:layout_height="1px"
+                android:layout_gravity="center"
+                android:background="@color/d7d7d7" />
+
+            <LinearLayout
+                android:id="@+id/ll_setting_newmessage"
+                style="@style/ll_setting"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/tv_setting"
+                    android:text="接收用户消息" />
+
+                <com.zhw.chemistrywave.view.EaseSwitchButton
+                    android:id="@+id/esb_setting_usermsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow_right" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_setting_diqvshezhi"
+            style="@style/ll_setting"
+            android:layout_marginTop="16px"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/tv_setting"
+                android:text="通知显示消息详情" />
+
+            <com.zhw.chemistrywave.view.EaseSwitchButton
+                android:id="@+id/esb_setting_msgdetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="722px"
+            android:layout_height="1px"
+            android:layout_gravity="center"
+            android:background="@color/d7d7d7"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="181px"
+            android:layout_marginTop="16px"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_setting_privacy"
+                style="@style/ll_setting"
+                android:layout_marginTop="1px">
+
+                <TextView
+                    style="@style/tv_setting"
+                    android:text="声音" />
+
+                <com.zhw.chemistrywave.view.EaseSwitchButton
+                    android:id="@+id/esb_setting_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow_right" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="722px"
+                android:layout_height="1px"
+                android:layout_gravity="center"
+                android:background="@color/d7d7d7" />
+
+            <LinearLayout
+                android:id="@+id/ll_setting_tongyong"
+                style="@style/ll_setting">
+
+                <TextView
+                    style="@style/tv_setting"
+                    android:text="震动" />
+
+                <com.zhw.chemistrywave.view.EaseSwitchButton
+                    android:id="@+id/esb_setting_shake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="181px"
+            android:layout_marginTop="16px"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_setting_aboutus"
+                style="@style/ll_setting">
+
+                <TextView
+                    style="@style/tv_setting"
+                    android:text="About us" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow_right" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="722px"
+                android:layout_height="1px"
+                android:layout_gravity="center"
+                android:background="@color/d7d7d7" />
+
+            <LinearLayout
+                android:id="@+id/ll_setting_exit"
+
+                style="@style/ll_setting">
+
+                <TextView
+                    style="@style/tv_setting"
+                    android:text="Log out" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow_right"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

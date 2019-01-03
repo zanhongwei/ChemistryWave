@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.axehome.chemistrywaves.fragments.UserMsgFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lv_usermsgf"
+        android:dividerHeight="15px"
+        android:divider="@color/ef"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       />
+
+</FrameLayout>

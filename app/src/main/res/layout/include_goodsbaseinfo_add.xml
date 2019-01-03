@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:text="货物名称："
+                    />
+
+                <EditText
+                    android:id="@+id/et_need_name"
+                    style="@style/et_orderneed"
+                    android:text="2"
+                    />
+            </LinearLayout>
+            <View
+                style="@style/lines"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:text="英文名称："
+                    />
+
+                <EditText
+                    android:id="@+id/et_need_yingwenname"
+                    style="@style/et_orderneed"
+                    android:text="2"
+                    />
+            </LinearLayout>
+            <View
+                style="@style/lines"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:text="商品分类："
+                    />
+                <LinearLayout
+                    android:id="@+id/ll_need_fenlei"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:id="@+id/et_need_fenlei"
+                        android:text="一级分类"
+                        android:textColor="@color/textcolor"
+                        android:textSize="11sp"
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content" />
+                    <TextView
+                        android:id="@+id/et_need_erji"
+                        android:gravity="center_vertical"
+                        android:text="二级分类"
+                        android:textColor="@color/textcolor"
+                        android:textSize="11sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                style="@style/lines"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:text="CINO："
+                    />
+
+                <EditText
+                    android:id="@+id/et_need_cino"
+                    style="@style/et_orderneed"
+                    android:text="2"
+                    />
+            </LinearLayout>
+            <View
+                style="@style/lines"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:text="CAS："
+                    />
+
+                <EditText
+                    android:id="@+id/et_need_cas"
+                    style="@style/et_orderneed"
+                    android:text="2"
+                    />
+            </LinearLayout>
+            <View
+                style="@style/lines"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:text="分子量："
+                    />
+
+                <EditText
+                    android:id="@+id/et_need_fenziliang"
+                    style="@style/et_orderneed"
+                    android:text="2"
+                    />
+            </LinearLayout>
+            <View
+                style="@style/lines"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:text="PSA："
+                    />
+
+                <EditText
+                    android:id="@+id/et_need_psa"
+                    style="@style/et_orderneed"
+                    android:text="2"
+                    />
+            </LinearLayout>
+            <View
+                style="@style/lines"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:text="精确质量："
+                    />
+
+                <EditText
+                    android:id="@+id/et_need_jingquezhiliang"
+                    style="@style/et_orderneed"
+                    android:text="2"
+                    />
+            </LinearLayout>
+            <View
+                style="@style/lines"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:text="货物规格："
+                    />
+
+                <EditText
+                    android:id="@+id/et_need_guige"
+                    style="@style/et_orderneed"
+                    android:text="2"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/lines"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:text="货物纯度："
+                    />
+
+                <EditText
+                    android:id="@+id/et_need_chundu"
+                    style="@style/et_orderneed"
+                    android:text="2"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/lines"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:text="货期："
+                    />
+
+                <EditText
+                    android:id="@+id/et_need_timequest"
+                    style="@style/et_orderneed"
+                    android:layout_weight="1"
+                    android:text="2"
+                    />
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:layout_marginRight="48px"
+                    android:text="天"></TextView>
+            </LinearLayout>
+
+            <View
+                style="@style/lines"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    style="@style/tvorderneed"
+                    android:text="数量："/>
+
+                <EditText
+                    android:id="@+id/et_need_numquest"
+                    style="@style/et_orderneed"
+                    android:layout_weight="1"
+                    android:text="2"
+                    />
+
+                <LinearLayout
+
+                    android:id="@+id/ll_need_shuliangdanwei"
+                    android:layout_width="127px"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingRight="20px">
+
+                    <TextView
+                        android:id="@+id/tv_need_dun"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="吨"
+                        android:textColor="@color/a32"
+                        android:textSize="26px"/>
+
+                    <TextView
+                        android:layout_width="1px"
+                        android:layout_height="26px"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15px"
+                        android:layout_marginRight="15px"
+                        android:background="@color/ae"/>
+
+                    <ImageView
+                        android:id="@+id/iv_register_type"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="11px"
+                        android:src="@drawable/down_sj"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/lines"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:text="包装："
+                    />
+
+                <EditText
+                    android:id="@+id/et_need_package"
+                    style="@style/et_orderneed"
+                    android:text="2"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/lines"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:text="运输方式："
+                    />
+
+                <TextView
+                    android:id="@+id/et_need_packrequest"
+                    style="@style/et_orderneed"
+                    android:gravity="center_vertical"
+                    android:text="2"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/lines"></View>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:text="最低价格："
+                    />
+
+                <EditText
+                    android:id="@+id/et_need_money"
+                    style="@style/et_orderneed"
+                    android:layout_weight="1"
+                    android:text="2"
+                    />
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:layout_marginRight="48px"
+                    android:text="元"></TextView>
+            </LinearLayout>
+
+            <View
+                style="@style/linescu"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:text="付款要求："
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/lines"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="32px">
+
+                <RadioGroup
+                    android:id="@+id/rg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawablePadding="10px"
+                        android:drawableRight="@drawable/btn_radio_pay"
+                        android:text="线下支付"
+                        android:textColor="@color/a58"
+                        android:textSize="11sp"/>
+
+                    <RadioButton
+
+                        android:id="@+id/rb2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25px"
+
+                        android:background="@null"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/alipay"
+                        android:drawablePadding="6px"
+                        android:drawableRight="@drawable/btn_radio_pay"
+                        android:text="支付宝"
+                        android:textColor="@color/a58"
+                        android:textSize="11sp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25px"
+
+                        android:background="@null"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/wechat_pay"
+                        android:drawablePadding="6px"
+                        android:drawableRight="@drawable/btn_radio_pay"
+                        android:text="微信"
+                        android:textColor="@color/a58"
+                        android:textSize="11sp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25px"
+
+                        android:background="@null"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/yinlian_pay"
+                        android:drawablePadding="6px"
+                        android:drawableRight="@drawable/btn_radio_pay"
+                        android:text="银联"
+                        android:textColor="@color/a58"
+                        android:textSize="11sp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25px"
+                        android:layout_marginRight="10px"
+
+                        android:background="@null"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/yinlian_pay"
+                        android:drawablePadding="6px"
+                        android:drawableRight="@drawable/btn_radio_pay"
+                        android:text="供应链金融"
+                        android:textColor="@color/a58"
+                        android:textSize="11sp"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                style="@style/linescu"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:layout_marginTop="20px"
+                    android:gravity="start"
+                    android:text="应用方案："
+                    />
+
+                <ImageView
+
+                    android:id="@+id/tv_need_scyyfa"
+                    android:layout_width="150px"
+                    android:layout_height="150px"
+                    android:layout_margin="10px"
+                    android:layout_marginLeft="10px"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dianjisc"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/linescu"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:layout_marginTop="20px"
+                    android:gravity="start"
+                    android:text="产品图片："
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_need_sccptp"
+                    android:layout_width="150px"
+                    android:layout_height="150px"
+                    android:layout_gravity="center"
+                    android:layout_margin="10px"
+                    android:layout_marginLeft="20px"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dianjisc"
+
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/linescu"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32px">
+
+                <TextView
+                    style="@style/tvorderneed"
+                    android:layout_marginTop="20px"
+                    android:gravity="start"
+                    android:text="生产状态："
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_need_sccczt"
+                    android:layout_width="150px"
+                    android:layout_height="150px"
+                    android:layout_gravity="center"
+                    android:layout_margin="10px"
+                    android:layout_marginLeft="20px"
+                    android:background="#F2F2F2"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dianjisc"
+
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/lines"></View>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

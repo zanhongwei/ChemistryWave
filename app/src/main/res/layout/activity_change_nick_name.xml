@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhw.chemistrywave.activity.ChangeNickNameActivity">
+
+    <include layout="@layout/titlebar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="30px"
+        android:paddingRight="30px">
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:text="The nickname"
+            android:textColor="@color/a80"
+            android:textSize="30px"/>
+
+        <EditText
+            android:id="@+id/et_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textColor="#1a1a1a"
+            android:textSize="50px"
+            android:layout_marginTop="60px"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/d9"
+            android:layout_marginTop="20px"/>
+    </LinearLayout>
+    <View
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:layout_weight="1"/>
+    
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="600px"
+        android:layout_height="90px"
+        android:background="@drawable/btn_complete_bg"
+        android:layout_gravity="center_horizontal"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="32px"
+        />
+    <View
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:layout_weight="1"/>
+
+</LinearLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Cu:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includejinshuhanliang_tong"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Pb:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includejinshuhanliang_qian"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Zn:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includejinshuhanliang_xin"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Sn:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includejinshuhanliang_xi"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Ni:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includejinshuhanliang_nie"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Co:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includejinshuhanliang_gu"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Sb:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includejinshuhanliang_ti"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Hg:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includejinshuhanliang_gun"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Cd:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includejinshuhanliang_ge"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Bi:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includejinshuhanliang_bi"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+</LinearLayout>

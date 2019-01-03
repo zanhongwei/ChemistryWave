@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f2">
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/titlebar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include_title"
+        android:layout_marginBottom="130px"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140px"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="29px">
+
+                <TextView
+                    android:id="@+id/tv_wofaqijingjiadetail_goodsname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2,6-双(三氟甲基)苯甲酸"
+                    android:textColor="@color/a33"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24px"
+                    android:text="竞价产品"
+                    android:textColor="@color/a99"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="64px"
+                android:layout_marginTop="10px"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="订单需求"
+                android:textColor="@color/a66"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/eb"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="648px"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <!--纯度要求-->
+                <LinearLayout
+                    style="@style/ll_jingjiadetail">
+
+                    <TextView
+
+                        style="@style/tv_jingjiadetail"
+                        android:text="纯度要求"/>
+
+                    <TextView
+                        style="@style/tv_jingjiadetail_line_vertical"/>
+
+                    <TextView
+                        android:id="@+id/tv_wofaqijingjiadetail_chundu"
+                        style="@style/tv_jingjiadetail_right"/>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/tv_jingjiadetail_line_shuiping"/>
+                <!--货期要求-->
+                <LinearLayout
+                    style="@style/ll_jingjiadetail">
+
+                    <TextView
+
+                        style="@style/tv_jingjiadetail"
+                        android:text="货期要求"/>
+
+                    <TextView
+                        style="@style/tv_jingjiadetail_line_vertical"/>
+
+                    <TextView
+                        android:id="@+id/tv_wofaqijingjiadetail_huoqi"
+                        style="@style/tv_jingjiadetail_right"/>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/tv_jingjiadetail_line_shuiping"/>
+                <!--数量需求-->
+                <LinearLayout
+                    style="@style/ll_jingjiadetail">
+
+                    <TextView
+                        style="@style/tv_jingjiadetail"
+                        android:text="数量需求"/>
+
+                    <TextView
+                        style="@style/tv_jingjiadetail_line_vertical"/>
+
+                    <TextView
+                        android:id="@+id/tv_wofaqijingjiadetail_shuliang"
+                        style="@style/tv_jingjiadetail_right"/>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/tv_jingjiadetail_line_shuiping"/>
+                <!--包装要求-->
+                <LinearLayout
+                    style="@style/ll_jingjiadetail">
+
+                    <TextView
+                        style="@style/tv_jingjiadetail"
+                        android:text="包装要求"/>
+
+                    <TextView
+                        style="@style/tv_jingjiadetail_line_vertical"/>
+
+                    <TextView
+                        android:id="@+id/tv_wofaqijingjiadetail_baozhuang"
+                        style="@style/tv_jingjiadetail_right"/>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/tv_jingjiadetail_line_shuiping"/>
+                <!--接受价格范围-->
+                <LinearLayout
+                    style="@style/ll_jingjiadetail">
+
+                    <TextView
+                        style="@style/tv_jingjiadetail"
+                        android:text="接受价格范围"/>
+
+                    <TextView
+                        style="@style/tv_jingjiadetail_line_vertical"/>
+
+                    <TextView
+                        android:id="@+id/tv_wofaqijingjiadetail_price"
+                        style="@style/tv_jingjiadetail_right"/>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/tv_jingjiadetail_line_shuiping"/>
+                <!--付款要求：-->
+                <LinearLayout
+                    style="@style/ll_jingjiadetail">
+
+                    <TextView
+                        style="@style/tv_jingjiadetail"
+                        android:text="付款要求："/>
+
+                    <TextView
+                        style="@style/tv_jingjiadetail_line_vertical"/>
+
+                    <TextView
+                        android:id="@+id/tv_wofaqijingjiadetail_fukuangyaoqiu"
+                        style="@style/tv_jingjiadetail_right"/>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/tv_jingjiadetail_line_shuiping"/>
+                <!--线下支付-->
+                <LinearLayout
+                    style="@style/ll_jingjiadetail">
+
+                    <RadioGroup
+                        android:id="@+id/rg_wofaqijingjiadetail_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_wofaqijingjiadetail_xianxia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25px"
+                            android:layout_marginRight="10px"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableRight="@drawable/btn_radio_pay"
+                            android:text="线下支付"
+                            android:textColor="@color/a58"
+                            android:textSize="13sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_wofaqijingjiadetail_alipay"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25px"
+                            android:layout_marginRight="10px"
+
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/alipay"
+                            android:drawablePadding="3px"
+                            android:drawableRight="@drawable/btn_radio_pay"
+                            android:text="支付宝"
+                            android:textColor="@color/a58"
+                            android:textSize="11sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_wofaqijingjiadetail_wechatpay"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25px"
+                            android:layout_marginRight="10px"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/wechat_pay"
+                            android:drawablePadding="3px"
+                            android:drawableRight="@drawable/btn_radio_pay"
+                            android:text="微信"
+                            android:textColor="@color/a58"
+                            android:textSize="11sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_wofaqijingjiadetail_yinlianpay"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25px"
+                            android:layout_marginRight="10px"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/yinlian_pay"
+                            android:drawablePadding="3px"
+                            android:drawableRight="@drawable/btn_radio_pay"
+                            android:text="银联"
+                            android:textColor="@color/a58"
+                            android:textSize="11sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25px"
+                            android:layout_marginRight="10px"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/yinlian_pay"
+                            android:drawablePadding="6px"
+                            android:drawableRight="@drawable/btn_radio_pay"
+                            android:text="供应链金融"
+                            android:textColor="@color/a58"
+                            android:textSize="11sp"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/tv_jingjiadetail_line_shuiping"/>
+                <!--运输-->
+                <LinearLayout
+                    style="@style/ll_jingjiadetail">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@style/tv_jingjiadetail"
+                        android:text="运输"/>
+
+                    <TextView
+                        style="@style/tv_jingjiadetail_line_vertical"/>
+
+                    <TextView
+                        android:id="@+id/tv_wofaqijingjiadetail_yunshu"
+                        style="@style/tv_jingjiadetail_right"/>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/tv_jingjiadetail_line_shuiping"/>
+            </LinearLayout>
+
+            <include layout="@layout/item_pingzhicanshu"/>
+
+            <include layout="@layout/item_jingshuhanliang"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_yijingjia"
+        android:layout_width="match_parent"
+        android:layout_height="94px"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_wofaqijingjiadetail_qvxiaojingjia"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/qvxiaojingjia"
+            android:gravity="center"
+            android:text="取消竞价"
+            android:textColor="@color/white"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/tv_wofaqijingjiadetail_chakanjingbiaozhe"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/chakanjingbiaoz"
+            android:gravity="center"
+            android:text="查看竞标者"
+            android:textColor="@color/white"
+            android:textSize="17sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_canyujingjia"
+        android:layout_width="match_parent"
+        android:layout_height="94px"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_wofaqijingjiadetail_canyujingjia"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/chakanjingbiaoz"
+            android:gravity="center"
+            android:text="参与竞价"
+            android:textColor="@color/white"
+            android:textSize="17sp"/>
+    </LinearLayout>
+</RelativeLayout>

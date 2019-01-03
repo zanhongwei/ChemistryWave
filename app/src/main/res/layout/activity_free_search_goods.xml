@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/f2"
+    >
+
+    <include layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_all"
+            android:layout_width="0dp"
+            android:layout_height="82px"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="All"
+                android:textColor="@color/blue"
+                android:textSize="30px" />
+
+            <View
+                android:id="@+id/view_all"
+                android:layout_width="60px"
+                android:layout_height="5px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/blue" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_to_accept"
+            android:layout_width="0dp"
+            android:layout_height="82px"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_to_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Pending"
+                android:textColor="@color/a33"
+                android:textSize="30px" />
+
+            <View
+                android:id="@+id/view_to_accept"
+                android:layout_width="60px"
+                android:layout_height="5px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_finding"
+            android:layout_width="0dp"
+            android:layout_height="82px"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_finding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="找货中"
+                android:textColor="@color/a33"
+                android:textSize="30px" />
+
+            <View
+                android:id="@+id/view_finding"
+                android:layout_width="60px"
+                android:layout_height="5px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_result"
+            android:layout_width="0dp"
+            android:layout_height="82px"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Processed"
+                android:textColor="@color/a33"
+                android:textSize="30px" />
+
+            <View
+                android:id="@+id/view_result"
+                android:layout_width="60px"
+                android:layout_height="5px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_cancel"
+            android:layout_width="0dp"
+            android:layout_height="82px"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="已取消"
+                android:textColor="@color/a33"
+                android:textSize="30px" />
+
+            <View
+                android:id="@+id/view_cancel"
+                android:layout_width="60px"
+                android:layout_height="5px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/e6" />
+
+    <ListView
+        android:divider="@color/f2"
+        android:dividerHeight="10px"
+        android:background="@color/white"
+        android:id="@+id/lv_free_search_goods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+</LinearLayout>

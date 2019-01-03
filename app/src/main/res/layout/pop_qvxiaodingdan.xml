@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:background="@drawable/bj_qvxiaodingdan"
+        android:layout_width="550px"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="25px"
+            android:layout_marginBottom="15px"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:text="Please choose your reason for canceling the order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="1px" />
+       <RadioGroup
+           android:layout_marginLeft="20px"
+           android:orientation="vertical"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+           <RadioButton
+               android:background="@null"
+               android:button="@null"
+               android:drawableRight="@drawable/btn_radio_qvxiaodingdan"
+               android:text="I don't buy"
+               android:textSize="12sp"
+               android:textColor="@color/ae"
+               android:layout_width="match_parent"
+               android:layout_height="62px" />
+           <ImageView
+               android:scaleType="fitXY"
+               android:src="@drawable/line_qvxiaodingdan"
+               android:layout_width="482px"
+               android:layout_height="1px" />
+           <RadioButton
+               android:text="this infomation is not correct,buy again"
+               android:background="@null"
+               android:button="@null"
+               android:drawableRight="@drawable/btn_radio_qvxiaodingdan"
+               android:textSize="12sp"
+               android:textColor="@color/ae"
+               android:layout_width="match_parent"
+               android:layout_height="62px" />
+           <ImageView
+               android:scaleType="fitXY"
+               android:src="@drawable/line_qvxiaodingdan"
+               android:layout_width="482px"
+               android:layout_height="1px" />
+           <RadioButton
+               android:background="@null"
+               android:button="@null"
+               android:drawableRight="@drawable/btn_radio_qvxiaodingdan"
+               android:text="No goods"
+               android:textSize="12sp"
+               android:textColor="@color/ae"
+               android:layout_width="match_parent"
+               android:layout_height="62px" />
+           <ImageView
+               android:scaleType="fitXY"
+               android:src="@drawable/line_qvxiaodingdan"
+               android:layout_width="482px"
+               android:layout_height="1px" />
+           <RadioButton
+               android:background="@null"
+               android:button="@null"
+               android:drawableRight="@drawable/btn_radio_qvxiaodingdan"
+               android:text="Logistics is too slow"
+               android:textSize="12sp"
+               android:textColor="@color/ae"
+               android:layout_width="match_parent"
+               android:layout_height="62px" />
+           <ImageView
+               android:scaleType="fitXY"
+               android:src="@drawable/line_qvxiaodingdan"
+               android:layout_width="482px"
+               android:layout_height="1px" />
+           <RadioButton
+               android:background="@null"
+               android:button="@null"
+               android:drawableRight="@drawable/btn_radio_qvxiaodingdan"
+               android:text="others"
+               android:textSize="12sp"
+               android:textColor="@color/ae"
+               android:layout_width="match_parent"
+               android:layout_height="62px" />
+           <ImageView
+               android:scaleType="fitXY"
+               android:src="@drawable/line_qvxiaodingdan"
+               android:layout_width="482px"
+               android:layout_height="1px" />
+       </RadioGroup>
+        <LinearLayout
+            android:layout_marginTop="38px"
+            android:layout_marginBottom="38px"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="cancel"
+                android:textColor="@color/a0f75c3"
+                android:background="@drawable/qvxiao"
+                android:layout_width="194px"
+                android:layout_height="47px" />
+            <TextView
+                android:layout_marginLeft="46px"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="cofirm"
+                android:textColor="@color/white"
+                android:background="@drawable/queding"
+                android:layout_width="194px"
+                android:layout_height="47px" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

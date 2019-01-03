@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Intension (color):"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includequalitydetail_qiangdu"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Coloured light:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includequalitydetail_seguang"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            android:id="@+id/textView7"
+            style="@style/tvorderneed"
+            android:text="Appearance:" />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includequalitydetail_waiguan"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Moistures:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includequalitydetail_shuifen"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Insolubles:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includequalitydetail_burongwu"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Solubility:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includequalitydetail_rongjiedu"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Cl content:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includequalitydetail_lvlizihanliang"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Salinity:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includequalitydetail_yanfen"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Conductivity:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includequalitydetail_diandaolv"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Michler's ketone:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includequalitydetail_mishitong"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="32px">
+
+        <TextView
+            style="@style/tvorderneed"
+            android:text="Solid content:"
+            />
+
+        <EditText
+            android:text=""
+            android:id="@+id/et_includequalitydetail_guhanliang"
+            style="@style/et_orderneed"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+</LinearLayout>

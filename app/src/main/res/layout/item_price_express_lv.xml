@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
+        android:paddingTop="15px"
+        android:paddingBottom="15px">
+
+        <TextView
+            android:id="@+id/tv_price_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="$35.0"
+            android:textSize="34px"
+            android:textColor="@color/ef2f2e"/>
+
+        <TextView
+            android:id="@+id/tv_privce_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="68px"
+            android:layout_marginRight="20px"
+            android:layout_gravity="center_vertical"
+            android:text="Man was born free, and everywhere he is in chains.Man was born free, and everywhere he is in chains."
+            android:textColor="@color/t333"
+            android:textSize="26px"/>
+    </LinearLayout>
+
+</LinearLayout>

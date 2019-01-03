@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhw.chemistrywave.activity.MyCompanyInfoActivity">
+
+    <include layout="@layout/titlebar"/>
+
+    <LinearLayout
+        android:id="@+id/ll_company_name"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="30px">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/my_information"
+            android:text="公司名称" />
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_company_name"
+            style="@style/my_information_hui"
+            android:text="" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30px"
+            android:src="@drawable/arrow_right"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_company_phone"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="30px">
+
+        <TextView
+            android:id="@+id/tv_phone"
+            style="@style/my_information"
+            android:text="公司电话" />
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_company_phone"
+            style="@style/my_information_hui"
+            android:text="" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30px"
+            android:src="@drawable/arrow_right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_company_address"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="30px">
+
+        <TextView
+            android:id="@+id/tv_address"
+            style="@style/my_information"
+            android:text="公司地址"
+            />
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_company_address"
+            style="@style/my_information_hui"
+            android:text=""
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right"
+            android:layout_marginRight="30px"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_company_sex"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="30px">
+
+        <TextView
+            android:id="@+id/tv_sex"
+            style="@style/my_information"
+            android:text="Com-person sex"
+            />
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_company_sex"
+            style="@style/my_information_hui"
+            android:text=""
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right"
+            android:layout_marginRight="30px"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:background="@color/f2"/>
+    <LinearLayout
+        android:id="@+id/ll_company_info"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="30px">
+
+        <TextView
+            style="@style/my_information"
+            android:text="Shop information"
+            />
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_company_info"
+            style="@style/my_information_hui"
+            android:text=""
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right"
+            android:layout_marginRight="30px"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_company_environment"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="30px">
+
+        <TextView
+            style="@style/my_information"
+            android:text="Shop environment"
+            />
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_company_environment"
+            style="@style/my_information_hui"
+            android:text=""
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right"
+            android:layout_marginRight="30px"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_company_product"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="30px">
+
+        <TextView
+            style="@style/my_information"
+            android:text="production photos"
+            />
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_company_product"
+            style="@style/my_information_hui"
+            android:text=""
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right"
+            android:layout_marginRight="30px"/>
+
+    </LinearLayout>
+
+</LinearLayout>

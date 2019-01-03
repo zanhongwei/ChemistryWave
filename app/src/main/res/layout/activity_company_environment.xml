@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhw.chemistrywave.activity.CompanyEnvironmentActivity">
+
+    <include layout="@layout/titlebar"/>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="600px"
+        android:layout_height="80px"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/upload"
+        android:layout_marginTop="70px"
+        android:text="Upload"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="32px"
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_environment"
+        android:layout_width="238px"
+        android:layout_height="238px"
+        android:layout_marginTop="80px"
+        android:layout_marginLeft="20px"
+        />
+
+
+
+</LinearLayout>

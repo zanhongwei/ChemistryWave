@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        layout="@layout/titlebar"/>
+
+    <ExpandableListView
+        android:id="@+id/lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#fff"
+        android:childIndicator="@null"
+        android:groupIndicator="@null"
+        android:divider="@color/e6"
+        android:dividerHeight="1px"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white">
+
+        <CheckBox
+            android:id="@+id/cb_all"
+            style="@style/cb_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="25px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20px"
+            android:text="All"
+            android:textColor="@color/a99"
+            android:textSize="28px" />
+
+        <LinearLayout
+            android:id="@+id/ll_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_delect"
+                android:layout_width="250px"
+                android:layout_height="match_parent"
+                android:background="#ef2f2e"
+                android:gravity="center"
+                android:text="Delect"
+                android:textColor="@color/white"
+                android:textSize="32px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_jiesuan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/tv_heji"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20px"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Total:  $0.00"
+                android:textColor="@color/a33"
+                android:textSize="34px"/>
+
+            <TextView
+                android:id="@+id/tv_jiesuan"
+                android:layout_width="210px"
+                android:layout_height="match_parent"
+                android:background="#ef2f2e"
+                android:gravity="center"
+                android:text="Buy"
+                android:textColor="@color/white"
+                android:textSize="32px" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

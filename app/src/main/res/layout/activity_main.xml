@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    tools:context="com.zhw.chemistrywave.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140px"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="100px"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_homepage"
+                android:layout_width="0px"
+                android:layout_height="100px"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="5px"
+                    android:background="@color/e6" />
+
+                <ImageView
+                    android:id="@+id/ib_homepage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/home_icon_selected" />
+
+                <TextView
+                    android:id="@+id/tv_homepage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:text="Homepage"
+                    android:textColor="@color/a232326"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_classiffy"
+                android:layout_width="0px"
+                android:layout_height="100px"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="5px"
+                    android:background="@color/e6" />
+
+                <ImageView
+                    android:id="@+id/ib_classiffy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/fenlei_unselected" />
+
+                <TextView
+                    android:id="@+id/tv_classiffy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:text="Classiffy"
+                    android:textColor="@color/a232326"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_inquiry"
+            android:layout_width="0px"
+            android:layout_height="140px"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/mianfeizhaohuo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inquiry"
+                android:textColor="@color/a232326"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="100px"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:id="@+id/ll_order"
+                android:layout_width="0px"
+                android:layout_height="100px"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="5px"
+                    android:background="@color/e6" />
+
+                <ImageView
+                    android:id="@+id/ib_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/order_unselected" />
+
+                <TextView
+                    android:id="@+id/tv_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:text="Order"
+                    android:textColor="@color/a232326"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_mine"
+                android:layout_width="0px"
+                android:layout_height="100px"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="5px"
+                    android:background="@color/e6" />
+
+                <ImageView
+                    android:id="@+id/ib_mine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/wode_unselected" />
+
+                <TextView
+                    android:id="@+id/tv_mine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:text="Mine"
+                    android:textColor="@color/a232326"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <RadioGroup
+
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/rb_main_homepage"
+            style="@style/bottem_tab_menu"
+            android:layout_gravity="center"
+            android:layout_marginTop="6px"
+            android:drawableTop="@drawable/homepage"
+            android:text="Homepage" />
+
+        <RadioButton
+            android:id="@+id/rb_main_fenlei"
+            style="@style/bottem_tab_menu"
+            android:layout_gravity="center"
+            android:layout_marginTop="6px"
+            android:drawableTop="@drawable/fenlei"
+            android:text="Classify" />
+
+        <RadioButton
+            android:id="@+id/rb_main_mianfeizhaohuo"
+            style="@style/bottem_tab_menu"
+            android:layout_width="0dp"
+            android:layout_height="120px"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/mianfeizhaohuo"
+            android:text="Inquiry" />
+
+        <RadioButton
+            android:id="@+id/rb_main_order"
+            style="@style/bottem_tab_menu"
+            android:layout_marginTop="6px"
+            android:drawableTop="@drawable/order"
+            android:text="Order" />
+
+        <RadioButton
+            android:id="@+id/rb_main_mycenter"
+            style="@style/bottem_tab_menu"
+            android:layout_marginTop="6px"
+            android:drawableTop="@drawable/wode"
+            android:text="Mine" />
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bj_forgetpwd"
+
+    tools:context="com.axehome.chemistrywaves.activitys.RegisterSupplierActivity">
+<RelativeLayout
+    android:id="@+id/rl_registersupplier_back"
+    android:layout_marginTop="40px"
+    android:layout_width="140px"
+    android:layout_height="90px">
+    <ImageView
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="35px"
+        android:src="@drawable/fanhui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="67px"
+        android:textSize="17sp"
+        android:text="请填写公司真实信息"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+
+        android:paddingLeft="14px"
+        android:id="@+id/et_registersupplier_companyname"
+        android:layout_marginTop="105px"
+        android:layout_gravity="center"
+        android:hint="请输入您的公司名称"
+        android:textColor="@color/ccedff"
+        android:textColorHint="@color/ccedff"
+        android:textSize="12sp"
+        android:background="@drawable/shaoe_companyname"
+        android:layout_width="439px"
+        android:layout_height="65px" />
+    <EditText
+        android:paddingLeft="14px"
+        android:id="@+id/et_registersupplier_companyaddress"
+        android:layout_marginTop="58px"
+        android:layout_gravity="center"
+        android:hint="请输入您的公司地址"
+        android:textColor="@color/ccedff"
+        android:textColorHint="@color/ccedff"
+        android:textSize="12sp"
+        android:background="@drawable/shaoe_companyname"
+        android:layout_width="439px"
+        android:layout_height="65px" />
+    <EditText
+        android:paddingLeft="14px"
+        android:id="@+id/et_registersupplier_companyphone"
+        android:layout_marginTop="58px"
+        android:layout_gravity="center"
+        android:hint="请输入您的公司座机电话"
+        android:textColor="@color/ccedff"
+        android:textColorHint="@color/ccedff"
+        android:textSize="12sp"
+        android:background="@drawable/shaoe_companyname"
+        android:layout_width="439px"
+        android:layout_height="65px" />
+    <TextView
+        android:layout_marginTop="200px"
+        android:gravity="right"
+        android:layout_gravity="center"
+        android:id="@+id/tv_registersupplier_haveaccount"
+        android:padding="10px"
+        android:text="已有账号"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_width="442px"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_registersupplier_register"
+        android:layout_width="437px"
+        android:layout_height="64px"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_czmm"
+        android:gravity="center"
+        android:text="注册"
+        android:textColor="@color/a064264" />
+</LinearLayout>

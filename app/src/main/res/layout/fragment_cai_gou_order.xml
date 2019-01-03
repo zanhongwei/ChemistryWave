@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+    <android.support.design.widget.TabLayout
+
+    android:id="@+id/tab_caigouorderf"
+    app:tabTextAppearance="@style/TabLayoutTextStyle"
+    app:tabIndicatorHeight="2dp"
+
+    app:tabSelectedTextColor="@color/b80d9"
+    app:tabIndicatorColor="@color/f75c3"
+    app:tabTextColor="@color/a8"
+    android:layout_width="match_parent"
+    android:layout_height="67px"
+    tools:ignore="MissingPrefix">
+
+    </android.support.design.widget.TabLayout>
+    <TextView
+    android:background="@color/ee"
+    android:layout_width="match_parent"
+    android:layout_height="10px" />
+    <ListView
+    android:id="@+id/lv_caigouorderf"
+    android:dividerHeight="18px"
+    android:divider="@color/ef"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    </ListView>
+
+</LinearLayout>

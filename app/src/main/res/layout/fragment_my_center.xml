@@ -1,0 +1,284 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/f2"
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+   <RelativeLayout
+       android:background="@drawable/bj_mycenter"
+       android:layout_width="match_parent"
+       android:layout_height="385px">
+        <com.zhw.chemistrywave.view.CircleImageView
+            android:id="@+id/civ_mycenterf_headimage"
+            android:layout_marginTop="42px"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/headimage_mycenter"
+            app:layout_auto_baseheight="width"
+            android:layout_width="130px"
+            android:layout_height="130px" />
+       <TextView
+           android:text=""
+           android:textSize="32px"
+           android:textColor="@color/white"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/textView"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="12px"
+           android:layout_below="@+id/civ_mycenterf_headimage"/>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="20px"
+           android:layout_alignParentBottom="true"
+           android:orientation="horizontal"
+           android:gravity="center_vertical">
+           <LinearLayout
+               android:id="@+id/ll_settings"
+               android:layout_width="0px"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:orientation="vertical">
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/shezhi"
+                   android:layout_gravity="center"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Settings"
+                   android:layout_gravity="center"
+                   android:textColor="#fff"
+                   android:layout_marginTop="8px"
+                   android:textSize="26px"/>
+               
+           </LinearLayout>
+           <View
+               android:layout_width="1px"
+               android:layout_height="58px"
+               android:background="#ffffff"/>
+           <LinearLayout
+               android:id="@+id/ll_message"
+               android:layout_width="0px"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:orientation="vertical">
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/xiaoxi"
+                   android:layout_gravity="center"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Messages"
+                   android:layout_gravity="center"
+                   android:textColor="#fff"
+                   android:layout_marginTop="8px"
+                   android:textSize="26px"/>
+           </LinearLayout>
+           <View
+               android:id="@+id/view_shopcar"
+               android:layout_width="1px"
+               android:layout_height="58px"
+               android:background="#ffffff"/>
+           <LinearLayout
+               android:id="@+id/ll_shopcar"
+               android:layout_width="0px"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:orientation="vertical">
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/gouwuche"
+                   android:layout_gravity="center"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Shopping cart"
+                   android:layout_gravity="center"
+                   android:textColor="#fff"
+                   android:layout_marginTop="8px"
+                   android:textSize="26px"/>
+           </LinearLayout>
+       </LinearLayout>
+   </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_mycenterf_wodeshangping"
+            android:layout_marginTop="21px"
+            style="@style/ll_mycenter_wodesp">
+            <TextView
+                android:text="My goods"
+                style="@style/tv_mycenter_wodesp" />
+        <ImageView
+
+            android:src="@drawable/arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/ll_mycenterf_tianjiashangping"
+            style="@style/ll_mycenter_wodesp">
+            <TextView
+                android:text="Add goods"
+                style="@style/tv_mycenter_wodesp" />
+            <ImageView
+                android:src="@drawable/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_mycenterf_wodeziliao"
+
+            style="@style/ll_mycenter_wodesp">
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/tv_mycenter_wodesp"
+                android:text="My information" />
+
+            <ImageView
+
+                android:src="@drawable/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_mycenterf_xitongxunpan"
+            style="@style/ll_mycenter_wodesp">
+            <TextView
+                android:text="System inquiry"
+                style="@style/tv_mycenter_wodesp" />
+            <ImageView
+
+                android:src="@drawable/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_mycenterf_gongyingshangxunpan"
+            style="@style/ll_mycenter_wodesp">
+            <TextView
+                android:text="Supplier inquiry"
+                style="@style/tv_mycenter_wodesp" />
+            <ImageView
+
+                android:src="@drawable/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/ll_mycenterf_daichulixunpan"
+            style="@style/ll_mycenter_wodesp">
+            <TextView
+                android:text="Pendding inquiry"
+                style="@style/tv_mycenter_wodesp" />
+            <ImageView
+
+                android:src="@drawable/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/ll_mycenterf_yichulixunpan"
+            style="@style/ll_mycenter_wodesp">
+            <TextView
+                android:text="Processed inquiry"
+                style="@style/tv_mycenter_wodesp" />
+            <ImageView
+
+                android:src="@drawable/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+
+
+
+            android:id="@+id/ll_mycenterf_pingtaijiance"
+            android:layout_marginTop="21px"
+            style="@style/ll_mycenter_wodesp">
+            <TextView
+                android:text="Harlan eye"
+                style="@style/tv_mycenter_wodesp" />
+            <ImageView
+
+                android:src="@drawable/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_mycenterf_hualangzhiyan"
+            style="@style/ll_mycenter_wodesp">
+            <TextView
+                android:text="Price express"
+                style="@style/tv_mycenter_wodesp" />
+            <ImageView
+
+                android:src="@drawable/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_mycenterf_zhaodaili"
+            style="@style/ll_mycenter_wodesp">
+            <TextView
+                android:text="Platform guarantee"
+                style="@style/tv_mycenter_wodesp" />
+            <ImageView
+                android:src="@drawable/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_mycenterf_zhengxinchaxun"
+            style="@style/ll_mycenter_wodesp">
+            <TextView
+                android:text="Supply chain finance"
+                style="@style/tv_mycenter_wodesp" />
+            <ImageView
+                android:src="@drawable/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_mycenterf_tousujiufen"
+            style="@style/ll_mycenter_wodesp"
+            android:layout_marginBottom="59px"
+            android:visibility="gone">
+            <TextView
+                android:text="Complaint dispute"
+                style="@style/tv_mycenter_wodesp" />
+            <ImageView
+                android:src="@drawable/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_baseinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="goods base information"
+            android:textColor="@color/textcolor"/>
+
+        <ImageView
+            android:layout_width="31px"
+            android:layout_height="31px"
+            android:layout_gravity="center"
+            android:layout_marginRight="31px"
+            android:src="@drawable/edit"/>
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:gravity="center_vertical"
+            android:text="goods name:"
+            android:textColor="@color/textcolorqian"/>
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"/>
+
+
+    </LinearLayout>
+
+    <View
+        style="@style/linescu"></View>
+
+    <LinearLayout
+        android:id="@+id/ll_qualitydetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Quality detail"
+            android:textColor="@color/textcolor"/>
+
+        <ImageView
+            android:layout_width="31px"
+            android:layout_height="31px"
+            android:layout_gravity="center"
+            android:layout_marginRight="31px"
+            android:src="@drawable/edit"/>
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:id="@+id/ll_metalpercent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Metal content"
+            android:textColor="@color/textcolor"/>
+
+        <ImageView
+            android:layout_width="31px"
+            android:layout_height="31px"
+            android:layout_gravity="center"
+            android:layout_marginRight="31px"
+            android:src="@drawable/edit"/>
+    </LinearLayout>
+
+    <View
+        style="@style/lines"></View>
+
+    <LinearLayout
+        android:id="@+id/ll_jiancebaogao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Examining report"
+            android:textColor="@color/textcolor"/>
+
+        <ImageView
+            android:layout_width="31px"
+            android:layout_height="31px"
+            android:layout_gravity="center"
+            android:layout_marginRight="31px"
+            android:src="@drawable/edit"/>
+    </LinearLayout>
+
+    <View
+        style="@style/linescu"></View>
+
+    <LinearLayout
+        android:id="@+id/ll_zhekou"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="折扣"
+            android:textColor="@color/textcolor"/>
+
+        <ImageView
+            android:layout_width="31px"
+            android:layout_height="31px"
+            android:layout_gravity="center"
+            android:layout_marginRight="31px"
+            android:src="@drawable/arrow_right"/>
+    </LinearLayout>
+    <View
+        style="@style/lines"></View>
+</LinearLayout>

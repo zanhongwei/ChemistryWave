@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="465px">
+        <ListView
+            android:scrollbars="none"
+            android:id="@+id/lv_fenlei1"
+
+            android:layout_width="375px"
+            android:divider="@null"
+            android:dividerHeight="50px"
+            android:layout_height="match_parent"></ListView>
+        <ListView
+            android:scrollbars="none"
+            android:id="@+id/lv_fenlei2"
+
+            android:layout_width="375px"
+            android:divider="@null"
+            android:dividerHeight="50px"
+            android:layout_height="match_parent"></ListView>
+    </LinearLayout>
+    <TextView
+        android:background="@color/e6"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="90px">
+        <TextView
+            android:id="@+id/tv_fenlei_reset"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="重置"
+            android:textColor="@color/t333"
+            android:textSize="34px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_fenlei_sure"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:background="#f0302f"
+            android:textSize="34px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

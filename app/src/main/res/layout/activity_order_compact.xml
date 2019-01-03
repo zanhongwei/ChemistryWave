@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+<include
+    layout="@layout/titlebar"/>
+
+
+        <WebView
+            android:id="@+id/wb_contract"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></WebView>
+
+
+    <RelativeLayout
+        android:layout_marginTop="47px"
+        android:paddingLeft="28px"
+        android:paddingRight="31px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/tv_ordercompact_content"
+            android:layout_marginBottom="200px"
+            android:textSize="30px"
+            android:textColor="@color/a66"
+            android:lineSpacingExtra="8px"
+            android:text="@string/compactcontent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

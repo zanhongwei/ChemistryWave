@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="243px">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30px"
+            android:background="@color/white" />
+
+        <ImageView
+            android:id="@+id/iv_product_img"
+            android:layout_width="243px"
+            android:layout_height="243px"
+            android:layout_marginLeft="20px"
+            android:background="@drawable/bg_img_changpin" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@+id/iv_product_img"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="30px"
+                android:text="￥3000.00"
+                android:textColor="@color/ef2f2e"
+                android:textSize="26px" />
+
+            <ImageView
+                android:id="@+id/iv_guanbi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="28px"
+                android:layout_marginTop="30px"
+                android:src="@drawable/guanbi" />
+
+            <TextView
+                android:id="@+id/tv_product_params"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10px"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="50px"
+                android:layout_marginTop="30px"
+                android:lineSpacingExtra="10px"
+                android:text="Selected：“”,“”,“”"
+                android:textColor="@color/a32"
+                android:textSize="30px" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="50px"
+        android:scrollbars="none"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:text="Intension(Color)"
+                    android:textColor="@color/a33"
+                    android:textSize="30px" />
+
+                <com.zhw.chemistrywave.view.MyGridView
+                    android:id="@+id/gv_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="30px"
+                    android:horizontalSpacing="50px"
+                    android:verticalSpacing="30px"
+                    android:numColumns="3"
+                    android:visibility="gone"/>
+                
+                <TextView
+                    android:id="@+id/tv_color_power"
+                    android:layout_width="150px"
+                    android:minWidth="150px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="30px"
+                    android:layout_marginBottom="30px"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/color_power_pressed"
+                    android:ellipsize="end"
+                    android:textColor="@color/white"
+                    android:textSize="30px"
+                    android:gravity="center"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="32px"
+                    android:layout_marginRight="32px"
+                    android:background="@color/e6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50px"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:text="Coloured light"
+                    android:textColor="@color/a33"
+                    android:textSize="30px" />
+
+                <com.zhw.chemistrywave.view.MyGridView
+                    android:id="@+id/gv_colour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="30px"
+                    android:horizontalSpacing="50px"
+                    android:verticalSpacing="30px"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/tv_color_light"
+                    android:layout_width="150px"
+                    android:minWidth="150px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="30px"
+                    android:layout_marginBottom="30px"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/color_power_pressed"
+                    android:ellipsize="end"
+                    android:textColor="@color/white"
+                    android:textSize="30px"
+                    android:gravity="center"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="32px"
+                    android:layout_marginRight="32px"
+                    android:background="@color/e6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50px"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:text="Packaging"
+                    android:textColor="@color/a33"
+                    android:textSize="30px" />
+
+                <com.zhw.chemistrywave.view.MyGridView
+                    android:id="@+id/gv_package"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="30px"
+                    android:horizontalSpacing="50px"
+                    android:verticalSpacing="30px"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_package"
+                    android:layout_width="150px"
+                    android:minWidth="150px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="30px"
+                    android:layout_marginBottom="30px"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/color_power_pressed"
+                    android:ellipsize="end"
+                    android:textColor="@color/white"
+                    android:textSize="30px"
+                    android:gravity="center"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="32px"
+                    android:layout_marginRight="32px"
+                    android:background="@color/e6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40px"
+                android:orientation="horizontal"
+                android:layout_marginBottom="46px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30px"
+                    android:text="Number"
+                    android:textColor="@color/a33"
+                    android:textSize="30px" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:id="@+id/iv_subtract"
+                    android:layout_width="91px"
+                    android:layout_height="75px"
+                    android:src="@drawable/jianhao"/>
+                <TextView
+                    android:id="@+id/tv_num"
+                    android:layout_width="100px"
+                    android:layout_height="75px"
+                    android:background="@color/f7"
+                    android:textSize="36px"
+                    android:text="1"
+                    android:gravity="center"
+                    android:textColor="@color/a33"/>
+                <ImageView
+                    android:id="@+id/iv_add"
+                    android:layout_width="91px"
+                    android:layout_height="75px"
+                    android:src="@drawable/jiahao"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_cart"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Add to shopcar"
+                    android:background="#ffb422"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="30px"/>
+                <TextView
+                    android:id="@+id/tv_buy"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Buy"
+                    android:background="#ff5039"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="30px"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

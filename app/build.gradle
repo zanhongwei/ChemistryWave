@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "27.0.3"
+    defaultConfig {
+        applicationId "com.zhw.chemistrywave"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':pickerview')
+    compile project(':pullToRefrece')
+    compile project(':zProgressHUD')
+    compile('com.github.LuckSiege.PictureSelector:picture_library:v2.1.7') {
+        exclude group: 'com.github.bumptech.glide'
+    }
+    compile('cn.qqtheme.framework:WheelPicker:1.5.5') {
+        exclude group: 'com.android.support'
+    }
+    compile files('libs/universal-image-loader-1.9.3.jar')
+    compile 'com.blankj:utilcode:1.1.5'
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.zhy:autolayout:1.4.5'
+    compile 'com.jakewharton:butterknife:8.7.0'
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.google.code.gson:gson:2.8.1'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.zhy:okhttputils:2.6.2'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.alibaba:fastjson:1.2.33'
+    compile 'com.githang:status-bar-compat:latest.integration'
+    compile 'com.android.support:design:25.2.0'
+    compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.7'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.zhy.base:fileprovider:1.0.0'
+    compile 'com.github.gittjy:LoadingDialog:1.0.2'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
+}

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/f2"
+    tools:context="com.axehome.chemistrywaves.activitys.DisCountActivity">
+<include
+    layout="@layout/titlebar"/>
+    <LinearLayout
+
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<LinearLayout
+    android:id="@+id/ll_discount_youhuizhekoucb"
+    android:gravity="center_vertical"
+    android:paddingLeft="43px"
+    android:paddingTop="44px"
+    android:paddingRight="47px"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_weight="1"
+        android:text="优惠折扣"
+        android:textSize="32px"
+        android:textColor="#303133"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:clickable="false"
+        android:id="@+id/cb_discount_youhuizhekou"
+        style="@style/CustomCheckboxThemeDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+        <TextView
+            android:layout_marginTop="12px"
+            android:layout_marginLeft="43px"
+            android:textSize="24px"
+            android:textColor="#919299"
+            android:text="设置优惠价格"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:background="@color/e6"
+            android:layout_marginTop="30px"
+            android:layout_gravity="center"
+            android:layout_width="670px"
+            android:layout_height="1px" />
+        <LinearLayout
+            android:id="@+id/ll_discount_youhuizhekou"
+            android:visibility="visible"
+            android:layout_marginBottom="51px"
+            android:layout_marginTop="40px"
+            android:gravity="center_vertical"
+            android:paddingLeft="43px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="¥"
+                android:textColor="@color/a66"
+                android:textSize="60px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/et_discount_youhuizhekou"
+                android:hint="请输入优惠价格"
+                android:paddingLeft="20px"
+                android:textSize="40px"
+                android:layout_marginLeft="23px"
+                android:background="@drawable/jiagek"
+                android:layout_width="454px"
+                android:layout_height="83px" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginTop="30px"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_discount_xianshimiaoshacb"
+            android:gravity="center_vertical"
+            android:paddingLeft="43px"
+            android:paddingTop="44px"
+            android:paddingRight="47px"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:text="限时秒杀"
+                android:textSize="32px"
+                android:textColor="#303133"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:clickable="false"
+                android:id="@+id/cb_discount_xianshimiaosha"
+                style="@style/CustomCheckboxThemeDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="12px"
+            android:layout_marginLeft="43px"
+            android:textSize="24px"
+            android:textColor="#919299"
+            android:text="设置优惠价格和事件"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:background="@color/e6"
+            android:layout_marginTop="30px"
+            android:layout_gravity="center"
+            android:layout_width="670px"
+            android:layout_height="1px" />
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_discount_xianshimiaosha"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:layout_marginTop="40px"
+                android:gravity="center_vertical"
+                android:paddingLeft="43px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="¥"
+                    android:textColor="@color/a66"
+                    android:textSize="60px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/et_discount_xianshimiaosha"
+                    android:text="123"
+                    android:paddingLeft="20px"
+                    android:textSize="40px"
+                    android:layout_marginLeft="23px"
+                    android:background="@drawable/jiagek"
+                    android:layout_width="454px"
+                    android:layout_height="83px" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="40px"
+                android:layout_marginBottom="50px"
+                android:paddingLeft="43px"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/et_discount_miaoshadatestart"
+                    android:gravity="center"
+                    android:textColor="@color/a66"
+                    android:textSize="30px"
+                    android:text="2017-03-02		15:30"
+                    android:background="@drawable/bj_riqi"
+                    android:layout_width="300px"
+                    android:layout_height="90px" />
+                <TextView
+                    android:layout_marginLeft="10px"
+                    android:layout_marginRight="10px"
+                    android:background="@color/b3"
+                    android:layout_width="35px"
+                    android:layout_height="1px" />
+                <EditText
+                    android:id="@+id/et_discount_miaoshadateend"
+                    android:gravity="center"
+                    android:textColor="@color/a66"
+                    android:textSize="30px"
+                    android:text="2017-03-02		15:30"
+                    android:background="@drawable/bj_riqi"
+                    android:layout_width="300px"
+                    android:layout_height="90px" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_discount_save"
+        android:layout_marginTop="300px"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="30px"
+        android:background="@drawable/bj_yellow"
+        android:layout_width="391px"
+        android:layout_height="76px" />
+</LinearLayout>

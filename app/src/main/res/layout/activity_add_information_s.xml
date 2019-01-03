@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bj_forgetpwd"
+    tools:context="com.zhw.chemistrywave.activity.AddInformationActivity">
+    <RelativeLayout
+        android:id="@+id/rl_register_back"
+        android:layout_marginTop="40px"
+        android:layout_width="match_parent"
+        android:layout_height="90px">
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="130px"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_marginLeft="35px"
+                android:layout_centerVertical="true"
+                android:src="@drawable/fanhui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80px"
+        android:text="please fill in company real information"
+        android:textColor="#ffffffff"
+        android:textColorHint="#80ffffff"
+        android:textSize="26px"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67px"
+        android:paddingRight="90px">
+        <TextView
+            style="@style/textview_addinformation_style"
+            android:text="Name"/>
+
+        <EditText
+            android:id="@+id/et_name"
+            style="@style/daibaibian_shurukuang"
+            android:hint="Please fill in company name"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:paddingRight="90px">
+        <TextView
+            style="@style/textview_addinformation_style"
+            android:text="Address"/>
+
+        <EditText
+            android:id="@+id/et_address"
+            style="@style/daibaibian_shurukuang"
+            android:hint="Please fill in company address"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:paddingRight="90px">
+        <TextView
+            style="@style/textview_addinformation_style"
+            android:text="Contact person"/>
+
+        <EditText
+            android:id="@+id/et_contact_person"
+            style="@style/daibaibian_shurukuang"
+            android:hint="please fill in contact person"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:paddingRight="90px">
+        <TextView
+            style="@style/textview_addinformation_style"
+            android:text="Contact number"/>
+
+        <EditText
+            android:id="@+id/et_contact_phone"
+            style="@style/daibaibian_shurukuang"
+            android:hint="Please fill in contact number"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:paddingRight="90px">
+        <TextView
+            style="@style/textview_addinformation_style"
+            android:text="Business license"/>
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="105px"
+            android:layout_weight="2">
+            <RelativeLayout
+                android:id="@+id/rl_add_img"
+                android:layout_width="213px"
+                android:layout_height="105px"
+                android:background="@drawable/bg_et_daibaibiankuang">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/tianjia"
+                    android:layout_centerInParent="true" />
+                <ImageView
+                    android:id="@+id/iv_add_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_gravity="center_vertical"
+                android:text="Upload"
+                android:textColor="@color/white"
+                android:textSize="24px"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:paddingRight="90px">
+        <TextView
+            style="@style/textview_addinformation_style"
+            android:text="Others"/>
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="105px"
+            android:layout_weight="2">
+            <RelativeLayout
+                android:id="@+id/rl_add_others"
+                android:layout_width="213px"
+                android:layout_height="105px"
+                android:background="@drawable/bg_et_daibaibiankuang">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/tianjia"
+                    android:layout_centerInParent="true" />
+                <ImageView
+                    android:id="@+id/iv_add_others"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_gravity="center_vertical"
+                android:text="Upload attachment"
+                android:textColor="@color/white"
+                android:textSize="24px"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:layout_weight="1"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="550px"
+            android:layout_height="64px"
+            android:background="@drawable/bg_btn_register"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="Register"
+            android:textColor="@color/blue"
+            android:textSize="30px"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:id="@+id/tv_to_login"
+            android:layout_width="wrap_content"
+            android:layout_height="30px"
+            android:layout_alignRight="@+id/btn_register"
+            android:layout_above="@+id/btn_register"
+            android:layout_marginBottom="10px"
+            android:text="Existing account"
+            android:textColor="@color/white"
+            android:textSize="24px"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:layout_weight="1"/>
+</LinearLayout>

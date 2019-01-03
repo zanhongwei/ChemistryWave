@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="30px"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_itemlvcyjbz_goodsname"
+
+            android:textSize="28px"
+            android:textColor="@color/a33"
+            android:text="4,4'-二正十二烷氧基氧化偶氮苯"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginLeft="80px"
+            android:layout_marginRight="35px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_itemlvcyjbz_jingbiaojia"
+                android:text="300000.00元"
+                android:textSize="40px"
+                android:textColor="@color/ef2f2e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="5px"
+                android:text="竞标价"
+                android:textSize="12sp"
+                android:textColor="@color/a99"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="43px"
+        android:layout_marginBottom="20px"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="30px"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/a66"
+            android:textSize="24px"
+            android:text="纯度："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_itemlvcyjbz_chundu"
+            android:textColor="@color/a33"
+            android:textSize="24px"
+            android:text="99%"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="50px"
+            android:layout_marginRight="37px"
+            android:background="@color/cc"
+            android:layout_width="1px"
+            android:layout_height="22px" />
+        <TextView
+            android:textColor="@color/a66"
+            android:textSize="24px"
+            android:text="货期："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_itemlvcyjbz_huoqi"
+            android:textColor="@color/a33"
+            android:textSize="24px"
+            android:text="20天"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="70px"
+            android:id="@+id/tv_itemlvcyjbz_xuanzeta"
+            android:gravity="center"
+            android:text="选择他"
+            android:textSize="24px"
+            android:textColor="@color/f2"
+            android:background="@drawable/xuanzeta_cyjbz"
+            android:layout_width="120px"
+            android:layout_height="50px" />
+        <TextView
+            android:id="@+id/tv_itemlvcyjbz_chakan"
+            android:layout_marginLeft="20px"
+            android:gravity="center"
+            android:text="查看"
+            android:textSize="24px"
+            android:textColor="@color/f2"
+            android:background="@drawable/chakan_cyjbz"
+            android:layout_width="120px"
+            android:layout_height="50px" />
+    </LinearLayout>
+</LinearLayout>

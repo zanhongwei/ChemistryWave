@@ -1,0 +1,314 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="405px"
+                android:background="#00f">
+
+                <com.bigkoo.convenientbanner.ConvenientBanner
+                    android:id="@+id/homecb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:canLoop="true" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62px"
+                    android:layout_marginTop="53px"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <TextView
+                        android:id="@+id/tv_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="21px"
+                        android:text="天津"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/et_search"
+                        android:layout_width="545px"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/searchbg"
+                        android:focusable="false"
+                        android:hint="Please fill in the keyword "
+                        android:paddingLeft="70px"
+                        android:textColor="#4d525d"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_search"
+                        android:layout_width="30px"
+                        android:layout_height="30px"
+                        android:layout_alignLeft="@+id/et_search"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20px"
+                        android:src="@drawable/search" />
+
+                    <ImageView
+                        android:id="@+id/iv_home_news"
+                        android:layout_width="42px"
+                        android:layout_height="38px"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="28px"
+                        android:src="@drawable/news" />
+
+                    <ImageView
+                        android:id="@+id/iv_isnews"
+                        android:layout_width="13px"
+                        android:layout_height="13px"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="21px"
+                        android:layout_marginTop="7px"
+                        android:background="@drawable/shape_redyuan" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="106px"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="160px"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="NEWS"
+                    android:textColor="@color/homead"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="1px"
+                    android:layout_height="28px"
+                    android:layout_gravity="center"
+                    android:background="@drawable/verticallines" />
+
+                <com.zhw.chemistrywave.view.MarqueeView
+                    android:id="@+id/mqv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="false" />
+
+            </LinearLayout>
+
+            <View style="@style/lines"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="30px"
+                android:paddingTop="30px">
+
+                <LinearLayout
+                    android:id="@+id/ll_sdjj"
+                    style="@style/homell"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="84px"
+                        android:layout_height="84px"
+                        android:src="@drawable/jingjia" />
+
+                    <TextView
+                        style="@style/hometv"
+                        android:text="Complaint Dispute" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_sdcg"
+                    style="@style/homell">
+
+                    <ImageView
+                        android:layout_width="84px"
+                        android:layout_height="84px"
+                        android:src="@drawable/hualangzhiyan"
+
+                        />
+
+                    <TextView
+                        style="@style/hometv"
+                        android:text="Harlan\neye" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_xhgy"
+                    style="@style/homell">
+
+                    <ImageView
+                        android:layout_width="84px"
+                        android:layout_height="84px"
+                        android:src="@drawable/priceexpress" />
+
+                    <TextView
+                        style="@style/hometv"
+                        android:text="Price\nexpress" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_zkzq"
+                    style="@style/homell">
+
+                    <ImageView
+                        android:layout_width="84px"
+                        android:layout_height="84px"
+                        android:src="@drawable/platform" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        style="@style/hometv"
+                        android:text="Platform guarantee" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_mfzh"
+                    style="@style/homell">
+
+                    <ImageView
+                        android:layout_width="84px"
+                        android:layout_height="84px"
+                        android:src="@drawable/supply" />
+
+                    <TextView
+                        style="@style/hometv"
+                        android:text="Supply chain finance" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="105px"
+                    android:background="@color/white">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="70px"
+                        android:background="@color/e9e8e8" />
+
+                    <TextView
+                        android:layout_width="492px"
+                        android:layout_height="70px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/bg_tv_title"
+                        android:gravity="center"
+                        android:text="Hot selection of suppliers"
+                        android:textColor="@color/white"
+                        android:textSize="36px" />
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+
+            <com.zhw.chemistrywave.view.MyListViews
+                android:id="@+id/lv_supplier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="105px"
+                    android:background="@color/white">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="70px"
+                        android:background="@color/e9e8e8" />
+
+                    <TextView
+                        android:layout_width="346px"
+                        android:layout_height="70px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/bg_tv_title_express"
+                        android:gravity="center"
+                        android:text="Price express"
+                        android:textColor="@color/white"
+                        android:textSize="36px" />
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/lv_express_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="670px"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="105px"
+                    android:background="@color/white">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="70px"
+                        android:background="@color/e9e8e8" />
+
+                    <TextView
+                        android:layout_width="346px"
+                        android:layout_height="70px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/bg_tv_title_hot_sale"
+                        android:gravity="center"
+                        android:text="Hot-sale product"
+                        android:textColor="@color/white"
+                        android:textSize="36px" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.zhw.chemistrywave.view.MyListViews
+                android:id="@+id/lv_hot_sale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="#e2e1e6"
+                android:dividerHeight="1px"
+                android:paddingLeft="30px"
+                android:paddingRight="30px"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

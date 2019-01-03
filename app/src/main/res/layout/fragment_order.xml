@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+<include layout="@layout/titlebar_myorder"/>
+   <LinearLayout
+       android:paddingLeft="20px"
+       android:paddingRight="20px"
+       android:orientation="horizontal"
+       android:layout_marginTop="10px"
+       android:layout_width="match_parent"
+       android:layout_height="68px"
+       android:visibility="gone">
+       <TextView
+           android:id="@+id/tv_orderf_caigoudingdan"
+           android:gravity="center"
+           android:background="@drawable/bj_caigoudingdan"
+           android:text="采购订单"
+           android:textSize="16sp"
+           android:textColor="@color/white"
+           android:layout_width="352px"
+           android:layout_height="match_parent" />
+       <TextView
+           android:id="@+id/tv_orderf_gonghuodingdan"
+           android:gravity="center"
+           android:background="@drawable/bj_white"
+           android:text="供货订单"
+           android:textSize="16sp"
+           android:textColor="@color/a58"
+           android:layout_width="352px"
+           android:layout_height="match_parent" />
+   </LinearLayout>
+
+<ImageView
+    android:src="@drawable/line_blue"
+    android:scaleType="fitXY"
+    android:layout_width="match_parent"
+    android:layout_height="2px" />
+    <FrameLayout
+        android:id="@+id/fl_orderf_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        ></FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.axehome.chemistrywaves.activitys.MessageActivity">
+
+    <include
+        layout="@layout/titlebar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60px"
+        android:background="@color/f4"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_message_sys"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_message_sys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="系统消息"
+                android:textColor="@color/a0987de"
+                android:textSize="28px"/>
+
+            <TextView
+                android:id="@+id/tv_message_sysline"
+                android:layout_width="110px"
+                android:layout_height="4px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/a0987de"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_message_user"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_message_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="用户消息"
+                android:textColor="@color/a67"
+                android:textSize="28px"/>
+
+            <TextView
+                android:id="@+id/tv_message_userline"
+                android:layout_width="110px"
+                android:layout_height="4px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/a0987de"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_message_notification"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_message_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="通知消息"
+                android:textColor="@color/a67"
+                android:textSize="28px"/>
+
+            <TextView
+                android:id="@+id/tv_message_notificationline"
+                android:layout_width="110px"
+                android:layout_height="4px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/a0987de"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_message_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        ></FrameLayout>
+</LinearLayout>

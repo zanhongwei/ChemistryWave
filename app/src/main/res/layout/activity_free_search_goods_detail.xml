@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/f2">
+    <include
+        layout="@layout/titlebar_white_left"/>
+    <LinearLayout
+        android:paddingLeft="104px"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:background="@drawable/bj_daishouli"
+        android:layout_width="match_parent"
+        android:layout_height="200px">
+        <TextView
+            android:id="@+id/tv_freesearchgoodsdetail_one"
+            android:gravity="center"
+            android:text="To accept"
+            android:textSize="34px"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_freesearchgoodsdetail_two"
+            android:layout_marginTop="22px"
+            android:text="The product is waiting in line for acceptance..."
+            android:textSize="28px"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="31px"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="117px">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="35px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_freesearchgoodsdetail_bianhao"
+                android:text="找货编号：123654789"
+                android:textSize="24px"
+                android:textColor="@color/a99"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_freesearchgoodsdetail_date"
+                android:layout_marginTop="6px"
+                android:text="生成时间：12:30:56			2017-03-02"
+                android:textSize="24px"
+                android:textColor="@color/a99"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_freesearchgoodsdetail_lainxikefu"
+            android:layout_marginRight="23px"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/shengqingshouhou_null"
+            android:textSize="28px"
+            android:textColor="@color/a4d4d4d"
+            android:text="Service"
+            android:layout_width="160px"
+            android:layout_height="60px" />
+    </LinearLayout>
+    <LinearLayout
+        android:paddingLeft="35px"
+        android:paddingRight="46px"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_marginTop="12px"
+        android:layout_width="match_parent"
+        android:layout_height="136px">
+        <TextView
+            android:layout_marginTop="34px"
+            android:textSize="28px"
+            android:textColor="@color/a99"
+            android:text="Product name:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20px"/>
+        <TextView
+            android:id="@+id/tv_freesearchgoodsdetail_goodsname"
+            android:layout_marginTop="35px"
+            android:textSize="32px"
+            android:textColor="@color/a4d4d4d"
+            android:text="N-[3-氯-4-(3-氟苄氧基)苯基]-6-碘喹唑啉-4-胺"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:background="@color/e6"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+    <LinearLayout
+
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="80px">
+<LinearLayout
+
+    android:gravity="center_vertical"
+    android:layout_weight="1"
+    android:layout_width="0px"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_marginLeft="30px"
+        android:textSize="26px"
+        android:textColor="@color/a99"
+        android:text="Purity:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10px"/>
+    <TextView
+        android:id="@+id/tv_freesearchgoodsdetail_chundu"
+        android:textSize="26px"
+        android:textColor="@color/a33"
+    android:text="99%"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+</LinearLayout>
+        <TextView
+            android:background="@color/e6"
+            android:layout_width="1px"
+            android:layout_height="match_parent" />
+        <LinearLayout
+
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginLeft="22px"
+                android:textSize="26px"
+                android:textColor="@color/a99"
+                android:text="Delivery time:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10px"/>
+            <TextView
+                android:id="@+id/tv_freesearchgoodsdetail_huoqi"
+                android:textSize="26px"
+                android:textColor="@color/a33"
+                android:text="25天"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:background="@color/e6"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+    <LinearLayout
+
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="80px">
+        <LinearLayout
+
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginLeft="30px"
+                android:textSize="26px"
+                android:textColor="@color/a99"
+                android:text="Product Num："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_freesearchgoodsdetail_shuliang"
+                android:textSize="26px"
+                android:textColor="@color/a33"
+                android:text="1000吨"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <TextView
+            android:background="@color/e6"
+            android:layout_width="1px"
+            android:layout_height="match_parent" />
+        <LinearLayout
+
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginLeft="22px"
+                android:textSize="26px"
+                android:textColor="@color/a99"
+                android:text="Packing："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_freesearchgoodsdetail_baozhuang"
+                android:textSize="26px"
+                android:textColor="@color/a33"
+                android:text="纸箱包装"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:background="@color/e6"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/white">
+
+        <LinearLayout
+
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:text="Transport："
+                android:textColor="@color/a99"
+                android:textSize="26px" />
+
+            <TextView
+                android:id="@+id/tv_freesearchgoodsdetail_yunshu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="海运"
+                android:textColor="@color/a33"
+                android:textSize="26px" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/e6" />
+
+        <LinearLayout
+
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22px"
+                android:text="Price："
+                android:textColor="@color/a99"
+                android:textSize="26px" />
+
+            <TextView
+                android:id="@+id/tv_freesearchgoodsdetail_fendingjiage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100000000.00元"
+                android:textColor="@color/a33"
+                android:textSize="26px" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:background="@color/e6"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="80px">
+
+            <TextView
+                android:layout_marginLeft="30px"
+                android:textSize="26px"
+                android:textColor="@color/a99"
+                android:text="Payment："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_freesearchgoodsdetail_payway"
+                android:textSize="26px"
+                android:textColor="@color/a33"
+                android:text="【支付宝】"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    <TextView
+        android:background="@color/e6"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="80px">
+
+            <TextView
+                android:layout_marginLeft="30px"
+                android:textSize="26px"
+                android:textColor="@color/a99"
+                android:text="Others："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_freesearchgoodsdetail_other"
+                android:textSize="26px"
+                android:textColor="@color/a33"
+                android:text="99%"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+    </LinearLayout>
+    <TextView
+        android:background="@color/e6"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="80px">
+
+        <TextView
+            android:id="@+id/tv_freesearchgoodsdetail_chakandetail"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:background="@drawable/shengqingshouhou_null"
+            android:layout_marginRight="23px"
+            android:textSize="28px"
+            android:textColor="@color/a4d4d4d"
+            android:text="Details"
+            android:layout_width="160px"
+            android:layout_height="60px" />
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_classifyfitem_bj"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<TextView
+    android:id="@+id/tv_classifyfitem_name"
+    android:gravity="center"
+    android:text="碱性染料"
+    android:textSize="30px"
+   android:duplicateParentState="true"
+    android:layout_width="match_parent"
+    android:minHeight="120px"
+    android:layout_height="match_parent"/>
+</LinearLayout>

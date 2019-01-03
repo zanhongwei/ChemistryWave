@@ -1,0 +1,89 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f0f4f7"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <include
+        layout="@layout/titlebar"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:choiceMode="singleChoice"
+            android:fastScrollEnabled="true"
+            android:cacheColorHint="@android:color/transparent"
+            android:scrollbars="none"
+            android:divider="@color/e6"
+            android:dividerHeight="1px"
+            android:id="@+id/lv_classifyf"
+            android:background="@color/white"
+            android:layout_width="176px"
+            android:layout_height="match_parent">
+
+        </ListView>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_classifyf_logo"
+                android:layout_gravity="center"
+                android:layout_marginTop="30px"
+                android:scaleType="fitXY"
+                android:src="@drawable/bj_classify"
+                android:layout_width="532px"
+                android:layout_height="178px" />
+            <TextView
+                android:id="@+id/tv_classifyf_fenlei"
+                android:layout_marginBottom="10px"
+                android:layout_marginTop="15px"
+                android:layout_gravity="center"
+                android:text=""
+                android:textColor="#313233"
+                android:textSize="26px"
+                android:layout_width="532px"
+                android:layout_height="wrap_content" />
+            <GridView
+                android:horizontalSpacing="1px"
+                android:verticalSpacing="1px"
+                android:id="@+id/gv_classifyf_jianxingranliao"
+                android:background="@color/e6"
+                android:layout_gravity="center"
+                android:numColumns="3"
+                android:layout_width="534px"
+                android:layout_height="match_parent">
+
+            </GridView>
+            <TextView
+                android:layout_marginBottom="10px"
+                android:layout_marginTop="15px"
+                android:layout_gravity="center"
+                android:text="推荐商家"
+                android:textColor="#313233"
+                android:textSize="26px"
+                android:layout_width="532px"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+            <GridView
+                android:horizontalSpacing="1px"
+                android:verticalSpacing="1px"
+                android:id="@+id/gv_classifyf_tuijainshangjia"
+                android:background="@color/e6"
+                android:layout_gravity="center"
+                android:numColumns="3"
+                android:layout_width="534px"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+            </GridView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhw.chemistrywave.activity.OpenAshopResultActivity">
+
+    <include layout="@layout/titlebar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/tijiaoshenqingfanhuishibai"
+            android:layout_marginTop="224px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/iv_img"
+            android:layout_marginTop="78px"
+            android:gravity="center"
+            android:text="Your application failed"/>
+
+        <TextView
+            android:id="@+id/tv_commit"
+            android:layout_width="350px"
+            android:layout_height="80px"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/tv_save_info"
+            android:gravity="center"
+            android:text="Reapply"
+            android:textColor="@color/white"
+            android:textSize="26px"
+            android:layout_marginBottom="100px"/>
+
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

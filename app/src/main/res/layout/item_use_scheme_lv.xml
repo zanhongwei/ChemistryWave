@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="30px"
+        android:paddingTop="20px"
+        android:paddingBottom="20px"
+        android:paddingRight="30px">
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/jiancebaogao_xlsx"
+            android:id="@+id/tv_file_img"
+            android:layout_width="85px"
+            android:layout_height="92px" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_marginLeft="20px">
+            <TextView
+                android:id="@+id/tv_file_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="应用方案.doc"
+                android:textSize="34px"
+                android:textColor="@color/a33"/>
+            <TextView
+                android:id="@+id/tv_file_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11.0MB"
+                android:layout_marginTop="10px"/>
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+        <CheckBox
+            android:visibility="visible"
+            android:id="@+id/cb_select"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            style="@style/CustomCheckboxThemeBlueQx"/>
+    </LinearLayout>
+</LinearLayout>

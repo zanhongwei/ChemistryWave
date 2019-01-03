@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.axehome.chemistrywaves.activitys.JingBiaoZheDetailActivity">
+
+    <include
+        android:id="@+id/include_jingbiaozhedetail"
+        layout="@layout/titlebar"/>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include_jingbiaozhedetail">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="30px">
+
+            <TextView
+                android:id="@+id/tv_jingbiaozhedetail_goodsname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="10px"
+                android:paddingLeft="26px"
+                android:text="2,6-双(三氟甲基)苯甲酸-双(三氟甲基)苯甲酸
+-双(三氟甲基)苯甲酸"
+                android:textColor="@color/a33"
+                android:textSize="30px"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28px"
+                android:layout_marginTop="41px"
+                android:paddingLeft="26px"
+                android:paddingRight="95px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="规格："
+                    android:textColor="@color/a66"
+                    android:textSize="24px"/>
+
+                <TextView
+                    android:id="@+id/tv_jingbiaozhedetail_guige"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100kg/瓶"
+                    android:textColor="@color/a66"
+                    android:textSize="24px"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="111px"
+                    android:text="纯度："
+                    android:textColor="@color/a66"
+                    android:textSize="24px"/>
+
+                <TextView
+                    android:id="@+id/tv_jingbiaozhedetail_chundu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="99%"
+                    android:textColor="@color/a66"
+                    android:textSize="24px"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="83px"
+                    android:text="货期："
+                    android:textColor="@color/a66"
+                    android:textSize="24px"/>
+
+                <TextView
+                    android:id="@+id/tv_jingbiaozhedetail_huoqi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20天"
+                    android:textColor="@color/a66"
+                    android:textSize="24px"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/eb"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="78px"
+                android:gravity="center_vertical"
+                android:paddingLeft="26px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="产品数量："
+                    android:textColor="@color/a58"
+                    android:textSize="26px"/>
+
+                <TextView
+                    android:id="@+id/tv_jingbiaozhedetail_chanpingshuliang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/a58"
+                    android:textSize="26px"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/eb"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="78px"
+                android:gravity="center_vertical"
+                android:paddingLeft="26px">
+
+                <TextView
+                    android:id="@+id/tv_jingbiaozhedetail_zhichibaozhuang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="支持包装："
+                    android:textColor="@color/a58"
+                    android:textSize="26px"/>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/a58"
+                    android:textSize="26px"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/eb"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="78px"
+                android:gravity="center_vertical"
+                android:paddingLeft="26px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="付款方式："
+                    android:textColor="@color/a58"
+                    android:textSize="26px"/>
+
+                <TextView
+                    android:id="@+id/tv_jingbiaozhedetail_fukuangfangshi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/a58"
+                    android:textSize="26px"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/eb"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="78px"
+                android:gravity="center_vertical"
+                android:paddingLeft="26px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="运输方式："
+                    android:textColor="@color/a58"
+                    android:textSize="26px"/>
+
+                <TextView
+                    android:id="@+id/tv_jingbiaozhedetail_yunshufangshi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/a58"
+                    android:textSize="26px"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/eb"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="78px"
+                android:gravity="center_vertical"
+                android:paddingLeft="432px"
+                android:paddingRight="34px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最低价格："
+                    android:textColor="@color/a66"
+                    android:textSize="26px"/>
+
+                <TextView
+                    android:id="@+id/tv_jingbiaozhedetail_zuidijiage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3000.00元"
+                    android:textColor="@color/ef2f2e"
+                    android:textSize="34px"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="10px"
+                android:background="@color/eb"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:gravity="center_vertical"
+                android:paddingLeft="26px"
+                android:paddingRight="26px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="应用方案："
+
+                    android:textColor="@color/e161a"
+                    android:textSize="30px"/>
+
+                <TextView
+                    android:id="@+id/tv_jingbiaozhedetail_yingyongfangan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:textColor="@color/e161a"
+                    android:textSize="30px"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow_right"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="10px"
+                android:background="@color/e6"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:gravity="center_vertical"
+                android:paddingLeft="26px"
+                android:paddingRight="26px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="生产状态："
+
+                    android:textColor="@color/e161a"
+                    android:textSize="30px"/>
+
+                <TextView
+                    android:id="@+id/tv_jingbiaozhedetail_shengchanzhuangtai"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/e161a"
+                    android:textSize="30px"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow_right"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="10px"
+                android:background="@color/e6"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="40px"
+                android:paddingLeft="26px"
+                android:paddingTop="40px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="检测报告"
+
+                    android:textColor="@color/e161a"
+                    android:textSize="30px"/>
+
+                <ImageView
+                    android:layout_width="690px"
+                    android:layout_height="400px"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="22px"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/jiancebaogao"/>
+            </LinearLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/e6"/>
+
+            <include
+                layout="@layout/item_pingzhicanshu"/>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/e6"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="20px"
+                android:background="@color/e6"/>
+
+            <include
+
+                layout="@layout/item_jingshuhanliang"/>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/e6"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_jingbiaozhedetail_xuanzeta"
+        android:layout_width="match_parent"
+        android:layout_height="94px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="100px"
+        android:background="@color/ef2f2e"
+        android:gravity="center"
+        android:text="选择他"
+        android:textColor="@color/white"
+        android:textSize="34px"/>
+</RelativeLayout>

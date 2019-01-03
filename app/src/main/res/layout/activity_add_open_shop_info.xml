@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f3"
+    android:orientation="vertical"
+    tools:context="com.zhw.chemistrywave.activity.AddOpenShopInfoActivity">
+
+    <include layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="20px"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="60px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:layout_marginTop="40px"
+            android:paddingRight="40px"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Contact name"
+                android:textColor="@color/a2b"
+                android:textSize="28px" />
+
+            <EditText
+                android:id="@+id/et_shop_contact"
+                style="@style/et_add_information_style"
+                android:hint="Please fill in name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15px"
+                android:text="*"
+                android:textColor="@color/e92626" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:paddingRight="40px"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Contact phone"
+                android:textColor="@color/a2b"
+                android:textSize="28px" />
+
+            <EditText
+                android:id="@+id/et_shop_phone"
+                style="@style/et_add_information_style"
+                android:hint="Please fill in phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15px"
+                android:text="*"
+                android:textColor="@color/e92626" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_id_number"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:paddingRight="40px"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="ID number"
+                android:textColor="@color/a2b"
+                android:textSize="28px" />
+
+            <EditText
+                android:id="@+id/et_id_number"
+                style="@style/et_add_information_style"
+                android:hint="Please fill in ID number" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15px"
+                android:text="*"
+                android:textColor="@color/e92626" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_gerendizhi"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:paddingRight="40px"
+            android:visibility="visible"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Address"
+                android:textColor="@color/a2b"
+                android:textSize="28px" />
+
+            <EditText
+                android:id="@+id/et_shop_address"
+                style="@style/et_add_information_style"
+                android:hint="Please fill in address" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15px"
+                android:text="*"
+                android:textColor="@color/e92626" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_gg_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15px"
+            android:paddingRight="40px"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Company name"
+                android:textColor="@color/a2b"
+                android:textSize="28px" />
+
+            <EditText
+                android:id="@+id/et_gg_name"
+                style="@style/et_add_information_style"
+                android:hint="Please fill in company name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15px"
+                android:text="*"
+                android:textColor="@color/e92626" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_gg_dizhi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15px"
+            android:paddingRight="40px"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Company address"
+                android:textColor="@color/a2b"
+                android:textSize="28px" />
+
+            <EditText
+                android:id="@+id/et_gg_address"
+                style="@style/et_add_information_style"
+                android:hint="Please fill in company address" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15px"
+                android:text="*"
+                android:textColor="@color/e92626" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_yyzz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15px"
+            android:gravity="center_vertical"
+            android:paddingRight="40px"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Business license"
+                android:textColor="@color/a2b"
+                android:textSize="28px" />
+
+            <LinearLayout
+                android:layout_width="422px"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_add_zz"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:onClick="addZhizhao"
+                    android:src="@drawable/morenyingyezhizhao" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15px"
+                android:text="*"
+                android:textColor="@color/e92626" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="20px"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="50px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60px"
+            android:paddingRight="40px">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Shop name"
+                android:textColor="@color/a2b"
+                android:textSize="28px" />
+
+            <EditText
+                android:id="@+id/et_shop_name"
+                style="@style/et_add_information_style"
+                android:hint="Please fill in shop name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15px"
+                android:text="*"
+                android:textColor="@color/e92626" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15px"
+            android:gravity="center_vertical"
+            android:paddingRight="40px">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Shop logo"
+                android:textColor="@color/a2b"
+                android:textSize="28px" />
+
+            <LinearLayout
+                android:layout_width="422px"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_add_logo"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:onClick="addLogo"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/shangchuanjiahao" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:onClick="addLogo"
+                    android:text="Add picture"
+                    android:textColor="@color/a317ee7" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15px"
+                android:text="*"
+                android:textColor="@color/e92626" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="500px"
+            android:layout_height="60px"
+            android:background="@drawable/bg_btn_buy_now"
+            android:onClick="commitApply"
+            android:text="Commit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="24px" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_apply"
+            android:layout_marginTop="24px"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="500px"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:onClick="hlAgreement"
+                android:text="After examination and approval, the above information shall not be amended, please fill in carefully."
+                android:textColor="@color/f6"
+                android:textSize="20px" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+
+
+</LinearLayout>

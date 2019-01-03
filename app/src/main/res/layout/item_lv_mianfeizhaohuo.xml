@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="65px"
+    android:orientation="horizontal">
+
+    <com.zhw.chemistrywave.view.CircleImageView
+        android:id="@+id/civ_itemmianfeizhaohuo_headimage"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_marginLeft="56px"
+        android:src="@drawable/headimage_mycenter"
+        app:layout_auto_baseheight="width" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15px"
+        android:text="User"
+        android:textColor="@color/a58"
+        android:textSize="24px" />
+
+    <TextView
+        android:id="@+id/tv_itemmianfeizhaohuo_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="middle"
+        android:maxWidth="120px"
+        android:maxLength="1"
+        android:text="#王先生#"
+        android:textColor="@color/a0a85dd"
+        android:textSize="24px" />
+
+    <TextView
+        android:id="@+id/tv_itemmianfeizhaohuo_goodsname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2-甲基戊烷货品"
+        android:textColor="@color/a58"
+        android:textSize="24px" />
+
+    <TextView
+        android:id="@+id/tv_itemmianfeizhaohuo_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16px"
+        android:text="09:47"
+        android:textColor="@color/a58"
+        android:textSize="24px" />
+
+    <TextView
+        android:id="@+id/tv_itemmianfeizhaohuo_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14px"
+        android:text="find successfully"
+        android:textColor="@color/b93737"
+        android:textSize="24px" />
+</LinearLayout>

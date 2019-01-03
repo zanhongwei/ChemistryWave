@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/include_goods_other" />
+
+    <TextView
+        android:id="@+id/tv_fabuzhaohuo_publish"
+        android:layout_width="391px"
+        android:layout_height="76px"
+        android:layout_gravity="center"
+        android:layout_marginTop="300px"
+        android:background="@drawable/woyaozhaohuo"
+        android:gravity="center"
+        android:text="Publish"
+        android:textColor="@color/white"
+        android:textSize="30px" />
+</LinearLayout>

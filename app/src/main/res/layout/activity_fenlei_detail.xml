@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/f2">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/bj_shopdetail"
+        android:layout_width="match_parent"
+        android:layout_height="130px">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginTop="40px"
+            android:layout_width="match_parent"
+            android:layout_height="88px">
+            <RelativeLayout
+                android:id="@+id/rl_fenleidetail_back"
+                android:layout_width="100px"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/fanhui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_marginLeft="15px"
+                android:paddingLeft="15px"
+                android:gravity="center_vertical"
+                android:background="@drawable/search_bj"
+                android:layout_width="545px"
+                android:layout_height="62px">
+                <ImageView
+                    android:src="@drawable/search_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:singleLine="true"
+                    android:id="@+id/et_fenleidetail_search"
+                    android:layout_marginLeft="20px"
+                    android:textSize="26px"
+                    android:textColor="#4d525d"
+                    android:hint="Search for chemical names"
+                    android:imeOptions="actionSearch"
+                    android:background="@null"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_fenlei"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_fenleidetail_fenlei"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_fenleidetail_fenlei"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Classify"
+
+                android:textColor="@color/t333"
+                android:textSize="30px" />
+
+            <ImageView
+                android:id="@+id/iv_fenleidetail_fenlei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:src="@drawable/sj_down_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_fenleidetail_chundu"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_fenleidetail_chundu"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Purity"
+
+                android:textColor="@color/t333"
+                android:textSize="30px" />
+
+            <ImageView
+                android:id="@+id/iv_fenleidetail_chundu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:src="@drawable/sj_down_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_fenleidetail_huoqi"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_fenleidetail_huoqi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery"
+                android:textColor="@color/t333"
+                android:textSize="30px" />
+
+            <ImageView
+                android:id="@+id/iv_fenleidetail_huoqi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:src="@drawable/sj_down_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_fenleidetail_price"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_fenleidetail_jiage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textColor="@color/t333"
+                android:textSize="30px" />
+
+            <ImageView
+                android:id="@+id/iv_fenleidetail_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:src="@drawable/sj_two" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridView
+            android:layout_marginBottom="30px"
+            android:id="@+id/gv_fenleidetail"
+            android:layout_marginTop="10px"
+            android:numColumns="2"
+            android:verticalSpacing="10px"
+            android:horizontalSpacing="10px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </GridView>
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_blackback"
+            android:background="#99000000"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

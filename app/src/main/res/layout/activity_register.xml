@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bj_forgetpwd"
+    android:orientation="vertical"
+    tools:context=".activity.ForgetPwdActivity">
+    <RelativeLayout
+        android:id="@+id/rl_register_back"
+        android:layout_marginTop="40px"
+        android:layout_width="match_parent"
+        android:layout_height="90px">
+        <RelativeLayout
+            android:layout_width="130px"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_marginLeft="35px"
+                android:layout_centerVertical="true"
+                android:src="@drawable/fanhui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <TextView
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:textSize="38px"
+            android:text="忘记密码"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll_register_type"
+        android:layout_marginTop="62px"
+        android:layout_marginLeft="493px"
+        android:background="@color/white"
+        android:layout_width="107px"
+        android:layout_height="33px"
+        android:visibility="invisible">
+        <TextView
+            android:id="@+id/tv_register_type"
+            android:paddingLeft="12px"
+            android:paddingRight="15px"
+            android:text="个人"
+            android:textSize="12sp"
+            android:textColor="@color/a32"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_gravity=""
+            android:background="@color/ae"
+            android:layout_width="1px"
+            android:layout_height="26px" />
+        <ImageView
+            android:id="@+id/iv_register_type"
+            android:paddingLeft="11px"
+
+            android:layout_gravity="center"
+            android:src="@drawable/down_sj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginTop="44px"
+        android:layout_gravity="center"
+        android:layout_width="442px"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/login_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_register_phone"
+            android:layout_marginLeft="10px"
+            android:textSize="26px"
+            android:textColor="#80ffffff"
+            android:textColorHint="#80ffffff"
+            android:hint="please input phone number"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="10px"
+        android:layout_marginLeft="155px"
+        android:background="@color/white"
+        android:layout_width="442px"
+        android:layout_height="1px" />
+
+    <LinearLayout
+        android:layout_width="442px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="70px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/yaoshi" />
+
+        <EditText
+            android:id="@+id/et_register_yzcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="intput vertify code"
+            android:textColor="#80ffffff"
+            android:textColorHint="#80ffffff"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/tv_register_getcode"
+            android:gravity="center"
+            android:textColor="@color/c40083"
+            android:background="@drawable/shape_huoqvyzm"
+            android:layout_width="175px"
+            android:layout_height="47px"
+            android:text="get code"
+            android:textSize="26px" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="155px"
+        android:layout_marginTop="10px"
+
+        android:background="@color/white"
+        android:layout_width="264px"
+        android:layout_height="1px" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginTop="70px"
+        android:layout_gravity="center"
+        android:layout_width="442px"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/login_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/et_register_newpwd"
+            android:layout_marginLeft="10px"
+            android:textSize="26px"
+            android:textColor="#80ffffff"
+            android:textColorHint="#80ffffff"
+            android:hint="intput new password"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="10px"
+        android:layout_marginLeft="155px"
+        android:background="@color/white"
+        android:layout_width="442px"
+        android:layout_height="1px" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginTop="70px"
+        android:layout_gravity="center"
+        android:layout_width="442px"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/login_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_register_surenewpwd"
+            android:inputType="textPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="verify your password"
+            android:textColor="#80ffffff"
+            android:textColorHint="#80ffffff"
+            android:textSize="26px" />
+    </LinearLayout>
+    <TextView
+
+        android:layout_marginTop="10px"
+        android:layout_marginLeft="155px"
+        android:background="@color/white"
+        android:layout_width="442px"
+        android:layout_height="1px" />
+    <RadioGroup
+        android:id="@+id/rg_register"
+        android:orientation="horizontal"
+
+        android:layout_gravity="center"
+        android:layout_width="442px"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb_register_buyer"
+            android:paddingTop="20px"
+            android:paddingBottom="20px"
+            android:drawablePadding="10px"
+            android:text="Purchaser"
+            android:textColor="@color/white"
+            android:textSize="26px"
+            android:background="@null"
+            android:button="@null"
+            android:checked="true"
+            android:drawableLeft="@drawable/btn_radio_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/rb_register_supplier"
+            android:paddingTop="20px"
+            android:paddingBottom="20px"
+            android:background="@null"
+            android:button="@null"
+            android:drawableLeft="@drawable/btn_radio_fee"
+           android:drawablePadding="10px"
+            android:textColor="@color/white"
+            android:text="Supplier"
+            android:textSize="26px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+        <TextView
+            android:layout_marginTop="70px"
+            android:gravity="right"
+            android:layout_gravity="center"
+            android:id="@+id/tv_register_haveaccount"
+            android:padding="10px"
+            android:text="Existing account"
+            android:textSize="26px"
+            android:textColor="@color/white"
+            android:layout_width="442px"
+            android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tv_register_next"
+        android:layout_width="437px"
+        android:layout_height="64px"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_czmm"
+        android:gravity="center"
+        android:text="Register"
+        android:textColor="@color/blue"
+        android:textSize="30px" />
+</LinearLayout>

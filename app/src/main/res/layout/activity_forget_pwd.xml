@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bj_forgetpwd"
+    android:orientation="vertical"
+    tools:context="com.axehome.chemistrywaves.activitys.ForgetPwdActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_forgetpwd_back"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_marginTop="40px">
+
+        <RelativeLayout
+            android:layout_width="130px"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="35px"
+                android:src="@drawable/fanhui" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Retrieve password"
+            android:textColor="@color/white"
+            android:textSize="38px" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="442px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="153px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_username" />
+
+        <EditText
+            android:id="@+id/et_forgetpwd_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="Please fill in mobile number"
+            android:textColor="#80ffffff"
+            android:textColorHint="#80ffffff"
+            android:textSize="26px" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="442px"
+        android:layout_height="1px"
+        android:layout_marginLeft="155px"
+        android:layout_marginTop="10px"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="442px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="70px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/yaoshi" />
+
+        <EditText
+            android:id="@+id/et_forgetpwd_yzcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="Please fill in code"
+            android:textColor="#80ffffff"
+            android:textColorHint="#80ffffff"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/tv_forgetpwd_getcode"
+            android:layout_width="175px"
+            android:layout_height="47px"
+            android:background="@drawable/shape_huoqvyzm"
+            android:gravity="center"
+            android:text="Get code"
+            android:textColor="@color/c40083"
+            android:textSize="26px" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="264px"
+        android:layout_height="1px"
+
+        android:layout_marginLeft="155px"
+        android:layout_marginTop="10px"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="442px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="70px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_password" />
+
+        <EditText
+            android:id="@+id/et_forgetpwd_newpwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="Fill in new password"
+            android:inputType="textPassword"
+            android:textColor="#80ffffff"
+            android:textColorHint="#80ffffff"
+            android:textSize="26px" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="442px"
+        android:layout_height="1px"
+        android:layout_marginLeft="155px"
+        android:layout_marginTop="10px"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="442px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="70px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_password" />
+
+        <EditText
+            android:id="@+id/et_forgetpwd_surenewpwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="Fill in password again"
+            android:inputType="textPassword"
+            android:textColor="#80ffffff"
+            android:textColorHint="#80ffffff"
+            android:textSize="26px" />
+    </LinearLayout>
+
+    <TextView
+
+        android:layout_width="442px"
+        android:layout_height="1px"
+        android:layout_marginLeft="155px"
+        android:layout_marginTop="10px"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="469px"
+        android:layout_marginTop="140px"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_forgetpwd_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10px"
+            android:text="Login"
+            android:textColor="@color/ffd800"
+            android:textSize="26px" />
+
+        <TextView
+            android:layout_width="1px"
+            android:layout_height="30px"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_forgetpwd_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10px"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:textSize="26px" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_forgetpwd_resetpwd"
+        android:layout_width="437px"
+        android:layout_height="64px"
+        android:layout_gravity="center"
+        android:layout_marginTop="10px"
+        android:background="@drawable/shape_czmm"
+        android:gravity="center"
+        android:text="Reset Password"
+        android:textColor="@color/a064264"
+        android:textSize="30px" />
+</LinearLayout>

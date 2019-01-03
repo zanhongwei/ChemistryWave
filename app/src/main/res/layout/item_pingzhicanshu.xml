@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_marginTop="19px"
+        android:gravity="center"
+        android:text="品质参数"
+        android:textSize="26px"
+        android:textColor="@color/a66"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="64px" />
+    <TextView
+        android:background="@color/eb"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="485px">
+        <!--强度(色力)：色光：-->
+        <LinearLayout
+            style="@style/ll_jingjiadetail">
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_qiangdu"
+                android:text="强度(色力)："
+                style="@style/tv_jingjiadetailpingzhicanshu" />
+
+            <TextView
+                style="@style/tv_jingjiadetail_line_vertical" />
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_seguang"
+                android:text="色光："
+                style="@style/tv_jingjiadetail_rightpingzhicanshu" />
+        </LinearLayout>
+        <TextView
+            style="@style/tv_jingjiadetail_line_shuiping" />
+        <!--外观：水分:-->
+        <LinearLayout
+            style="@style/ll_jingjiadetail">
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_waiguang"
+                android:text="外观："
+                style="@style/tv_jingjiadetailpingzhicanshu" />
+            <TextView
+                style="@style/tv_jingjiadetail_line_vertical" />
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_shuifen"
+                android:text="水分:"
+                style="@style/tv_jingjiadetail_rightpingzhicanshu" />
+        </LinearLayout>
+        <TextView
+            style="@style/tv_jingjiadetail_line_shuiping" />
+        <!--数量需求-->
+        <LinearLayout
+            style="@style/ll_jingjiadetail">
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_burongwu"
+                android:text="不溶物："
+                style="@style/tv_jingjiadetailpingzhicanshu" />
+            <TextView
+                style="@style/tv_jingjiadetail_line_vertical" />
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_rongjiedu"
+                android:text="溶解度："
+                style="@style/tv_jingjiadetail_rightpingzhicanshu" />
+        </LinearLayout>
+        <TextView
+            style="@style/tv_jingjiadetail_line_shuiping" />
+        <!--包装要求-->
+        <LinearLayout
+            style="@style/ll_jingjiadetail">
+
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_lvlizi"
+                style="@style/tv_jingjiadetailpingzhicanshu"
+                android:text="氯离子含量："/>
+
+            <TextView
+                style="@style/tv_jingjiadetail_line_vertical" />
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_yanfen"
+                android:text="盐分："
+                style="@style/tv_jingjiadetail_rightpingzhicanshu" />
+        </LinearLayout>
+        <TextView
+            style="@style/tv_jingjiadetail_line_shuiping" />
+        <!--接受价格范围-->
+        <LinearLayout
+            style="@style/ll_jingjiadetail">
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_diandaolv"
+                android:text="电导率："
+                style="@style/tv_jingjiadetailpingzhicanshu" />
+            <TextView
+                style="@style/tv_jingjiadetail_line_vertical" />
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_mishitong"
+                android:text="米氏酮："
+                style="@style/tv_jingjiadetail_rightpingzhicanshu" />
+        </LinearLayout>
+        <TextView
+            style="@style/tv_jingjiadetail_line_shuiping" />
+        <!--付款要求：-->
+        <LinearLayout
+            style="@style/ll_jingjiadetail">
+            <TextView
+                android:id="@+id/tv_wofaqijingjiadetail_guhanliang"
+                android:text="固含量："
+                style="@style/tv_jingjiadetail" />
+
+        </LinearLayout>
+        <TextView
+            style="@style/tv_jingjiadetail_line_shuiping" />
+
+
+    </LinearLayout>
+</LinearLayout>
