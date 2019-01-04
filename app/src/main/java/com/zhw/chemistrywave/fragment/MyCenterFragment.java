@@ -157,21 +157,24 @@ public class MyCenterFragment extends Fragment {
                 break;
             //我添加的商品
             case R.id.ll_mycenterf_tianjiashangping:
+
+                Toast.makeText(getActivity(), "Please go to the website to add goods", Toast.LENGTH_SHORT).show();
+//                return;
 //                saveSp();
 
-                if (TextUtils.isEmpty(shopState)){
-                    ToastUtil.showToastShort(getActivity(),"Please open a shop first!");
-                }else {
-                    if (shopState.equals("2")){
-                        Intent intent1 = new Intent(getActivity(), TianJiaShangPingActivity.class);
-//                intent1.putExtra("mer_id",data);
-                        startActivity(intent1);
-                    }else if (shopState.equals("1")){
-                        ToastUtil.showToastShort(getActivity(),"Please wait for store approval!");
-                    }else {
-                        startActivity(new Intent(getActivity(),OpenAshopResultActivity.class));
-                    }
-                }
+//                if (TextUtils.isEmpty(shopState)){
+//                    ToastUtil.showToastShort(getActivity(),"Please open a shop first!");
+//                }else {
+//                    if (shopState.equals("2")){
+//                        Intent intent1 = new Intent(getActivity(), TianJiaShangPingActivity.class);
+////                intent1.putExtra("mer_id",data);
+//                        startActivity(intent1);
+//                    }else if (shopState.equals("1")){
+//                        ToastUtil.showToastShort(getActivity(),"Please wait for store approval!");
+//                    }else {
+//                        startActivity(new Intent(getActivity(),OpenAshopResultActivity.class));
+//                    }
+//                }
 
 
                 break;

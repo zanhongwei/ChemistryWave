@@ -492,22 +492,28 @@ public class HomePageFragment extends Fragment implements AdapterView.OnItemClic
             case R.id.ll_sdjj:
 //                startActivity(new Intent(getActivity(), CWServiceActivity.class).putExtra("name", "Complaint And Dispute"));
                 break;
-            //征信查询
+            //化浪之眼
             case R.id.ll_sdcg:
                 if (MyUtils.getUser() == null || MyUtils.getUser().getUser_id().isEmpty()) {
                     Toast.makeText(getActivity(), "Please login first", Toast.LENGTH_SHORT).show();
                 } else
-                    startActivity(new Intent(getActivity(), WebServiceActivity.class));
+                    startActivity(new Intent(getActivity(), WebServiceActivity.class)
+                            .putExtra("name","Harlan Eye ")
+                            .putExtra("url","harlan_eye.html?user_id=" + MyUtils.getUser().getUser_id()));
                 break;
-            //找代理
+            //价格速递
             case R.id.ll_xhgy:
-                startActivity(new Intent(getActivity(), CWServiceActivity.class).putExtra("name", "Price express"));
+                startActivity(new Intent(getActivity(), WebServiceActivity.class)
+                        .putExtra("name","Price Express")
+                        .putExtra("url","price.html"));
                 break;
             //平台监测
             case R.id.ll_zkzq:
-                startActivity(new Intent(getActivity(), CWServiceActivity.class).putExtra("name", "Platform guarantee"));
+                startActivity(new Intent(getActivity(), CWServiceActivity.class)
+                        .putExtra("url","platform.html")
+                        .putExtra("name", "Platform Guarantee"));
                 break;
-            //化浪之眼
+            //供应链金融
             case R.id.ll_mfzh:
                 startActivity(new Intent(getActivity(), CWServiceActivity.class).putExtra("name", "Supply chain finance"));
                 break;

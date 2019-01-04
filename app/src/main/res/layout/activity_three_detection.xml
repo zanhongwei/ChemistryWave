@@ -13,11 +13,13 @@
         android:layout_height="2px"
         android:background="@color/e6"
         android:layout_marginTop="2px"/>
-    <ListView
+    <GridView
         android:divider="@color/f2"
         android:background="@color/white"
-        android:dividerHeight="10px"
         android:id="@+id/lv_detection"
+        android:numColumns="2"
+        android:paddingLeft="15px"
+        android:paddingRight="15px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>

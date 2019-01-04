@@ -222,7 +222,9 @@ public class OrderfLvAdapter extends BaseAdapter {
         holder.llItemorderfSanfangjiance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, ThreeDetectionActivity.class).putExtra("order_id",mList.get(position).getOrder_id());
+                Intent intent = new Intent(mContext, ThreeDetectionActivity.class)
+                        .putExtra("title","Test report")
+                        .putExtra("order_id",mList.get(position).getOrder_id());
                 mContext.startActivity(intent);
             }
         });
@@ -230,8 +232,10 @@ public class OrderfLvAdapter extends BaseAdapter {
         holder.llItemorderfMianfeijianli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(mContext, FreeSuperVisorActivity.class);
-//                mContext.startActivity(intent);
+                Intent intent = new Intent(mContext, ThreeDetectionActivity.class);
+                intent.putExtra("title","Supervisor");
+                intent.putExtra("order_id",mList.get(position).getOrder_id());
+                mContext.startActivity(intent);
             }
         });
 

@@ -1,6 +1,7 @@
 package com.zhw.chemistrywave.activity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -21,6 +22,7 @@ public class WebServiceActivity extends BaseActivity {
     TextView tvTitlebarCenter;
     @BindView(R.id.wb_harlan_eye)
     WebView wbHarlanEye;
+    private String url;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,12 @@ public class WebServiceActivity extends BaseActivity {
         setContentView(R.layout.activity_web_service);
         ButterKnife.bind(this);
         tvTitlebarCenter.setText("Harlan eye");
+        url = getIntent().getStringExtra("url");
+        String name = getIntent().getStringExtra("name");
+        tvTitlebarCenter.setText(name);
+        Log.e("aaa", "(WebServiceActivity.java:33)<--url-->" + url);
+
+        setWebView();
     }
 
     @OnClick(R.id.rl_titlebar_back)
@@ -54,7 +62,7 @@ public class WebServiceActivity extends BaseActivity {
         wbHarlanEye.getSettings().setUseWideViewPort(true);
         //去掉放大缩小按钮
         wbHarlanEye.getSettings().setDisplayZoomControls(false);
-        wbHarlanEye.loadUrl(NetConfig.baseurl + "harlan_eye.html?user_id=" + MyUtils.getUser().getUser_id());
+        wbHarlanEye.loadUrl(NetConfig.baseurl + url);
         //设置Web视图
         wbHarlanEye.setWebViewClient(new webViewClient());
         //clearWebViewCache();

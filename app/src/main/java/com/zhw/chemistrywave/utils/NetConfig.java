@@ -205,6 +205,8 @@ public class NetConfig {
     public final static String sanfangjiance_url = baseurl + "detection/save";
     //查看所有的申请三方检测的列表(M)
     public final static String sanfangjiancelist_url = baseurl + "/orderCheck/detail";
+    //查看免费监理的接口
+    public final static String mianfeijianliorder = baseurl+"orderSuper/listOrderSuper";
     //我的收藏
     public final static String mylove_url = baseurl + "collection/list";
     //添加收藏

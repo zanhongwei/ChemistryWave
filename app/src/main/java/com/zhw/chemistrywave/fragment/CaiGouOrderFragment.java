@@ -76,7 +76,7 @@ public class CaiGouOrderFragment extends Fragment {
         unbinder = ButterKnife.bind(this, view);
         initView();
         initData();
-
+        
         return view;
     }
 

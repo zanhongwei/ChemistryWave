@@ -5,10 +5,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.zhw.chemistrywave.MyApplication;
 import com.zhw.chemistrywave.R;
 import com.zhw.chemistrywave.bean.ThreeDection;
+import com.zhw.chemistrywave.bean.ThreeDectionS;
+import com.zhw.chemistrywave.utils.NetConfig;
 
 import java.util.List;
 
@@ -24,10 +27,10 @@ public class ThreeDetectionAdapter extends BaseAdapter {
 
 
     private Context context;
-    private List<ThreeDection.DataBean.ListBean> mList;
+    private List<ThreeDectionS.DataBean> mList;
 
 
-    public ThreeDetectionAdapter(Context context, List<ThreeDection.DataBean.ListBean> mList) {
+    public ThreeDetectionAdapter(Context context, List<ThreeDectionS.DataBean> mList) {
         this.context = context;
         this.mList = mList;
     }
@@ -63,16 +66,14 @@ public class ThreeDetectionAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
+        Glide.with(context).load(NetConfig.baseurl + mList.get(position).getSuper_url()).apply(MyApplication.options).into(holder.ivDetection);
+
         return convertView;
     }
 
     static class ViewHolder {
-        @BindView(R.id.iv_img)
-        ImageView ivImg;
-        @BindView(R.id.tv_data)
-        TextView tvData;
-        @BindView(R.id.iv_selected)
-        ImageView ivSelected;
+        @BindView(R.id.iv_detection)
+        ImageView ivDetection;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);
