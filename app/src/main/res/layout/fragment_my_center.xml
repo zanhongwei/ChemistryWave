@@ -78,11 +78,30 @@
                android:layout_height="wrap_content"
                android:layout_weight="1"
                android:orientation="vertical">
-               <ImageView
+               <RelativeLayout
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:src="@drawable/xiaoxi"
-                   android:layout_gravity="center"/>
+                   android:layout_gravity="center">
+                   <ImageView
+                       android:id="@+id/iv_message"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/xiaoxi"
+                       android:layout_gravity="center"/>
+                   <TextView
+                       android:id="@+id/tv_message_num"
+                       android:layout_width="24px"
+                       android:layout_height="24px"
+                       android:layout_toRightOf="@+id/iv_message"
+                       android:background="@drawable/bg_paynum_tv"
+                       android:gravity="center"
+                       android:text="0"
+                       android:textColor="@color/white"
+                       android:textSize="18px"
+                       android:layout_marginLeft="0px"
+                       android:visibility="gone"/>
+               </RelativeLayout>
+
 
                <TextView
                    android:layout_width="wrap_content"
@@ -104,11 +123,30 @@
                android:layout_height="wrap_content"
                android:layout_weight="1"
                android:orientation="vertical">
-               <ImageView
+               <RelativeLayout
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:src="@drawable/gouwuche"
-                   android:layout_gravity="center"/>
+                   android:layout_gravity="center">
+                   <ImageView
+                       android:id="@+id/iv_shopcar"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/gouwuche"
+                       android:layout_gravity="center"/>
+                   <TextView
+                       android:id="@+id/tv_shopcar_num"
+                       android:layout_width="24px"
+                       android:layout_height="24px"
+                       android:layout_toRightOf="@+id/iv_shopcar"
+                       android:background="@drawable/bg_paynum_tv"
+                       android:gravity="center"
+                       android:text="0"
+                       android:textColor="@color/white"
+                       android:textSize="18px"
+                       android:layout_marginLeft="0px"
+                       android:visibility="gone"/>
+               </RelativeLayout>
+
 
                <TextView
                    android:layout_width="wrap_content"

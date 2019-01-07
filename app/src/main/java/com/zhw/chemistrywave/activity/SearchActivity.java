@@ -196,9 +196,9 @@ public class SearchActivity extends BaseActivity implements AdapterView.OnItemCl
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if (isGoods) {
                     startActivity(new Intent(SearchActivity.this, GoodsDetailActivity.class)
-                            .putExtra("mer_id", mSearchGoodsList.get(i).getGoods_id()));
+                            .putExtra("mer_id", mSearchGoodsList.get(i - 1).getGoods_id()));
                 } else {
-                    String userId = mSearchSupplierList.get(i).getUser_id() + "  ";
+                    String userId = mSearchSupplierList.get(i - 1).getUser_id() + "";
                     startActivity(new Intent(SearchActivity.this, ShopDetailActivity.class).putExtra("user_id", userId));
                 }
             }
@@ -280,7 +280,7 @@ public class SearchActivity extends BaseActivity implements AdapterView.OnItemCl
         }
 
         if (TextUtils.isEmpty(searchGoods)) {
-            Toast.makeText(this, "请输入关键字！", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please fill in keywords！", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -345,7 +345,7 @@ public class SearchActivity extends BaseActivity implements AdapterView.OnItemCl
         final String search = etSearchCintent.getText().toString().trim();
 
         if (TextUtils.isEmpty(search)) {
-            Toast.makeText(this, "请输入关键字！", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please fill in keywords！", Toast.LENGTH_SHORT).show();
             return;
         }
         OkHttpUtils

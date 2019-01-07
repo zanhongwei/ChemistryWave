@@ -52,13 +52,14 @@
                 android:layout_alignBottom="@+id/tv_shop_grade"
                 android:layout_toRightOf="@+id/tv_shop_grade"
                 android:layout_marginLeft="32px"
-                android:text="总销量：5656565件"/>
+                android:text="Total sales：5656565"
+                android:textSize="20px"/>
 
             <TextView
                 android:id="@+id/tv_goto_shop"
                 android:layout_width="93px"
                 android:layout_height="47px"
-                android:text="进店"
+                android:text="Enter"
                 android:textSize="26px"
                 android:textColor="#0791e6"
                 android:gravity="center"

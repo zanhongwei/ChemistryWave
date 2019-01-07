@@ -66,7 +66,8 @@ public class MyInformationActivity extends BaseActivity {
 
     private static final int CHANGE_NICKNAME_CODE = 4;
     private static final int CHANGE_PHONE_CODE = 5;
-    private static final int CHANGE_ADDRESS_CODE = 6;
+
+    private static final int ChANGE_CONTACT_NAME = 6;
     private static final int CHANGE_PASSWORD_CODE = 7;
     private static final int CODE_FOR_WRITE_PERMISSION = 11;
     @BindView(R.id.tv_titlebar_center)
@@ -191,6 +192,24 @@ public class MyInformationActivity extends BaseActivity {
             case ALBUM_RESULT_CODE:
                 // 相册
                 cropPic(data.getData());
+                break;
+                //修改昵称
+            case CHANGE_NICKNAME_CODE:
+
+                tvUserName.setText(data.getStringExtra("nickName"));
+                break;
+            case CHANGE_PHONE_CODE:
+//                data.getStringExtra("nickName")
+//                if (userPhone.length() == 11) {
+//                    StringBuilder sb = new StringBuilder(userPhone);
+//                    StringBuilder replace = sb.replace(3, 7, "****");
+//                    tvRegisterPhone.setText(replace.toString());
+//                } else {
+//                    tvRegisterPhone.setText(userPhone);
+//                }
+                break;
+            case ChANGE_CONTACT_NAME:
+                tvContactName.setText(data.getStringExtra("contact"));
                 break;
         }
     }
@@ -383,8 +402,8 @@ public class MyInformationActivity extends BaseActivity {
                 break;
             case R.id.ll_register_phone:
                 //2018/4/11 修改注册电话
-                startActivityForResult(new Intent(MyInformationActivity.this, ChangePhoneActivity.class)
-                        .putExtra("phone", userPhone), CHANGE_PHONE_CODE);
+                startActivity(new Intent(MyInformationActivity.this, ChangePhoneActivity.class)
+                        .putExtra("phone", userPhone));
                 break;
             case R.id.ll_register_mail:
                 // TODO: 2018/4/11 修改注册邮箱
@@ -394,8 +413,10 @@ public class MyInformationActivity extends BaseActivity {
                 startActivity(new Intent(MyInformationActivity.this, MyAddressActivity.class));
                 break;
             case R.id.ll_change_password:
-                // TODO: 2018/4/11 修改登录密码
-                startActivity(new Intent(MyInformationActivity.this, ChangePwdActivity.class));
+                // TODO: 2018/4/11 修改联系人
+                startActivityForResult(new Intent(MyInformationActivity.this, ChangeNickNameActivity.class)
+                        .putExtra("contact", contactName)
+                        .putExtra("flag", "contact"), ChANGE_CONTACT_NAME);
                 break;
         }
     }

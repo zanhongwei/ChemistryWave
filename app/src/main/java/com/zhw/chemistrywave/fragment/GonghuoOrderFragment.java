@@ -1,6 +1,7 @@
 package com.zhw.chemistrywave.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -10,11 +11,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.zhw.chemistrywave.R;
+import com.zhw.chemistrywave.activity.OrderDetailActivity;
 import com.zhw.chemistrywave.adapters.GonghuoOrderfLvAdapter;
 import com.zhw.chemistrywave.bean.Order;
 import com.zhw.chemistrywave.utils.MyUtils;
@@ -253,6 +256,14 @@ public class GonghuoOrderFragment extends Fragment {
         getData();
         mAdapter = new GonghuoOrderfLvAdapter(getActivity(), mList);
         lvGonghuoorderf.setAdapter(mAdapter);
+        lvGonghuoorderf.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("goods",mList.get(position));
+                startActivity(new Intent(getActivity(), OrderDetailActivity.class).putExtras(bundle));
+            }
+        });
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

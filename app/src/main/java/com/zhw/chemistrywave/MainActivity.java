@@ -66,6 +66,7 @@ public class MainActivity extends BaseActivity {
         int currentIndex = getIntent().getIntExtra("index", 0);
         Log.e("aaa",
                 "(MainActivity.java:56)<--mIndex-->" + mIndex);
+
         initData(currentIndex);
     }
 

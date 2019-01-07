@@ -62,7 +62,6 @@ public class SetPhoneActivity extends BaseActivity {
                 }
                 break;
             case R.id.btn_commit:
-
                 String trim = etCode.getText().toString().trim();
                 if (TextUtils.isEmpty(trim)){
                     Toast.makeText(this, "Please fill in code", Toast.LENGTH_SHORT).show();

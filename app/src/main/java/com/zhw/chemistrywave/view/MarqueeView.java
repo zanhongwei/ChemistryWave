@@ -31,7 +31,7 @@ public class MarqueeView extends ViewFlipper {
     private OnItemClickListener onItemClickListener;
     private OnClick onClick;
 
-    private int interval = 10000;//播放时间间隔
+    private int interval = 1000;//播放时间间隔
     private int animDuration = 500;
     private int textSize = 14;
     private boolean isImage = true;

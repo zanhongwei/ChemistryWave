@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.gson.Gson;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.zhw.chemistrywave.R;
 import com.zhw.chemistrywave.activity.FreeSearchGoodsActivity;
@@ -29,6 +30,8 @@ import com.zhw.chemistrywave.activity.ShopCarActivity;
 import com.zhw.chemistrywave.activity.SupplierSearchActivity;
 import com.zhw.chemistrywave.activity.TianJiaShangPingActivity;
 import com.zhw.chemistrywave.activity.UnHandleActivity;
+import com.zhw.chemistrywave.adapters.ShopCarAdapter;
+import com.zhw.chemistrywave.bean.ShopCar;
 import com.zhw.chemistrywave.utils.MyUtils;
 import com.zhw.chemistrywave.utils.NetConfig;
 import com.zhw.chemistrywave.utils.SPUtils;
@@ -41,6 +44,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import butterknife.BindView;
@@ -77,6 +81,14 @@ public class MyCenterFragment extends Fragment {
     View vShopCar;
     @BindView(R.id.ll_shopcar)
     LinearLayout llShopCar;
+    @BindView(R.id.ll_mycenterf_hualangzhiyan)
+    LinearLayout llPriceExpress;//价格速递
+    @BindView(R.id.ll_mycenterf_zhaodaili)
+    LinearLayout llPlatformGua;//平台交易
+    @BindView(R.id.tv_shopcar_num)
+    TextView tvShopCarNum;
+    @BindView(R.id.tv_message_num)
+    TextView tvMessageNum;
 
     Unbinder unbinder;
     private String user_id;
@@ -84,53 +96,11 @@ public class MyCenterFragment extends Fragment {
     private String user_photo;
     private String user_state;
 
-    private String shopState  = "";//店铺是否透过审核
+    private String shopState = "";//店铺是否透过审核
 
     public MyCenterFragment() {
         // Required empty public constructor
     }
-
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_my_center, container, false);
-        unbinder = ButterKnife.bind(this, view);
-
-        user_state = (String) SPUtils.get(getActivity(), "user_state", "0");
-
-        initView();
-
-        getUserInfo();//获取用户信息
-
-
-        return view;
-    }
-
-    private void initView() {
-
-        if (user_state.equals("0")) {
-            llWodeshangpin.setVisibility(View.GONE);
-            llTianjiashangpin.setVisibility(View.GONE);
-            llDaichulixunpan.setVisibility(View.GONE);
-            llYichulixunpan.setVisibility(View.GONE);
-        } else {
-            vShopCar.setVisibility(View.GONE);
-            llShopCar.setVisibility(View.GONE);
-            llGongyingshangxunpan.setVisibility(View.GONE);
-
-            getShopDetail();
-
-        }
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
-    }
-
 
     @OnClick({R.id.ll_settings, R.id.ll_message, R.id.ll_shopcar, R.id.ll_mycenterf_wodeshangping,
             R.id.ll_mycenterf_tianjiashangping, R.id.ll_mycenterf_wodeziliao, R.id.ll_mycenterf_daichulixunpan,
@@ -157,7 +127,6 @@ public class MyCenterFragment extends Fragment {
                 break;
             //我添加的商品
             case R.id.ll_mycenterf_tianjiashangping:
-
                 Toast.makeText(getActivity(), "Please go to the website to add goods", Toast.LENGTH_SHORT).show();
 //                return;
 //                saveSp();
@@ -175,8 +144,6 @@ public class MyCenterFragment extends Fragment {
 //                        startActivity(new Intent(getActivity(),OpenAshopResultActivity.class));
 //                    }
 //                }
-
-
                 break;
             case R.id.ll_shopcar:
                 startActivity(new Intent(getActivity(), ShopCarActivity.class));
@@ -229,89 +196,51 @@ public class MyCenterFragment extends Fragment {
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-        getUserInfo();
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (!user_state.equals("0")) {
+            getShopDetail();
+        }
     }
 
-    private void getShopDetail() {
-        OkHttpUtils
-                .post()
-                .url(NetConfig.SHOP_DETAIL)
-                .addParams("user_id", MyUtils.getUser().getUser_id())
-                .build()
-                .execute(new StringCallback() {
-                    @Override
-                    public void onError(Call call, Exception e, int id) {
-                        Log.e("aaa",
-                                "(MyCenterFragment.java:229)<--获取开店信息失败返回-->"+e.getMessage());
-                    }
-                    @Override
-                    public void onResponse(String response, int id) {
-                        Log.e("aaa",
-                                "(MyCenterFragment.java:235)<--获取开店信息成功返回-->"+response);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_my_center, container, false);
+        unbinder = ButterKnife.bind(this, view);
 
-                        if (TextUtils.isEmpty(response)){
-                            ToastUtil.showToastShort(getActivity(),"Network error");
-                        }else {
-                            try {
-                                JSONObject jsonObject = new JSONObject(response);
-                                int code = jsonObject.getInt("code");
-                                if (code==0){
-                                    JSONObject jsonObject1 = new JSONObject(response);
-                                    JSONObject data = jsonObject1.getJSONObject("data");
-                                    shopState = data.getString("shop_state");
-                                }else if (code == 500){
+        user_state = (String) SPUtils.get(getActivity(), "user_state", "0");
 
-                                }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    }
-                });
+        initView();
+
+        getUserInfo();//获取用户信息
+
+        getShopCarInfo();//获取购物车数量
+
+        getMessageNum();//获取未读消息数量
+
+
+        return view;
     }
 
-    private void saveSp() {
-        Map<String, String> map = new HashMap<>();
-        map.put("user_id", user_id);
-        map.put("user_name", user_name);
-        map.put("user_photo", user_photo);
-        Log.e("aaa", "--添加商品参数-->" + map.toString());
-        OkHttpUtils.post().url(NetConfig.addgoods_url)
-                .params(map)
-                .build()
-                .execute(new StringCallback() {
-                    @Override
-                    public void onError(Call call, Exception e, int id) {
-                        Log.e("aaa", "--添加商品返回-error-->" + e.toString());
-                        Toast.makeText(getActivity(), "network error", Toast.LENGTH_SHORT).show();
-                    }
 
-                    @Override
-                    public void onResponse(String response, int id) {
-                        Log.e("aaa", "--添加商品返回--->" + response);
-                        //{"msg":"success","code":0,"data":"46"}
-                        if (!TextUtils.isEmpty(response)) {
-                            try {
-                                JSONObject jsonObject = new JSONObject(response);
-                                int code = jsonObject.getInt("code");
-                                if (code == 0) {
-                                    String data = jsonObject.getString("data");
-                                    Intent intent1 = new Intent(getActivity(), TianJiaShangPingActivity.class);
-                                    intent1.putExtra("mer_id", data);
-                                    startActivity(intent1);
-                                }else {
-                                    Toast.makeText(getActivity(), "network error", Toast.LENGTH_SHORT).show();
-                                }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        }else{
-                            Toast.makeText(getActivity(), "network error", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
+    private void initView() {
+
+        if (user_state.equals("0")) {
+            llWodeshangpin.setVisibility(View.GONE);
+            llTianjiashangpin.setVisibility(View.GONE);
+            llDaichulixunpan.setVisibility(View.GONE);
+            llYichulixunpan.setVisibility(View.GONE);
+        } else {
+            vShopCar.setVisibility(View.GONE);
+            llShopCar.setVisibility(View.GONE);
+            llGongyingshangxunpan.setVisibility(View.GONE);
+            getShopDetail();
+        }
+
+        llPriceExpress.setVisibility(View.GONE);
+        llPlatformGua.setVisibility(View.GONE);
     }
 
     private void getUserInfo() {
@@ -322,7 +251,7 @@ public class MyCenterFragment extends Fragment {
                     @Override
                     public void onError(Call call, Exception e, int id) {
                         Log.e("aaa",
-                                "(MyCenterFragment.java:255)<---->"+e.getMessage());
+                                "(MyCenterFragment.java:255)<---->" + e.getMessage());
                         Toast.makeText(getActivity(), "network error", Toast.LENGTH_SHORT).show();
                     }
 
@@ -384,7 +313,7 @@ public class MyCenterFragment extends Fragment {
 //                                    String user_area = result.getString("user_area");
 //                                    tvMyinfoAddress.setText(user_area != null ? user_area : "请点击设置");
                                     Log.e("aaa", "-result.getString(\"user_photo\")-->" + NetConfig.baseurl + result.getString("user_photo"));
-                                    if (user_state.equals("0")){
+                                    if (user_state.equals("0")) {
                                         if (TextUtils.isEmpty(result.getString("user_photo"))
                                                 || "null".equals(result.getString("user_photo"))
                                                 || null == result.getString("user_photo")) {
@@ -394,7 +323,7 @@ public class MyCenterFragment extends Fragment {
                                         } else {
                                             ImageLoader.getInstance().displayImage(NetConfig.baseurl + result.getString("user_photo"), civMycenterfHeadimage);
                                         }
-                                    }else {
+                                    } else {
                                         if (TextUtils.isEmpty(result.getString("user_photo"))
                                                 || "null".equals(result.getString("user_photo"))
                                                 || null == result.getString("user_photo")) {
@@ -415,18 +344,154 @@ public class MyCenterFragment extends Fragment {
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
-                        }else {
+                        } else {
                             Toast.makeText(getActivity(), "network error", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (!user_state.equals("0")){
-            getShopDetail();
+    private void getShopCarInfo() {
+
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("user_id", MyUtils.getUser().getUser_id());
+            jsonObject.put("page", "1");
+            jsonObject.put("limit", "100000");
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
+        OkHttpUtils.post().url(NetConfig.shopcar_url)
+                .addParams("jsonStr", jsonObject.toString())
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+                        Log.e("aaa", "--查询我的购物车返回-error-->" + e.toString());
+                        ToastUtil.showToastShort(getActivity(), "Network error");
+                    }
+
+                    @Override
+                    public void onResponse(String response, int id) {
+                        Log.e("aaa", "--查询我的购物车返回--->" + response);
+                        if (!TextUtils.isEmpty(response)) {
+                            try {
+                                JSONObject jsonObject = new JSONObject(response);
+                                int code = jsonObject.getInt("code");
+                                if (code == 0) {
+                                    Gson gson = new Gson();
+                                    ShopCar shopCar = gson.fromJson(response, ShopCar.class);
+                                    List<ShopCar.DataBean.ListBean> list = shopCar.getData().getList();
+                                    if (list.size() > 0) {
+                                        tvShopCarNum.setVisibility(View.VISIBLE);
+                                        tvShopCarNum.setText(String.valueOf(list.size()));
+                                    } else {
+                                        tvShopCarNum.setVisibility(View.GONE);
+                                    }
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                });
+    }
+
+    private void getMessageNum() {
+
+        JSONObject object = new JSONObject();
+        try {
+            object.put("user_id", MyUtils.getUser().getUser_id());
+            object.put("status", "0");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        OkHttpUtils
+                .post()
+                .url(NetConfig.queryUnreadNumber)
+                .addParams("jsonStr", object.toString())
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+                        Log.e("aaa", "(MyCenterFragment.java:369)<--获取未读消息数量-->" + e.getMessage());
+                    }
+
+                    @Override
+                    public void onResponse(String response, int id) {
+                        Log.e("aaa", "(MyCenterFragment.java:374)<--获取未读消息的数量-->" + response);
+                        if (TextUtils.isEmpty(response)) {
+
+                        } else {
+                            try {
+                                JSONObject jsonObject = new JSONObject(response);
+                                int code = jsonObject.getInt("code");
+                                if (code == 0) {
+                                    int data = jsonObject.getInt("data");
+                                    if (data > 0) {
+                                        tvMessageNum.setVisibility(View.VISIBLE);
+                                        tvMessageNum.setText(String.valueOf(data));
+                                    } else {
+                                        tvMessageNum.setVisibility(View.GONE);
+                                    }
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+//        getUserInfo();
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
+
+    private void getShopDetail() {
+        OkHttpUtils
+                .post()
+                .url(NetConfig.SHOP_DETAIL)
+                .addParams("user_id", MyUtils.getUser().getUser_id())
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+                        Log.e("aaa",
+                                "(MyCenterFragment.java:229)<--获取开店信息失败返回-->" + e.getMessage());
+                    }
+
+                    @Override
+                    public void onResponse(String response, int id) {
+                        Log.e("aaa",
+                                "(MyCenterFragment.java:235)<--获取开店信息成功返回-->" + response);
+
+                        if (TextUtils.isEmpty(response)) {
+                            ToastUtil.showToastShort(getActivity(), "Network error");
+                        } else {
+                            try {
+                                JSONObject jsonObject = new JSONObject(response);
+                                int code = jsonObject.getInt("code");
+                                if (code == 0) {
+                                    JSONObject jsonObject1 = new JSONObject(response);
+                                    JSONObject data = jsonObject1.getJSONObject("data");
+                                    shopState = data.getString("shop_state");
+                                } else if (code == 500) {
+
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                });
     }
 }

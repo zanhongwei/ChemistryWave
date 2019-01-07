@@ -5,70 +5,79 @@
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<LinearLayout
-    android:layout_marginTop="28px"
-    android:layout_marginBottom="25px"
-    android:layout_marginLeft="21px"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <TextView
-        android:text="Order number："
-        android:textSize="13sp"
-        android:textColor="@color/a58"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/tv_itemorderf_orderid"
-        android:text="123456789"
-        android:textSize="13sp"
-        android:textColor="@color/a58"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/tv_itemorderf_date"
-        android:layout_marginLeft="35px"
-        android:text="2017-05-06"
-        android:textSize="13sp"
-        android:layout_weight="1"
-        android:textColor="@color/a58"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:ellipsize="end"/>
-    <TextView
-        android:id="@+id/tv_itemorderf_orderstate"
-      android:layout_marginRight="30px"
-        android:text="Wait deliver"
-        android:textSize="24px"
-        android:textColor="#ff4d4d"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="28px"
+        android:layout_marginBottom="25px"
+        android:layout_marginLeft="21px"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Order number："
+            android:textSize="13sp"
+            android:textColor="@color/a58"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_itemorderf_orderid"
+            android:text="123456789"
+            android:textSize="13sp"
+            android:textColor="@color/a58"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_itemorderf_date"
+            android:layout_marginLeft="35px"
+            android:text="2017-05-06"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:textColor="@color/a58"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/tv_itemorderf_orderstate"
+            android:layout_marginRight="30px"
+            android:text="Wait deliver"
+            android:textSize="24px"
+            android:textColor="#ff4d4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
     <TextView
         android:layout_gravity="center"
         android:background="@color/e9e8e8"
         android:layout_width="710px"
         android:layout_height="1px" />
+
     <LinearLayout
         android:layout_marginTop="21px"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="164px">
-<ImageView
-    android:id="@+id/iv_itemorderf_logo"
-    android:layout_marginLeft="21px"
-    android:src="@drawable/bj_goods"
-    app:layout_auto_baseheight="width"
-    android:scaleType="fitXY"
-    android:layout_width="164px"
-    android:layout_height="164px" />
-        <LinearLayout
 
-           android:layout_gravity="bottom"
+        <ImageView
+            android:id="@+id/iv_itemorderf_logo"
+            android:layout_marginLeft="21px"
+            android:src="@drawable/bj_goods"
+            app:layout_auto_baseheight="width"
+            android:scaleType="fitXY"
+            android:layout_width="164px"
+            android:layout_height="164px" />
+
+        <LinearLayout
+            android:layout_gravity="bottom"
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="164px">
+
             <TextView
                 android:id="@+id/tv_itemorderf_goodsname"
                 android:layout_marginLeft="20px"
@@ -76,24 +85,28 @@
 碘喹唑啉-4-胺"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+
             <LinearLayout
                 android:id="@+id/ll_itemorderf_sanfang"
                 android:layout_marginLeft="20px"
                 android:layout_marginTop="20px"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
+
                 <LinearLayout
                     android:id="@+id/ll_itemorderf_sanfangjiance"
                     android:gravity="center"
                     android:background="@drawable/mianfeijianli"
                     android:layout_width="210px"
                     android:layout_height="46px">
-                <TextView
-                    android:text="[View]"
-                    android:textSize="12sp"
-                    android:textColor="@color/a2491e4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="[View]"
+                        android:textSize="12sp"
+                        android:textColor="@color/a2491e4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
                     <TextView
                         android:text="Detection"
                         android:textSize="12sp"
@@ -101,6 +114,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_marginLeft="13px"
                     android:id="@+id/ll_itemorderf_mianfeijianli"
@@ -108,12 +122,14 @@
                     android:background="@drawable/mianfeijianli"
                     android:layout_width="210px"
                     android:layout_height="46px">
+
                     <TextView
                         android:text="[View]"
                         android:textSize="12sp"
                         android:textColor="@color/a2491e4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
+
                     <TextView
                         android:text="supervisor"
                         android:textSize="12sp"
@@ -122,6 +138,7 @@
                         android:layout_height="wrap_content" />
                 </LinearLayout>
             </LinearLayout>
+
             <TextView
                 android:layout_marginLeft="20px"
                 android:layout_marginTop="20px"
@@ -131,12 +148,14 @@
         </LinearLayout>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_marginTop="14px"
         android:layout_marginRight="35px"
         android:layout_marginLeft="213px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <TextView
             android:id="@+id/tv_itemorderf_price"
             android:text="$1000.00"
@@ -144,6 +163,7 @@
             android:textColor="@color/ee3c3c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
         <TextView
             android:id="@+id/tv_itemorderf_chakanhetong"
             android:layout_weight="1"
@@ -154,6 +174,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
+
     <TextView
         android:layout_marginTop="24px"
         android:layout_gravity="center"
@@ -167,13 +188,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingRight="30px"
-        >
+        android:paddingRight="30px">
 
         <View
             android:layout_width="0px"
             android:layout_height="0px"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <TextView
             android:visibility="visible"
@@ -196,7 +216,7 @@
             android:text="确认物流"
             android:textColor="@color/white"
             android:textSize="12sp"
-            android:layout_marginLeft="30px"/>
+            android:layout_marginLeft="30px" />
 
         <TextView
             android:id="@+id/tv_itemorderf_three"
@@ -207,6 +227,6 @@
             android:text="查看物流"
             android:textColor="@color/white"
             android:textSize="12sp"
-            android:layout_marginLeft="30px"/>
+            android:layout_marginLeft="30px" />
     </LinearLayout>
 </LinearLayout>

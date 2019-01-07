@@ -18,15 +18,18 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
+import com.zhw.chemistrywave.MainActivity;
 import com.zhw.chemistrywave.R;
 import com.zhw.chemistrywave.activity.CWServiceActivity;
 import com.zhw.chemistrywave.activity.GoodsDetailActivity;
 import com.zhw.chemistrywave.activity.KuaiXunActivity;
+import com.zhw.chemistrywave.activity.LoginActivity;
 import com.zhw.chemistrywave.activity.MessageActivity;
 import com.zhw.chemistrywave.activity.SearchActivity;
 import com.zhw.chemistrywave.activity.ShopDetailActivity;
@@ -50,18 +53,22 @@ import com.zhw.chemistrywave.view.MarqueeView;
 import com.zhw.chemistrywave.view.MyListViews;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Timer;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 import okhttp3.Call;
+
 import static com.zhy.http.okhttp.OkHttpUtils.post;
 
 /**
@@ -101,6 +108,7 @@ public class HomePageFragment extends Fragment implements AdapterView.OnItemClic
     //声明一个热门供销商的集合
     private List<HotSuppliers.DataBean> mHotSupplierList = new ArrayList<>();
     private HotSupplierAdapter mHotSupplier;
+
     public HomePageFragment() {
         // Required empty public constructor
     }
@@ -120,13 +128,14 @@ public class HomePageFragment extends Fragment implements AdapterView.OnItemClic
 
     private void initView() {
 
+        ivIsnews.setVisibility(View.GONE);//消息的小红点暂时去掉
         // list的初始化；
         mPriceAdapter = new PriceExpressAdapter(mPriceExpress, getActivity());
         xhgyAdapter = new HomeXhgyGvAdapter(getActivity(), mList);
         lvHotSale.setAdapter(xhgyAdapter);
         mHotSupplier = new HotSupplierAdapter(getActivity(), mHotSupplierList);
         lvSupplier.setAdapter(mHotSupplier);
-        setMarqueeView();
+//        setMarqueeView();
 
         lvHotSale.setOnItemClickListener(this);
         lvSupplier.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -153,6 +162,7 @@ public class HomePageFragment extends Fragment implements AdapterView.OnItemClic
         //get trade news
         getTradeNews();
 
+//        setMarqueeView();
         listSdjj = new ArrayList<>();
     }
 
@@ -169,21 +179,22 @@ public class HomePageFragment extends Fragment implements AdapterView.OnItemClic
 
     }
 
+
     //垂直跑马
-    private void setMarqueeView() {
-        List<Marquee> marquees = new ArrayList<>();
-        for (int i = 0; i < 6; i++) {
-            if (i % 2 == 0 && i != 6 - 1) {
-                Marquee marquee = new Marquee();
-                marquee.setFirstimgUrl("News");
-                marquee.setFirsttitle("" + i);
-                marquee.setImgUrl("HarLan" + (i + 1));
-                marquee.setTitle(" " + (i + 1));
-                marquees.add(marquee);
-            }
-        }
-        mqv.startWithList(marquees);
-    }
+//    private void setMarqueeView() {
+//        List<Marquee> marquees = new ArrayList<>();
+//        for (int i = 0; i < 6; i++) {
+//            if (i % 2 == 0 && i != 6 - 1) {
+//                Marquee marquee = new Marquee();
+//                marquee.setFirstimgUrl("News");
+//                marquee.setFirsttitle("" + i);
+//                marquee.setImgUrl("HarLan" + (i + 1));
+//                marquee.setTitle(" " + (i + 1));
+//                marquees.add(marquee);
+//            }
+//        }
+//        mqv.startWithList(marquees);
+//    }
 
     /**
      * banner images
@@ -370,8 +381,6 @@ public class HomePageFragment extends Fragment implements AdapterView.OnItemClic
 
     private void getTradeNews() {
 
-        marquees = new ArrayList<>();
-
         final JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("news_type", "2");
@@ -396,7 +405,7 @@ public class HomePageFragment extends Fragment implements AdapterView.OnItemClic
                     public void onResponse(String response, int id) {
                         Log.e("aaa",
                                 "(HomePageFragment.java:242)<--行业资讯的成功返回-->" + response);
-
+                        List<Marquee> marquees = new ArrayList<>();
                         if (TextUtils.isEmpty(response)) {
                             Toast.makeText(getActivity(), "Network error", Toast.LENGTH_SHORT).show();
                         } else {
@@ -415,6 +424,7 @@ public class HomePageFragment extends Fragment implements AdapterView.OnItemClic
                                             marquees.add(marquee);
                                         }
                                     }
+                                    Log.e("aaa", "(HomePageFragment.java:426)<---->" + "执行这块代码");
                                     mqv.startWithList(marquees);
                                 } else {
                                     String msg = jsonObject1.getString("msg");
@@ -486,7 +496,10 @@ public class HomePageFragment extends Fragment implements AdapterView.OnItemClic
                 startActivity(new Intent(getActivity(), SearchActivity.class));
                 break;
             case R.id.iv_home_news:
-                startActivity(new Intent(getActivity(), MessageActivity.class));
+                if (MyUtils.getUser() == null || MyUtils.getUser().getUser_id().isEmpty()) {
+                    startActivity(new Intent(getActivity(), LoginActivity.class));
+                } else
+                    startActivity(new Intent(getActivity(), MessageActivity.class));
                 break;
             //投诉纠纷
             case R.id.ll_sdjj:
@@ -495,27 +508,36 @@ public class HomePageFragment extends Fragment implements AdapterView.OnItemClic
             //化浪之眼
             case R.id.ll_sdcg:
                 if (MyUtils.getUser() == null || MyUtils.getUser().getUser_id().isEmpty()) {
-                    Toast.makeText(getActivity(), "Please login first", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(getActivity(), LoginActivity.class));
                 } else
                     startActivity(new Intent(getActivity(), WebServiceActivity.class)
-                            .putExtra("name","Harlan Eye ")
-                            .putExtra("url","harlan_eye.html?user_id=" + MyUtils.getUser().getUser_id()));
+                            .putExtra("name", "Harlan Eye ")
+                            .putExtra("url", "harlan_eye.html?user_id=" + MyUtils.getUser().getUser_id()));
                 break;
             //价格速递
             case R.id.ll_xhgy:
-                startActivity(new Intent(getActivity(), WebServiceActivity.class)
-                        .putExtra("name","Price Express")
-                        .putExtra("url","price.html"));
+                if (MyUtils.getUser() == null || MyUtils.getUser().getUser_id().isEmpty()) {
+                    startActivity(new Intent(getActivity(), LoginActivity.class));
+                } else
+                    startActivity(new Intent(getActivity(), WebServiceActivity.class)
+                            .putExtra("name", "Price Express")
+                            .putExtra("url", "price.html"));
                 break;
             //平台监测
             case R.id.ll_zkzq:
-                startActivity(new Intent(getActivity(), CWServiceActivity.class)
-                        .putExtra("url","platform.html")
-                        .putExtra("name", "Platform Guarantee"));
+                if (MyUtils.getUser() == null || MyUtils.getUser().getUser_id().isEmpty()) {
+                    startActivity(new Intent(getActivity(), LoginActivity.class));
+                } else
+                    startActivity(new Intent(getActivity(), WebServiceActivity.class)
+                            .putExtra("url", "platform.html")
+                            .putExtra("name", "Platform Guarantee"));
                 break;
             //供应链金融
             case R.id.ll_mfzh:
-                startActivity(new Intent(getActivity(), CWServiceActivity.class).putExtra("name", "Supply chain finance"));
+                if (MyUtils.getUser() == null || MyUtils.getUser().getUser_id().isEmpty()) {
+                    startActivity(new Intent(getActivity(), LoginActivity.class));
+                } else
+                    startActivity(new Intent(getActivity(), CWServiceActivity.class).putExtra("name", "Supply chain finance"));
                 break;
 
 //            case R.id.rl_hot_supplier3:

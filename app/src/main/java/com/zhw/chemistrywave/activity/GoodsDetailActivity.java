@@ -197,7 +197,7 @@ public class GoodsDetailActivity extends BaseActivity implements View.OnClickLis
     private String color_light;
     private String package_opt;
     private boolean isBuyer = false;
-
+    private boolean isLogin = false;
     private Bundle bundle = new Bundle();//确认订单的bundle
     private int num = 1;//货物所选数量
     private GoodsParamsPopupWindow popupWindow;
@@ -212,6 +212,7 @@ public class GoodsDetailActivity extends BaseActivity implements View.OnClickLis
     private TextView tvColorLight;
     private TextView tvPackage;
     private PermissionHelper mPermissionHelper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -248,6 +249,10 @@ public class GoodsDetailActivity extends BaseActivity implements View.OnClickLis
                 tvNum.setText(num1 + "");
                 break;
             case R.id.tv_cart:
+                if (!isLogin) {
+                    startActivity(new Intent(GoodsDetailActivity.this, LoginActivity.class));
+                    return;
+                }
                 if (isBuyer) {
                     addShopCart();
                     popupWindow.dismiss();
@@ -257,6 +262,10 @@ public class GoodsDetailActivity extends BaseActivity implements View.OnClickLis
 
                 break;
             case R.id.tv_buy:
+                if (!isLogin) {
+                    startActivity(new Intent(GoodsDetailActivity.this, LoginActivity.class));
+                    return;
+                }
                 if (isBuyer) {
                     gotoOrder();
                     popupWindow.dismiss();
@@ -384,6 +393,9 @@ public class GoodsDetailActivity extends BaseActivity implements View.OnClickLis
         } catch (Exception e) {
 
         }
+        if (null != user_state && !user_state.isEmpty()) isLogin = true;
+        else isLogin = false;
+
         if (null != user_state && !user_state.isEmpty() && "0".equals(user_state)) {
             isBuyer = true;
         } else {
@@ -550,6 +562,10 @@ public class GoodsDetailActivity extends BaseActivity implements View.OnClickLis
                 finish();
                 break;
             case R.id.iv_add_shopcar://跳转购物车
+                if (!isLogin) {
+                    startActivity(new Intent(GoodsDetailActivity.this, LoginActivity.class));
+                    return;
+                }
                 if (isBuyer) {
                     startActivity(new Intent(GoodsDetailActivity.this, ShopCarActivity.class));
                 } else {
@@ -582,6 +598,10 @@ public class GoodsDetailActivity extends BaseActivity implements View.OnClickLis
                 break;
             //添加对供应商的询盘
             case R.id.ll_collect:
+                if (!isLogin) {
+                    startActivity(new Intent(GoodsDetailActivity.this, LoginActivity.class));
+                    return;
+                }
                 if (isBuyer) {
                     startActivity(new Intent(this, AddXunPanActivity.class).putExtra("goods_id", goods_id));
                 } else {
@@ -589,6 +609,10 @@ public class GoodsDetailActivity extends BaseActivity implements View.OnClickLis
                 }
                 break;
             case R.id.tv_add_shopcar:
+                if (!isLogin) {
+                    startActivity(new Intent(GoodsDetailActivity.this, LoginActivity.class));
+                    return;
+                }
                 if (isBuyer) {
                     addShopCart();
                 } else {
@@ -596,6 +620,10 @@ public class GoodsDetailActivity extends BaseActivity implements View.OnClickLis
                 }
                 break;
             case R.id.tv_pay:
+                if (!isLogin) {
+                    startActivity(new Intent(GoodsDetailActivity.this, LoginActivity.class));
+                    return;
+                }
                 if (isBuyer) {
                     gotoOrder();
                 } else {

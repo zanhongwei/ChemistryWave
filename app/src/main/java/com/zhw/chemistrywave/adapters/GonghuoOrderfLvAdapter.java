@@ -65,7 +65,7 @@ public class GonghuoOrderfLvAdapter extends BaseAdapter {
 
     @SuppressLint("NewApi")
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         ViewHolder holder = null;
         if (convertView == null) {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.item_lv_orderf, parent, false);
@@ -106,13 +106,12 @@ public class GonghuoOrderfLvAdapter extends BaseAdapter {
                     holder.tvItemorderfThree.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            showPopUpWindow(finalHolder1.tvItemorderfThree);
+                            showPopUpWindow(finalHolder1.tvItemorderfThree,mList.get(position).getTransport_corporation(),mList.get(position).getTransport_number());
                         }
                     });
                     break;
                 case "4":
                     holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != null ? "¥" + mList.get(position).getGoods_price() : "");
-
                     holder.tvItemorderfOrderstate.setText("Complete");
                     holder.tvItemorderfOne.setVisibility(View.GONE);
                     holder.tvItemorderfTwo.setVisibility(View.GONE);
@@ -123,8 +122,7 @@ public class GonghuoOrderfLvAdapter extends BaseAdapter {
                     holder.tvItemorderfThree.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-
-                            showPopUpWindow(finalHolder.tvItemorderfThree);
+                            showPopUpWindow(finalHolder.tvItemorderfThree,mList.get(position).getTransport_corporation(),mList.get(position).getTransport_number());
                         }
                     });
                     break;
@@ -171,7 +169,7 @@ public class GonghuoOrderfLvAdapter extends BaseAdapter {
     }
 
 
-    private void showPopUpWindow(TextView tvItemorderfThree) {
+    private void showPopUpWindow(TextView tvItemorderfThree, String gs, String dh) {
         View contentView = LayoutInflater.from(mContext).inflate(R.layout.item_pop_wuliu, null);
         final PopupWindow popWnd = new PopupWindow(mContext);
 
@@ -184,6 +182,9 @@ public class GonghuoOrderfLvAdapter extends BaseAdapter {
         TextView mTvClose = (TextView) contentView1.findViewById(R.id.tv_itempopwuliu_close);
         TextView mTvGs = (TextView) contentView1.findViewById(R.id.tv_itempopwuliu_gs);
         TextView mTvDanHao = (TextView) contentView1.findViewById(R.id.tv_itempopwuliu_danhao);
+
+        mTvGs.setText(gs);
+        mTvDanHao.setText(dh);
         mTvClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -216,24 +217,6 @@ public class GonghuoOrderfLvAdapter extends BaseAdapter {
 
     }
 
-    /**
-     * 添加弹出的popWin关闭的事件，主要是为了将背景透明度改回来
-     *
-     * @author cg
-     */
-    class poponDismissListener implements PopupWindow.OnDismissListener {
-
-        @Override
-        public void onDismiss() {
-            // TODO Auto-generated method stub
-            //Log.v("List_noteTypeActivity:", "我是关闭事件");
-//            backgroundAlpha(1f);
-            EventBus.getDefault().post("背景1");
-        }
-
-    }
-
-
     static class ViewHolder {
         @BindView(R.id.tv_itemorderf_orderid)
         TextView tvItemorderfOrderid;
@@ -265,5 +248,22 @@ public class GonghuoOrderfLvAdapter extends BaseAdapter {
         ViewHolder(View view) {
             ButterKnife.bind(this, view);
         }
+    }
+
+    /**
+     * 添加弹出的popWin关闭的事件，主要是为了将背景透明度改回来
+     *
+     * @author cg
+     */
+    class poponDismissListener implements PopupWindow.OnDismissListener {
+
+        @Override
+        public void onDismiss() {
+            // TODO Auto-generated method stub
+            //Log.v("List_noteTypeActivity:", "我是关闭事件");
+//            backgroundAlpha(1f);
+            EventBus.getDefault().post("背景1");
+        }
+
     }
 }

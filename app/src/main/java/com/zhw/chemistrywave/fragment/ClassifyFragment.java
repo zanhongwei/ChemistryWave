@@ -22,6 +22,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.zhw.chemistrywave.R;
 import com.zhw.chemistrywave.activity.FenleiDetailActivity;
+import com.zhw.chemistrywave.view.AutoGridView;
 import com.zhw.chemistrywave.adapters.ClassifyfGvAdapter;
 import com.zhw.chemistrywave.adapters.ClassifyfGvShangjiaAdapter;
 import com.zhw.chemistrywave.bean.FenLeiJsonBean;
@@ -68,7 +69,7 @@ public class ClassifyFragment extends Fragment {
     @BindView(R.id.tv_classifyf_fenlei)
     TextView tvClassifyfFenlei;
     @BindView(R.id.gv_classifyf_jianxingranliao)
-    GridView gvClassifyfJianxingranliao;
+    AutoGridView gvClassifyfJianxingranliao;
     @BindView(R.id.gv_classifyf_tuijainshangjia)
     GridView gvClassifyfTuijainshangjia;
     Unbinder unbinder;

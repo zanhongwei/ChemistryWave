@@ -68,8 +68,8 @@ public class SearchResultSlvAdapter extends BaseAdapter {
 
         Glide.with(context).load(NetConfig.baseurl+mList.get(i).getCom_logo()).apply(MyApplication.options).into(holder.civShopLogo);
         holder.tvShopName.setText(mList.get(i).getCom_name());
-//        holder.tvShopGrade.setText(mList.get(i).);//等级暂时接口未返回
-        holder.tvSaleNum.setText("总销量："+(mList.get(i).getTotal_volumes()==null?"0":mList.get(i).getTotal_volumes()));
+        holder.tvShopGrade.setText("0 Grade");//等级暂时接口未返回
+        holder.tvSaleNum.setText("Total sales："+(mList.get(i).getTotal_volumes()==null?"0":mList.get(i).getTotal_volumes()));
         if (null!=mList.get(i).getMerchandiseBeans()){
             List<SearchSupplier.DataBean.MerchandiseBeansBean> merchandiseBeans = mList.get(i).getMerchandiseBeans();
             switch (merchandiseBeans.size()){

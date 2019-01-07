@@ -2,4 +2,6 @@
 <resources>
 
   <integer name="animation_default_duration">300</integer>
+  <integer name="grid_columns">3</integer>
+
 </resources>

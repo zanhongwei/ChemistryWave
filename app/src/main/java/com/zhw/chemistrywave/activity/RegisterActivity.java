@@ -123,7 +123,6 @@ public class RegisterActivity extends BaseActivity {
                 break;
             //获取验证码
             case R.id.tv_register_getcode:
-
                 String phone = etRegisterPhone.getText().toString();
                 if (!TextUtils.isEmpty(phone)) {
                     dialog.show();

@@ -249,7 +249,6 @@ public class CaiGouOrderFragment extends Fragment {
         lvCaigouorderf.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("goods",mList.get(position));
                 startActivity(new Intent(getActivity(), OrderDetailActivity.class).putExtras(bundle));
@@ -279,7 +278,6 @@ public class CaiGouOrderFragment extends Fragment {
                 selfDialog.dismiss();
             }
         });
-
 
         selfDialog.setNoOnclickListener("Cancel", new MySelfDialog.onNoOnclickListener() {
             @Override

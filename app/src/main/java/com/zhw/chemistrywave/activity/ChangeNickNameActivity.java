@@ -42,12 +42,17 @@ public class ChangeNickNameActivity extends BaseActivity {
         setContentView(R.layout.activity_change_nick_name);
         ButterKnife.bind(this);
         flag = getIntent().getStringExtra("flag");
-        if (flag.equals("name")){
+        if (flag.equals("name")) {
             tvTitlebarCenter.setText("Change Nickname");
             String nickName = getIntent().getStringExtra("nickName");
             etNickname.setText(nickName);
             tvText.setText("The current nickname");
-        }else {
+        } else if (flag.equals("contact")) {
+            tvTitlebarCenter.setText("Contact name");
+            String contact = getIntent().getStringExtra("contact");
+            etNickname.setText(contact);
+            tvText.setText("Modify the name");
+        } else {
             tvTitlebarCenter.setText("Change Address");
             String nickName = getIntent().getStringExtra("address");
             etNickname.setText(nickName);
@@ -65,22 +70,75 @@ public class ChangeNickNameActivity extends BaseActivity {
                 break;
             case R.id.btn_commit:
                 if (flag.equals("name"))
-                commitNickName();
+                    commitNickName();
+                else if (flag.equals("contact"))
+                    commitContact();
                 else
                     commitaddress();
                 break;
         }
     }
 
-    private void commitaddress() {
+    private void commitContact() {
+
+        final String contactName = etNickname.getText().toString().trim();
+        if (contactName.isEmpty()){
+            Toast.makeText(this, "Please fill in contact name", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        HashMap<String, String> params = new HashMap<>();
+        params.put("user_id",MyUtils.getUser().getUser_id());
+        params.put("contact_name",contactName);
+
+        OkHttpUtils.post()
+                .url(NetConfig.user_update)
+                .params(params)
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+                        Log.e("aaa","(ChangeNickNameActivity.java:101)<---->" + e.getMessage());
+                        Toast.makeText(ChangeNickNameActivity.this, "network error", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onResponse(String response, int id) {
+                        Log.e("aaa","(ChangeNickNameActivity.java:106)<---->" + response);
+                        if (TextUtils.isEmpty(response)){
+                            Toast.makeText(ChangeNickNameActivity.this, "No Result", Toast.LENGTH_SHORT).show();
+                        }else {
+                            try {
+                                JSONObject jsonObject = new JSONObject(response);
+                                int code = jsonObject.getInt("code");
+                                if (code == 0) {
+                                    Toast.makeText(ChangeNickNameActivity.this, "change successfully", Toast.LENGTH_SHORT).show();
+                                    ChangeNickNameActivity.this.setResult(55, new Intent().putExtra("contact", contactName));
+                                    ChangeNickNameActivity.this.finish();
+                                } else {
+                                    String msg = jsonObject.getString("msg");
+                                    Toast.makeText(ChangeNickNameActivity.this, msg, Toast.LENGTH_SHORT).show();
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                });
+
+
+    }
+
+    private void commitNickName() {
+
         final String nickName = etNickname.getText().toString().trim();
-        if (TextUtils.isEmpty(nickName)){
-            Toast.makeText(this,"please fill in the address",Toast.LENGTH_SHORT).show();
+        if (TextUtils.isEmpty(nickName)) {
+            Toast.makeText(this, "Please fill in nickname", Toast.LENGTH_SHORT).show();
             return;
         }
         HashMap<String, String> params = new HashMap<>();
         params.put("user_id", MyUtils.getUser().getUser_id());
-        params.put("user_area",nickName);
+        params.put("user_name", nickName);
 
         OkHttpUtils.post()
                 .url(NetConfig.user_update)
@@ -90,25 +148,25 @@ public class ChangeNickNameActivity extends BaseActivity {
                     @Override
                     public void onError(Call call, Exception e, int id) {
                         Log.e("aaa",
-                                "(ChangeNickNameActivity.java:69)<--修改昵称的失败返回-->"+e.getMessage());
+                                "(ChangeNickNameActivity.java:69)<--修改昵称的失败返回-->" + e.getMessage());
                         Toast.makeText(ChangeNickNameActivity.this, "network error", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
                     public void onResponse(String response, int id) {
                         Log.e("aaa",
-                                "(ChangeNickNameActivity.java:76)<--修改昵称的成功返回-->"+response);
-                        if (TextUtils.isEmpty(response)){
+                                "(ChangeNickNameActivity.java:76)<--修改昵称的成功返回-->" + response);
+                        if (TextUtils.isEmpty(response)) {
                             Toast.makeText(ChangeNickNameActivity.this, "network error", Toast.LENGTH_SHORT).show();
-                        }else {
+                        } else {
                             try {
                                 JSONObject jsonObject = new JSONObject(response);
                                 int code = jsonObject.getInt("code");
-                                if (code==0){
+                                if (code == 0) {
                                     Toast.makeText(ChangeNickNameActivity.this, "change successfully", Toast.LENGTH_SHORT).show();
-                                    ChangeNickNameActivity.this.setResult(44,new Intent().putExtra("address",nickName));
+                                    ChangeNickNameActivity.this.setResult(44, new Intent().putExtra("nickName", nickName));
                                     ChangeNickNameActivity.this.finish();
-                                }else {
+                                } else {
                                     String msg = jsonObject.getString("msg");
                                     Toast.makeText(ChangeNickNameActivity.this, msg, Toast.LENGTH_SHORT).show();
                                 }
@@ -121,16 +179,15 @@ public class ChangeNickNameActivity extends BaseActivity {
                 });
     }
 
-    private void commitNickName() {
-
+    private void commitaddress() {
         final String nickName = etNickname.getText().toString().trim();
-        if (TextUtils.isEmpty(nickName)){
-            Toast.makeText(this,"please fill in nickname",Toast.LENGTH_SHORT).show();
+        if (TextUtils.isEmpty(nickName)) {
+            Toast.makeText(this, "please fill in the address", Toast.LENGTH_SHORT).show();
             return;
         }
         HashMap<String, String> params = new HashMap<>();
         params.put("user_id", MyUtils.getUser().getUser_id());
-        params.put("user_name",nickName);
+        params.put("user_area", nickName);
 
         OkHttpUtils.post()
                 .url(NetConfig.user_update)
@@ -140,25 +197,25 @@ public class ChangeNickNameActivity extends BaseActivity {
                     @Override
                     public void onError(Call call, Exception e, int id) {
                         Log.e("aaa",
-                                "(ChangeNickNameActivity.java:69)<--修改昵称的失败返回-->"+e.getMessage());
+                                "(ChangeNickNameActivity.java:69)<--修改昵称的失败返回-->" + e.getMessage());
                         Toast.makeText(ChangeNickNameActivity.this, "network error", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
                     public void onResponse(String response, int id) {
                         Log.e("aaa",
-                                "(ChangeNickNameActivity.java:76)<--修改昵称的成功返回-->"+response);
-                        if (TextUtils.isEmpty(response)){
+                                "(ChangeNickNameActivity.java:76)<--修改昵称的成功返回-->" + response);
+                        if (TextUtils.isEmpty(response)) {
                             Toast.makeText(ChangeNickNameActivity.this, "network error", Toast.LENGTH_SHORT).show();
-                        }else {
+                        } else {
                             try {
                                 JSONObject jsonObject = new JSONObject(response);
                                 int code = jsonObject.getInt("code");
-                                if (code==0){
+                                if (code == 0) {
                                     Toast.makeText(ChangeNickNameActivity.this, "change successfully", Toast.LENGTH_SHORT).show();
-                                    ChangeNickNameActivity.this.setResult(44,new Intent().putExtra("nickName",nickName));
+                                    ChangeNickNameActivity.this.setResult(44, new Intent().putExtra("address", nickName));
                                     ChangeNickNameActivity.this.finish();
-                                }else {
+                                } else {
                                     String msg = jsonObject.getString("msg");
                                     Toast.makeText(ChangeNickNameActivity.this, msg, Toast.LENGTH_SHORT).show();
                                 }

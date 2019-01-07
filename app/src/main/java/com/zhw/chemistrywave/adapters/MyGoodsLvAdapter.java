@@ -100,10 +100,11 @@ public class MyGoodsLvAdapter extends BaseAdapter {
                         public void onClick(View v) {
                             Log.e("aaa",
                                     "(MyGoodsLvAdapter.java:102)<---->"+mList.get(position).getGoods_name());
+                            Toast.makeText(mContext, "Please edit goods to PC", Toast.LENGTH_SHORT).show();
 
-                            mContext.startActivity(new Intent(mContext, EditGoodsActivity.class)
-                                    .putExtra("mer_id", String.valueOf(mList.get(position).getGoods_id()))
-                                    .putExtra("name", mList.get(position).getGoods_name()));
+//                            mContext.startActivity(new Intent(mContext, EditGoodsActivity.class)
+//                                    .putExtra("mer_id", String.valueOf(mList.get(position).getGoods_id()))
+//                                    .putExtra("name", mList.get(position).getGoods_name()));
                         }
                     });
                     holder.tvItemmygoodsTwo.setOnClickListener(new View.OnClickListener() {

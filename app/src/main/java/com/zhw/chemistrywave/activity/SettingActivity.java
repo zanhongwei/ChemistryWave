@@ -154,7 +154,6 @@ public class SettingActivity extends BaseActivity {
             case R.id.ll_setting_banbenshengji:
 
                 break;
-
             //接受用户消息
             case R.id.esb_setting_usermsg:
                 if (flag2) {

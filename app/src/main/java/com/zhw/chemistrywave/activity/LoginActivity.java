@@ -69,30 +69,34 @@ public class LoginActivity extends BaseActivity {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
-        int screenWidth  = getWindowManager().getDefaultDisplay().getWidth();       // 屏幕宽（像素，如：480px）
+        int screenWidth = getWindowManager().getDefaultDisplay().getWidth();       // 屏幕宽（像素，如：480px）
         int screenHeight = getWindowManager().getDefaultDisplay().getHeight();      // 屏幕高（像素，如：800p）
 
         Log.e("aaa",
-                "(LoginActivity.java:73)<--screenHeight-->"+screenHeight+"      screenWidth == "+ screenWidth);
+                "(LoginActivity.java:73)<--screenHeight-->" + screenHeight + "      screenWidth == " + screenWidth);
 
         log = getSharedPreferences("Log", MODE_PRIVATE);
-        if (null!= log.getString("phone","")){
-            String phone = log.getString("phone","");
+        if (null != log.getString("phone", "")) {
+            String phone = log.getString("phone", "");
             String pwd = log.getString("pwd", "");
-            login(phone,pwd);
+            login(phone, pwd);
         }
 
     }
 
     private void login(final String phone, final String pwd) {
 
+        if (TextUtils.isEmpty(phone)) {
+            return;
+        }
+
         Log.e("aaa",
-                "(LoginActivity.java:90)<--phone-->"+phone);
+                "(LoginActivity.java:90)<--phone-->" + phone);
         Log.e("aaa",
-                "(LoginActivity.java:92)<--pwd-->"+pwd);
+                "(LoginActivity.java:92)<--pwd-->" + pwd);
         HashMap<String, String> params = new HashMap<>();
-        params.put("user_phone",phone);
-        params.put("user_password",pwd);
+        params.put("user_phone", phone);
+        params.put("user_password", pwd);
         OkHttpUtils.post()
                 .url(login)
                 .params(params)
@@ -111,24 +115,24 @@ public class LoginActivity extends BaseActivity {
                         try {
                             JSONObject json = new JSONObject(response);
                             if (response.contains("success")) {
-                                log.edit().putString("phone",phone).commit();
-                                log.edit().putString("pwd",pwd).commit();
+                                log.edit().putString("phone", phone).commit();
+                                log.edit().putString("pwd", pwd).commit();
                                 String phone1 = log.getString("phone", "");
                                 Log.e("aaa",
-                                        "(LoginActivity.java:119)<--phone1-->"+phone1);
+                                        "(LoginActivity.java:119)<--phone1-->" + phone1);
                                 String data = json.getString("data");
                                 SPUtils.put("user", data);
                                 String biz_type = MyUtils.getUser().getBiz_type();
-                                if ("buyer_en".equals(biz_type)){
-                                    SPUtils.put(LoginActivity.this,"user_state","0");
-                                }else {
-                                    if ("com".equals(MyUtils.getUser().getUser_type())){
-                                        SPUtils.put(LoginActivity.this,"user_state","2");
-                                    }else {
-                                        SPUtils.put(LoginActivity.this,"user_state","1");
+                                if ("buyer_en".equals(biz_type)) {
+                                    SPUtils.put(LoginActivity.this, "user_state", "0");
+                                } else {
+                                    if ("com".equals(MyUtils.getUser().getUser_type())) {
+                                        SPUtils.put(LoginActivity.this, "user_state", "2");
+                                    } else {
+                                        SPUtils.put(LoginActivity.this, "user_state", "1");
                                     }
                                 }
-                                startActivity(new Intent(LoginActivity.this, MainActivity.class).putExtra("index",0));
+                                startActivity(new Intent(LoginActivity.this, MainActivity.class).putExtra("index", 0));
                                 finish();
                             } else {
                                 String msg = json.getString("msg");
@@ -173,8 +177,8 @@ public class LoginActivity extends BaseActivity {
                 }
 
                 HashMap<String, String> params = new HashMap<>();
-                params.put("user_phone",user_phone);
-                params.put("user_password",user_password);
+                params.put("user_phone", user_phone);
+                params.put("user_password", user_password);
                 OkHttpUtils.post()
                         .url(login)
                         .params(params)
@@ -193,21 +197,21 @@ public class LoginActivity extends BaseActivity {
                                 try {
                                     JSONObject json = new JSONObject(response);
                                     if (response.contains("success")) {
-                                        log.edit().putString("phone",user_phone).commit();
-                                        log.edit().putString("pwd",user_password).commit();
+                                        log.edit().putString("phone", user_phone).commit();
+                                        log.edit().putString("pwd", user_password).commit();
                                         String data = json.getString("data");
                                         SPUtils.put("user", data);
                                         String biz_type = MyUtils.getUser().getBiz_type();
-                                        if ("buyer_en".equals(biz_type)){
-                                            SPUtils.put(LoginActivity.this,"user_state","0");
-                                        }else {
-                                            if ("com".equals(MyUtils.getUser().getUser_type())){
-                                                SPUtils.put(LoginActivity.this,"user_state","2");
-                                            }else {
-                                                SPUtils.put(LoginActivity.this,"user_state","1");
+                                        if ("buyer_en".equals(biz_type)) {
+                                            SPUtils.put(LoginActivity.this, "user_state", "0");
+                                        } else {
+                                            if ("com".equals(MyUtils.getUser().getUser_type())) {
+                                                SPUtils.put(LoginActivity.this, "user_state", "2");
+                                            } else {
+                                                SPUtils.put(LoginActivity.this, "user_state", "1");
                                             }
                                         }
-                                        startActivity(new Intent(LoginActivity.this, MainActivity.class).putExtra("index",0));
+                                        startActivity(new Intent(LoginActivity.this, MainActivity.class).putExtra("index", 0));
                                     } else {
                                         String msg = json.getString("msg");
                                         Toast.makeText(LoginActivity.this, msg, Toast.LENGTH_SHORT).show();

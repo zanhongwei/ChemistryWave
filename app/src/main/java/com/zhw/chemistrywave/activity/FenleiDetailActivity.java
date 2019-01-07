@@ -511,16 +511,18 @@ public class FenleiDetailActivity extends BaseActivity {
         try {
             jsonObject.put("page", "1");
             jsonObject.put("limit", "1000");
-            jsonObject.put("user_id", MyUtils.getUser().getUser_id());
             jsonObject.put("goods_state", "up");
             jsonObject.put("one_type", onetype);
             jsonObject.put("goods_purity", chundu);
             jsonObject.put("goods_deliver", huoqi);
             jsonObject.put("two_type", twotype);
+            jsonObject.put("goods_type", "harlan");
             jsonObject.put("sort", priceRank);//价格的排序
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+        Log.e("aaa", "(FenleiDetailActivity.java:525)<---->" + jsonObject.toString());
 
         OkHttpUtils.post()
                 .url(NetConfig.HOT_SALE)

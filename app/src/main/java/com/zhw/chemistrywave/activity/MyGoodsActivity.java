@@ -87,7 +87,7 @@ public class MyGoodsActivity extends BaseActivity {
     private void initData() {
         tvTitlebarCenter.setText("My Goods");
         ivTitlebarLine.setVisibility(View.VISIBLE);
-        rlTitlebarSearch.setVisibility(View.VISIBLE);
+        rlTitlebarSearch.setVisibility(View.GONE);
         tvMyfaqibiddingZhengzaijingxing.setText("Shelf goods");
         tvMyfaqibiddingYiwancheng.setText("Removed goods");
         mList = new ArrayList<>();

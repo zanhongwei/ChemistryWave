@@ -106,6 +106,7 @@ public class OrderDetailActivity extends BaseActivity {
         tvTitlebarCenter.setText("Order Detail");
         Bundle bundle = getIntent().getExtras();
         goods = (Order.DataBean.ListBean) bundle.getSerializable("goods");
+
         mType = goods.getStatus();
         if (!TextUtils.isEmpty("mType")) {
             switch (mType) {

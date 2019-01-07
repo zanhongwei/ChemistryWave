@@ -310,5 +310,9 @@ public class NetConfig {
     public static String FIRST_SORTS_GOODS = baseurl + "goodsMall/list";
     //接口名称: 7.1点击二级分类后的商品列表
     public static String SECOND_SORTS_GOODS = baseurl + "goodsMall/list";
+    //
+    public static String queryUnreadNumber = baseurl + "message/queryUnreadNumber";
+    //
+
 
 }
