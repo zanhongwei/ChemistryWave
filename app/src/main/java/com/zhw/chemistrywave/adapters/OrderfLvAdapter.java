@@ -104,7 +104,7 @@ public class OrderfLvAdapter extends BaseAdapter {
                     break;
                 case "1":
                     holder.tvItemorderfOrderstate.setText("Wait pay");
-                    holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != null ? "$" + mList.get(position).getGoods_price() : "");
+                    holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != 0 ? "$" + mList.get(position).getGoods_price() : "");
                     holder.tvItemorderfOne.setVisibility(View.GONE);
                     holder.tvItemorderfTwo.setVisibility(View.GONE);
                     holder.tvItemorderfTwo.setText("Cancel");
@@ -126,7 +126,7 @@ public class OrderfLvAdapter extends BaseAdapter {
                 case "2":
                     Log.e("aaa",
                             "(OrderfLvAdapter.java:121)<--进入待发货-->");
-                    holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != null ? "¥" + mList.get(position).getGoods_price() : "");
+                    holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != 0 ? "$" + mList.get(position).getGoods_price() : "");
                     holder.tvItemorderfOrderstate.setText("Wait deliver");
                     holder.tvItemorderfOne.setVisibility(View.GONE);
                     holder.tvItemorderfThree.setVisibility(View.GONE);
@@ -144,7 +144,7 @@ public class OrderfLvAdapter extends BaseAdapter {
                     holder.tvItemorderfTwo.setVisibility(View.GONE);
                     break;
                 case "3":
-                    holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != null ? "¥" + mList.get(position).getGoods_price() : "");
+                    holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != 0 ? "$" + mList.get(position).getGoods_price() : "");
                     holder.tvItemorderfOrderstate.setText("Wait receiving");
                     holder.tvItemorderfOne.setVisibility(View.GONE);
                     holder.tvItemorderfTwo.setText("Affirm goods");
@@ -186,7 +186,7 @@ public class OrderfLvAdapter extends BaseAdapter {
                     });
                     break;
                 case "4":
-                    holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != null ? "¥" + mList.get(position).getGoods_price() : "");
+                    holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != 0 ? "$" + mList.get(position).getGoods_price() : "");
                     holder.tvItemorderfOrderstate.setText("Completed");
                     holder.tvItemorderfOne.setVisibility(View.GONE);
                     holder.tvItemorderfTwo.setVisibility(View.GONE);
@@ -194,7 +194,7 @@ public class OrderfLvAdapter extends BaseAdapter {
                     holder.tvItemorderfThree.setBackground(mContext.getResources().getDrawable(R.drawable.chakanwuliu));
                     break;
                 case "5":
-                    holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != null ? "仅退款  退款金额：¥" + mList.get(position).getGoods_price() : "");
+                    holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != 0 ? "仅退款  退款金额：¥" + mList.get(position).getGoods_price() : "");
                     holder.tvItemorderfOrderstate.setText("退款中");
                     holder.tvItemorderfOne.setVisibility(View.GONE);
                     holder.tvItemorderfThree.setText("取消申请");
@@ -205,7 +205,6 @@ public class OrderfLvAdapter extends BaseAdapter {
                     holder.tvItemorderfTwo.setVisibility(View.GONE);
                     break;
                 default:
-
                     break;
             }
         }

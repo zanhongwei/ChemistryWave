@@ -76,13 +76,90 @@ public class CaiGouOrderFragment extends Fragment {
         unbinder = ButterKnife.bind(this, view);
         initView();
         initData();
-        
+
         return view;
     }
 
     private void initView() {
         mAdapter = new OrderfLvAdapter(getActivity(), mList);
         lvCaigouorderf.setAdapter(mAdapter);
+    }
+
+    /**
+     * 初始化数据源
+     */
+    private void initData() {
+        setTabLayout();
+        tabCaigouorderf.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                switch (tab.getPosition()) {
+                    case 0:
+                        getData();//全部
+                        break;
+                    case 1:
+                        getData("1");//Obligation
+                        break;
+                    case 2:
+                        getData("2");//待发货
+                        break;
+                    case 3:
+                        getData("3");//待收货
+                        break;
+                    case 4:
+                        getData("4");//已完成
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+        lvCaigouorderf.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("goods", mList.get(position));
+                startActivity(new Intent(getActivity(), OrderDetailActivity.class).putExtras(bundle));
+            }
+        });
+        mList = new ArrayList<>();
+        mAdapter = new OrderfLvAdapter(getActivity(), mList);
+        getData();
+        lvCaigouorderf.setAdapter(mAdapter);
+        mAdapter.setQvXiaoClick(new OrderfLvAdapter.qvXiaoClick() {
+            @Override
+            public void onclick(int position) {
+                showUnLoginDialog(position);
+            }
+        });
+    }
+
+    private void setTabLayout() {
+        listTitle = new ArrayList<>();
+        //初始化各fragment
+        String[] title = getResources().getStringArray(R.array.ordertitle);
+        //将fragment装进列表中
+        for (int i = 0; i < title.length; i++) {
+            listTitle.add(title[i]);
+        }
+        //设置TabLayout的模式
+
+        tabCaigouorderf.setTabMode(TabLayout.MODE_SCROLLABLE);
+        //为TabLayout添加tab名称
+        Log.d("aaa", listTitle.toString());
+        for (int i = 0; i < listTitle.size(); i++) {
+            tabCaigouorderf.addTab(tabCaigouorderf.newTab().setText(listTitle.get(i)));//添加tab选项卡
+        }
+
+
     }
 
     /**
@@ -158,7 +235,7 @@ public class CaiGouOrderFragment extends Fragment {
                     @Override
                     public void onError(Call call, Exception e, int id) {
                         Log.e("aaa", "---查询订单列表返回----error-->" + e.getMessage() + e.getCause());
-                        ToastUtil.showToastShort(getActivity(),"Network error");
+                        ToastUtil.showToastShort(getActivity(), "Network error");
                     }
 
                     @Override
@@ -175,97 +252,18 @@ public class CaiGouOrderFragment extends Fragment {
                                     mList.addAll(listBeen);
                                     mAdapter.notifyDataSetChanged();
                                 } else {
-                                    ToastUtil.showToastShort(getActivity(),"Network error");
+                                    ToastUtil.showToastShort(getActivity(), "Network error");
                                 }
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
                         } else {
-                            ToastUtil.showToastShort(getActivity(),"Network error");
+                            ToastUtil.showToastShort(getActivity(), "Network error");
                         }
 
                     }
                 });
     }
-
-    private void setTabLayout() {
-        listTitle = new ArrayList<>();
-        //初始化各fragment
-        String[] title = getResources().getStringArray(R.array.ordertitle);
-        //将fragment装进列表中
-        for (int i = 0; i < title.length; i++) {
-            listTitle.add(title[i]);
-        }
-        //设置TabLayout的模式
-
-        tabCaigouorderf.setTabMode(TabLayout.MODE_SCROLLABLE);
-        //为TabLayout添加tab名称
-        Log.d("aaa", listTitle.toString());
-        for (int i = 0; i < listTitle.size(); i++) {
-
-            tabCaigouorderf.addTab(tabCaigouorderf.newTab().setText(listTitle.get(i)));//添加tab选项卡
-        }
-
-
-    }
-
-    /**
-     * 初始化数据源
-     */
-    private void initData() {
-        setTabLayout();
-        tabCaigouorderf.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                switch (tab.getPosition()) {
-                    case 0:
-                        getData();
-                        break;
-                    case 1:
-                        getData("1");
-                        break;
-                    case 2:
-                        getData("2");
-                        break;
-                    case 3:
-                        getData("3");
-                        break;
-                    case 4:
-                        getData("4");
-                        break;
-                }
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
-        lvCaigouorderf.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("goods",mList.get(position));
-                startActivity(new Intent(getActivity(), OrderDetailActivity.class).putExtras(bundle));
-            }
-        });
-        mList = new ArrayList<>();
-        mAdapter = new OrderfLvAdapter(getActivity(), mList);
-        getData();
-        lvCaigouorderf.setAdapter(mAdapter);
-        mAdapter.setQvXiaoClick(new OrderfLvAdapter.qvXiaoClick() {
-            @Override
-            public void onclick(int position) {
-                showUnLoginDialog(position);
-            }
-        });
-    }
-
 
     private void showUnLoginDialog(final int position) {
         final MySelfDialog selfDialog = new MySelfDialog(getActivity());
@@ -292,7 +290,7 @@ public class CaiGouOrderFragment extends Fragment {
     }
 
     /**
-     *  取消订单
+     * 取消订单
      */
     private void cancelOrder(final int position) {
 
@@ -300,27 +298,27 @@ public class CaiGouOrderFragment extends Fragment {
 
         OkHttpUtils.post()
                 .url(NetConfig.Cancel_order)
-                .addParams("order_id",order_id)
+                .addParams("order_id", order_id)
                 .build()
                 .execute(new StringCallback() {
                     @Override
                     public void onError(Call call, Exception e, int id) {
                         Log.e("aaa",
-                                "(CaiGouOrderFragment.java:305)<--取消订单失败返回-->"+e.getMessage());
-                        ToastUtil.showToastShort(getActivity(),"Network error");
+                                "(CaiGouOrderFragment.java:305)<--取消订单失败返回-->" + e.getMessage());
+                        ToastUtil.showToastShort(getActivity(), "Network error");
                     }
 
                     @Override
                     public void onResponse(String response, int id) {
                         Log.e("aaa",
-                                "(CaiGouOrderFragment.java:311)<--取消订单的成功返回-->"+response);
-                        if (TextUtils.isEmpty(response)){
-                            ToastUtil.showToastShort(getActivity(),"Network error");
-                        }else {
+                                "(CaiGouOrderFragment.java:311)<--取消订单的成功返回-->" + response);
+                        if (TextUtils.isEmpty(response)) {
+                            ToastUtil.showToastShort(getActivity(), "Network error");
+                        } else {
                             try {
                                 JSONObject jsonObject = new JSONObject(response);
                                 int code = jsonObject.getInt("code");
-                                if (code==0){
+                                if (code == 0) {
                                     mList.remove(position);
                                     mAdapter.notifyDataSetChanged();
                                 }
@@ -330,6 +328,18 @@ public class CaiGouOrderFragment extends Fragment {
                         }
                     }
                 });
+    }
+
+    /**
+     * /**
+     * 设置添加屏幕的背景透明度
+     *
+     * @param bgAlpha
+     */
+    public void backgroundAlpha(float bgAlpha) {
+        WindowManager.LayoutParams lp = getActivity().getWindow().getAttributes();
+        lp.alpha = bgAlpha; //0.0-1.0
+        getActivity().getWindow().setAttributes(lp);
     }
 
     @Override
@@ -402,18 +412,5 @@ public class CaiGouOrderFragment extends Fragment {
             //Log.v("List_noteTypeActivity:", "我是关闭事件");
             backgroundAlpha(1f);
         }
-    }
-
-    /**
-
-    /**
-     * 设置添加屏幕的背景透明度
-     *
-     * @param bgAlpha
-     */
-    public void backgroundAlpha(float bgAlpha) {
-        WindowManager.LayoutParams lp = getActivity().getWindow().getAttributes();
-        lp.alpha = bgAlpha; //0.0-1.0
-        getActivity().getWindow().setAttributes(lp);
     }
 }

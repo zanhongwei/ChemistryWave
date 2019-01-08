@@ -10,130 +10,332 @@
     <include layout="@layout/titlebar"/>
 
     <LinearLayout
-        android:id="@+id/ll_company_name"
+        android:id="@+id/ll_company"
         android:layout_width="match_parent"
-        android:layout_height="90px"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingLeft="30px">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
 
-        <TextView
-            android:id="@+id/tv_name"
-            style="@style/my_information"
-            android:text="公司名称" />
+        <LinearLayout
+            android:id="@+id/ll_company_name"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="30px">
 
-        <View
-            android:layout_width="0px"
-            android:layout_height="0px"
-            android:layout_weight="1" />
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/my_information"
+                android:text="Company name" />
 
-        <TextView
-            android:id="@+id/tv_company_name"
-            style="@style/my_information_hui"
-            android:text="" />
+            <View
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_weight="1" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="30px"
-            android:src="@drawable/arrow_right"
-            />
+            <TextView
+                android:id="@+id/tv_company_name"
+                style="@style/my_information_hui"
+                android:text="" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30px"
+                android:src="@drawable/arrow_right"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_company_address"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px">
+
+            <TextView
+                android:id="@+id/tv_address"
+                style="@style/my_information"
+                android:text="Company address"
+                />
+
+            <View
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tv_company_address"
+                style="@style/my_information_hui"
+                android:text=""
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right"
+                android:layout_marginRight="30px"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_company_sex"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px">
+
+            <TextView
+                android:id="@+id/tv_sex"
+                style="@style/my_information"
+                android:text="Contact name"
+                />
+
+            <View
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tv_company_sex"
+                style="@style/my_information_hui"
+                android:text=""
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right"
+                android:layout_marginRight="30px"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_company_phone"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="30px">
+
+            <TextView
+                android:id="@+id/tv_phone"
+                style="@style/my_information"
+                android:text="Contact number" />
+
+            <View
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_company_phone"
+                style="@style/my_information_hui"
+                android:text="" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30px"
+                android:src="@drawable/arrow_right" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_company_business"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="30px">
+
+            <TextView
+                android:id="@+id/tv_business"
+                style="@style/my_information"
+                android:text="Business license" />
+
+            <View
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_weight="1" />
+
+            <TextView
+                style="@style/my_information_hui"
+                android:text="" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30px"
+                android:src="@drawable/arrow_right" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_company_others"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="30px">
+
+            <TextView
+                style="@style/my_information"
+                android:text="Others" />
+
+            <View
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_company_others"
+                style="@style/my_information_hui"
+                android:text="" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30px"
+                android:src="@drawable/arrow_right" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/ll_company_phone"
         android:layout_width="match_parent"
-        android:layout_height="90px"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingLeft="30px">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll_person"
+        android:visibility="visible">
 
-        <TextView
-            android:id="@+id/tv_phone"
-            style="@style/my_information"
-            android:text="公司电话" />
+        <LinearLayout
+            android:id="@+id/ll_person_name"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="30px">
 
-        <View
-            android:layout_width="0px"
-            android:layout_height="0px"
-            android:layout_weight="1" />
+            <TextView
+                style="@style/my_information"
+                android:text="Name" />
 
-        <TextView
-            android:id="@+id/tv_company_phone"
-            style="@style/my_information_hui"
-            android:text="" />
+            <View
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_weight="1" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="30px"
-            android:src="@drawable/arrow_right" />
+            <TextView
+                android:id="@+id/tv_person_name"
+                style="@style/my_information_hui"
+                android:text="" />
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30px"
+                android:src="@drawable/arrow_right"
+                />
 
-    <LinearLayout
-        android:id="@+id/ll_company_address"
-        android:layout_width="match_parent"
-        android:layout_height="90px"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingLeft="30px">
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_address"
-            style="@style/my_information"
-            android:text="公司地址"
-            />
+        <LinearLayout
+            android:id="@+id/ll_person_address"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px">
 
-        <View
-            android:layout_width="0px"
-            android:layout_height="0px"
-            android:layout_weight="1"/>
+            <TextView
+                style="@style/my_information"
+                android:text="Phone"
+                />
 
-        <TextView
-            android:id="@+id/tv_company_address"
-            style="@style/my_information_hui"
-            android:text=""
-            />
+            <View
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_weight="1"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/arrow_right"
-            android:layout_marginRight="30px"/>
+            <TextView
+                android:id="@+id/tv_person_phone"
+                style="@style/my_information_hui"
+                android:text=""
+                />
 
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/ll_company_sex"
-        android:layout_width="match_parent"
-        android:layout_height="90px"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingLeft="30px">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right"
+                android:layout_marginRight="30px"/>
 
-        <TextView
-            android:id="@+id/tv_sex"
-            style="@style/my_information"
-            android:text="Com-person sex"
-            />
+        </LinearLayout>
 
-        <View
-            android:layout_width="0px"
-            android:layout_height="0px"
-            android:layout_weight="1"/>
+        <LinearLayout
+            android:id="@+id/ll_person_idcard"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px">
 
-        <TextView
-            android:id="@+id/tv_company_sex"
-            style="@style/my_information_hui"
-            android:text=""
-            />
+            <TextView
+                style="@style/my_information"
+                android:text="Id Card"
+                />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/arrow_right"
-            android:layout_marginRight="30px"/>
+            <View
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_weight="1"/>
+
+            <TextView
+                style="@style/my_information_hui"
+                android:text=""
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right"
+                android:layout_marginRight="30px"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_person_other"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="30px">
+
+            <TextView
+                style="@style/my_information"
+                android:text="Others" />
+
+            <View
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_weight="1" />
+
+            <TextView
+                style="@style/my_information_hui"
+                android:text="" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30px"
+                android:src="@drawable/arrow_right" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

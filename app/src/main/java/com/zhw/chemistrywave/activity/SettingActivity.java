@@ -97,7 +97,6 @@ public class SettingActivity extends BaseActivity {
     }
 
     private void initView() {
-
         if (null == MyUtils.getUser().getUser_photo() || MyUtils.getUser().getUser_photo().equals("null")) {
             Glide.with(this).load("http://www.harlanchina.com/photo.png").apply(MyApplication.options).into(civSettingHeadimage);
         } else {

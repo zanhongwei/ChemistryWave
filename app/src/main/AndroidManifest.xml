@@ -139,7 +139,7 @@
         <activity android:name=".activity.YiJianJingBiaoZheActivity" />
         <activity
             android:name=".activity.LoginActivity"
-            android:launchMode="singleTask"></activity>
+            android:launchMode="singleTask" />
         <activity android:name=".activity.CWServiceActivity" />
         <activity android:name=".activity.SupplierSearchActivity" />
         <activity android:name=".activity.HasHandleActivity" />
@@ -172,7 +172,9 @@
         <activity android:name=".activity.WebServiceActivity" />
         <activity android:name=".activity.NewsDetailActivity" />
         <activity android:name=".activity.ThreeDetectionActivity" />
-        <activity android:name=".activity.AboutUsActivity"></activity>
+        <activity android:name=".activity.AboutUsActivity" />
+        <activity android:name=".activity.TianxiewuliuxinxiActivity" />
+        <activity android:name=".activity.PhotoInfomationActivity"></activity>
     </application>
 
 </manifest>

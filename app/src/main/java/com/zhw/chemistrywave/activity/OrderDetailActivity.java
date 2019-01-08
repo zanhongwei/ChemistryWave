@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -11,15 +12,25 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.google.gson.Gson;
 import com.zhw.chemistrywave.MyApplication;
 import com.zhw.chemistrywave.R;
 import com.zhw.chemistrywave.base.BaseActivity;
+import com.zhw.chemistrywave.bean.AddressBean;
+import com.zhw.chemistrywave.bean.AddressDetailBean;
 import com.zhw.chemistrywave.bean.Order;
 import com.zhw.chemistrywave.utils.NetConfig;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import okhttp3.Call;
+import okhttp3.internal.Internal;
 
 public class OrderDetailActivity extends BaseActivity {
 
@@ -96,6 +107,7 @@ public class OrderDetailActivity extends BaseActivity {
         setContentView(R.layout.activity_order_detail);
         ButterKnife.bind(this);
         initData();
+
     }
 
     /**
@@ -106,7 +118,7 @@ public class OrderDetailActivity extends BaseActivity {
         tvTitlebarCenter.setText("Order Detail");
         Bundle bundle = getIntent().getExtras();
         goods = (Order.DataBean.ListBean) bundle.getSerializable("goods");
-
+        getAddressDetails(goods.getAddr_id());
         mType = goods.getStatus();
         if (!TextUtils.isEmpty("mType")) {
             switch (mType) {
@@ -123,17 +135,17 @@ public class OrderDetailActivity extends BaseActivity {
                 //待发货
                 case "2":
                     ivOrderdetailState.setImageResource(R.drawable.bj_orderdetail_top);
-                    tvOrderdetailState.setText("Wait receiving");
+                    tvOrderdetailState.setText("Wait deliver");
                     tvOrderdetailOne.setText("The order will be shipped within 24 hours");
                     tvOrderdetailTwo.setText("Please be patient");
-                    tvOrderdetailBtnone.setText("Wait receiving");
+                    tvOrderdetailBtnone.setText("Wait deliver");
                     tvOrderdetailBtntwo.setVisibility(View.GONE);
                     tvOrderdetailBtnthree.setVisibility(View.GONE);
                     break;
                 //待收货
                 case "3":
                     ivOrderdetailState.setImageResource(R.drawable.bj_daishouhuo);
-                    tvOrderdetailState.setVisibility(View.GONE);
+                    tvOrderdetailState.setText("Wait receiving");
                     tvOrderdetailOne.setText("Waiting for the buyer to collect the goods");
                     tvOrderdetailOne.setVisibility(View.GONE);
                     tvOrderdetailTwo.setVisibility(View.GONE);
@@ -143,7 +155,7 @@ public class OrderDetailActivity extends BaseActivity {
                     tvOrderdetailBtntwo.setText("Look at the logistics");
                     tvOrderdetailBtnone.setVisibility(View.GONE);
                     tvOrderdetailBtntwo.setVisibility(View.GONE);
-                    tvOrderdetailBtnthree.setText("Waiting delivery");
+                    tvOrderdetailBtnthree.setText("Waiting receiving");
                     break;
                 //已完成
                 case "4":
@@ -168,19 +180,52 @@ public class OrderDetailActivity extends BaseActivity {
             }
         }
 
-        if (goods !=null){
-            Glide.with(this).load(NetConfig.baseurl+ goods.getProduct_picture()).apply(MyApplication.options).into(ivGoodsPicture);
+        if (goods != null) {
+            Glide.with(this).load(NetConfig.baseurl + goods.getProduct_picture()).apply(MyApplication.options).into(ivGoodsPicture);
             tvOrderdetailGoodsname.setText(goods.getGoods_name());
-            tvOrderdetailGuige.setText("“"+ goods.getColor_power()+"”，“"+ goods.getColor_light()+"”，“"+ goods.getPackage_opt()+"”");
-            tvOrderdetailNum.setText("X"+ goods.getGoods_num());
+            tvOrderdetailGuige.setText("“" + goods.getColor_power() + "”，“" + goods.getColor_light() + "”，“" + goods.getPackage_opt() + "”");
+            tvOrderdetailNum.setText("X" + goods.getGoods_num());
 
-            tvOrderdetailShangpingzongjia.setText("$"+ goods.getGoods_price());
-            tvOrderdetailXufukuang.setText("$"+ goods.getTotal_money());
+            tvOrderdetailShangpingzongjia.setText("$" + goods.getGoods_price());
+            tvOrderdetailXufukuang.setText("$" + (goods.getGoods_price() * goods.getGoods_num()));
 
             tvOrderdetailOrderid.setText(goods.getOrder_id());
             tvOrderdetailChuanjianshijian.setText(goods.getPlace_time());
-            tvOrderdetailShouhuoren.setText(goods.getConsignee());
         }
+
+
+    }
+
+    private void getAddressDetails(final int addr_id) {
+
+        OkHttpUtils.post()
+                .url(NetConfig.getAddressDetail)
+                .addParams("addr_id", String.valueOf(addr_id))
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+                        Log.e("aaa", "(OrderDetailActivity.java:204)<---->" + e.getMessage());
+                    }
+
+                    @Override
+                    public void onResponse(String response, int id) {
+                        Log.e("aaa", "(OrderDetailActivity.java:209)<---->" + response);
+                        if (!TextUtils.isEmpty(response)) {
+                            try {
+                                JSONObject jsonObject = new JSONObject(response);
+                                int code = jsonObject.getInt("code");
+                                if (code == 0) {
+                                    AddressBean addressBean = new Gson().fromJson(response, AddressBean.class);
+                                    tvOrderdetailShouhuoren.setText(addressBean.getData().getConsignee());
+                                    tvOrderdetailAddress.setText(addressBean.getData().getDetail());
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                });
 
 
     }
@@ -207,7 +252,7 @@ public class OrderDetailActivity extends BaseActivity {
             case R.id.tv_orderdetail_btntwo:
                 break;
             case R.id.ll_goods_info:
-                startActivity(new Intent(this,GoodsDetailActivity.class).putExtra("mer_id",goods.getGoods_id()));
+                startActivity(new Intent(this, GoodsDetailActivity.class).putExtra("mer_id", goods.getGoods_id()));
                 break;
         }
     }

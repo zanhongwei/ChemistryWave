@@ -2,6 +2,7 @@ package com.zhw.chemistrywave.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.text.TextUtils;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.zhw.chemistrywave.R;
+import com.zhw.chemistrywave.activity.TianxiewuliuxinxiActivity;
 import com.zhw.chemistrywave.bean.Order;
 import com.zhw.chemistrywave.utils.NetConfig;
 import com.zhy.autolayout.utils.AutoUtils;
@@ -36,10 +38,15 @@ import butterknife.ButterKnife;
 public class GonghuoOrderfLvAdapter extends BaseAdapter {
     private Context mContext;
     private List<Order.DataBean.ListBean> mList;
+    private AdapterClick listener;
 
     public GonghuoOrderfLvAdapter(Context mContext, List<Order.DataBean.ListBean> mList) {
         this.mContext = mContext;
         this.mList = mList;
+    }
+
+    public void setListener(AdapterClick listener) {
+        this.listener = listener;
     }
 
     @Override
@@ -79,7 +86,7 @@ public class GonghuoOrderfLvAdapter extends BaseAdapter {
         if (!TextUtils.isEmpty(state)) {
             switch (state) {
                 case "2":
-                    holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != null ? "¥" + mList.get(position).getGoods_price() : "");
+                    holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != 0 ? "$" + mList.get(position).getGoods_price() : "");
                     holder.tvItemorderfOrderstate.setText("Pending delivery");
                     holder.tvItemorderfOne.setVisibility(View.GONE);
                     holder.tvItemorderfTwo.setText("Cancel order");
@@ -90,12 +97,13 @@ public class GonghuoOrderfLvAdapter extends BaseAdapter {
                     holder.tvItemorderfThree.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-//                            mContext.startActivity(new Intent(mContext, TianxiewuliuxinxiActivity.class));
+                            listener.deliveryGoods(position);
+//                            mContext.startActivity(new Intent(mContext, TianxiewuliuxinxiActivity.class).putExtra("order_id",mList.get(position).getOrder_id()));
                         }
                     });
                     break;
                 case "3":
-                    holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != null ? "¥" + mList.get(position).getGoods_price() : "");
+                    holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != 0 ? "$" + mList.get(position).getGoods_price() : "");
                     holder.tvItemorderfOrderstate.setText("Pending received");
                     holder.tvItemorderfOne.setVisibility(View.GONE);
                     holder.tvItemorderfTwo.setVisibility(View.GONE);
@@ -111,7 +119,7 @@ public class GonghuoOrderfLvAdapter extends BaseAdapter {
                     });
                     break;
                 case "4":
-                    holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != null ? "¥" + mList.get(position).getGoods_price() : "");
+                    holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != 0 ? "$" + mList.get(position).getGoods_price() : "");
                     holder.tvItemorderfOrderstate.setText("Complete");
                     holder.tvItemorderfOne.setVisibility(View.GONE);
                     holder.tvItemorderfTwo.setVisibility(View.GONE);
@@ -125,16 +133,6 @@ public class GonghuoOrderfLvAdapter extends BaseAdapter {
                             showPopUpWindow(finalHolder.tvItemorderfThree,mList.get(position).getTransport_corporation(),mList.get(position).getTransport_number());
                         }
                     });
-                    break;
-                case "5":
-                    holder.tvItemorderfPrice.setText(mList.get(position).getGoods_price() != null ? "仅退款  退款金额：¥" + mList.get(position).getGoods_price() : "");
-                    holder.tvItemorderfOrderstate.setText("退款中");
-                    holder.tvItemorderfOne.setVisibility(View.GONE);
-                    holder.tvItemorderfTwo.setText("取消订单");
-                    holder.tvItemorderfTwo.setTextColor(mContext.getResources().getColor(R.color.a58));
-                    holder.tvItemorderfTwo.setBackground(mContext.getResources().getDrawable(R.drawable.shengqingshouhou_null));
-                    holder.tvItemorderfThree.setText("同意退款");
-                    holder.tvItemorderfThree.setBackground(mContext.getResources().getDrawable(R.drawable.chakanwuliu));
                     break;
 
             }
@@ -166,6 +164,12 @@ public class GonghuoOrderfLvAdapter extends BaseAdapter {
         holder.tvItemorderfDate.setText(mList.get(position).getPlace_time() != null ? mList.get(position).getPlace_time() : "");
 
         return convertView;
+    }
+
+    public interface AdapterClick{
+
+        void deliveryGoods(int position);
+
     }
 
 

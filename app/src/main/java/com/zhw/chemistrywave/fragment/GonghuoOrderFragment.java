@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.zhw.chemistrywave.R;
 import com.zhw.chemistrywave.activity.OrderDetailActivity;
+import com.zhw.chemistrywave.activity.TianxiewuliuxinxiActivity;
 import com.zhw.chemistrywave.adapters.GonghuoOrderfLvAdapter;
 import com.zhw.chemistrywave.bean.Order;
 import com.zhw.chemistrywave.utils.MyUtils;
@@ -48,6 +49,7 @@ import okhttp3.Call;
 public class GonghuoOrderFragment extends Fragment {
 
 
+    private static final int DELIVERY_CODE = 1;
     @BindView(R.id.tab_gonghuoorderf)
     TabLayout tabGonghuoorderf;
     @BindView(R.id.lv_gonghuoorderf)
@@ -56,11 +58,22 @@ public class GonghuoOrderFragment extends Fragment {
     private List<Order.DataBean.ListBean> mList = new ArrayList<>();
     private GonghuoOrderfLvAdapter mAdapter;
     private List<String> listTitle;  //tab名称列表
+    private String state = "";
 
     public GonghuoOrderFragment() {
         // Required empty public constructor
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (TextUtils.isEmpty(state)) {
+            getData();
+        } else {
+            getData(state);
+        }
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -86,6 +99,91 @@ public class GonghuoOrderFragment extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         EventBus.getDefault().unregister(this);
+    }
+
+    /**
+     * 初始化数据源
+     */
+    private void initData() {
+        setTabLayout();
+        tabGonghuoorderf.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                switch (tab.getPosition()) {
+                    case 0:
+                        state = "";
+                        getData();
+                        break;
+                    case 1:
+                        state = "2";
+                        getData(state);
+                        break;
+                    case 2:
+                        state = "3";
+                        getData(state);
+                        break;
+                    case 3:
+                        state = "4";
+                        getData(state);
+                        break;
+                    case 4:
+                        state = "5";
+                        getData(state);
+                        break;
+
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+        mList = new ArrayList<>();
+        getData();
+        mAdapter = new GonghuoOrderfLvAdapter(getActivity(), mList);
+        lvGonghuoorderf.setAdapter(mAdapter);
+        lvGonghuoorderf.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("goods", mList.get(position));
+                startActivity(new Intent(getActivity(), OrderDetailActivity.class).putExtras(bundle));
+            }
+        });
+        mAdapter.setListener(new GonghuoOrderfLvAdapter.AdapterClick() {
+            @Override
+            public void deliveryGoods(int position) {
+                Intent intent = new Intent(getActivity(), TianxiewuliuxinxiActivity.class);
+                intent.putExtra("order_id", mList.get(position).getOrder_id());
+                startActivityForResult(intent, DELIVERY_CODE);
+            }
+        });
+    }
+
+    private void setTabLayout() {
+        listTitle = new ArrayList<>();
+        //初始化各fragment
+        String[] title = getResources().getStringArray(R.array.ordertitlegonghuo);
+        //将fragment装进列表中
+        for (int i = 0; i < title.length; i++) {
+            listTitle.add(title[i]);
+        }
+        //设置TabLayout的模式
+
+        tabGonghuoorderf.setTabMode(TabLayout.MODE_SCROLLABLE);
+        //为TabLayout添加tab名称
+        Log.d("aaa", listTitle.toString());
+        for (int i = 0; i < listTitle.size(); i++) {
+            tabGonghuoorderf.addTab(tabGonghuoorderf.newTab().setText(listTitle.get(i)));//添加tab选项卡
+        }
+
+
     }
 
     /**
@@ -154,7 +252,7 @@ public class GonghuoOrderFragment extends Fragment {
                     @Override
                     public void onError(Call call, Exception e, int id) {
                         Log.e("aaa", "---查询订单列表返回----error-->" + e.getMessage() + e.getCause());
-                        ToastUtil.showToastShort(getActivity(),"Network error");
+                        ToastUtil.showToastShort(getActivity(), "Network error");
                     }
 
                     @Override
@@ -181,89 +279,6 @@ public class GonghuoOrderFragment extends Fragment {
                         }
                     }
                 });
-    }
-
-    private void setTabLayout() {
-        listTitle = new ArrayList<>();
-        //初始化各fragment
-        String[] title = getResources().getStringArray(R.array.ordertitlegonghuo);
-        //将fragment装进列表中
-        for (int i = 0; i < title.length; i++) {
-            listTitle.add(title[i]);
-        }
-        //设置TabLayout的模式
-
-        tabGonghuoorderf.setTabMode(TabLayout.MODE_SCROLLABLE);
-        //为TabLayout添加tab名称
-        Log.d("aaa", listTitle.toString());
-        for (int i = 0; i < listTitle.size(); i++) {
-
-            tabGonghuoorderf.addTab(tabGonghuoorderf.newTab().setText(listTitle.get(i)));//添加tab选项卡
-        }
-
-
-    }
-
-    /**
-     * 初始化数据源
-     */
-    private void initData() {
-        setTabLayout();
-        tabGonghuoorderf.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                switch (tab.getPosition()) {
-                    case 0:
-                        Log.e("aaa",
-                                "(GonghuoOrderFragment.java:215)<--点击了全部按钮-->");
-                        getData();
-                        break;
-                    case 1:
-                        Log.e("aaa",
-                                "(GonghuoOrderFragment.java:220)<--点击了第一个按钮-->");
-                        getData("2");
-                        break;
-                    case 2:
-                        Log.e("aaa",
-                                "(GonghuoOrderFragment.java:225)<--点击了第二个按钮-->");
-                        getData("3");
-                        break;
-                    case 3:
-                        Log.e("aaa",
-                                "(GonghuoOrderFragment.java:230)<--点击了第三个按钮-->");
-                        getData("4");
-                        break;
-                    case 4:
-                        Log.e("aaa",
-                                "(GonghuoOrderFragment.java:235)<--点击了第四个按钮-->");
-                        getData("5");
-                        break;
-
-                }
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
-        mList = new ArrayList<>();
-        getData();
-        mAdapter = new GonghuoOrderfLvAdapter(getActivity(), mList);
-        lvGonghuoorderf.setAdapter(mAdapter);
-        lvGonghuoorderf.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("goods",mList.get(position));
-                startActivity(new Intent(getActivity(), OrderDetailActivity.class).putExtras(bundle));
-            }
-        });
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

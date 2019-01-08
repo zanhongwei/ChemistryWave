@@ -312,7 +312,11 @@ public class NetConfig {
     public static String SECOND_SORTS_GOODS = baseurl + "goodsMall/list";
     //
     public static String queryUnreadNumber = baseurl + "message/queryUnreadNumber";
-    //
+    //获取地址详情
+    public static String getAddressDetail = baseurl+"address/detail";
+
+    //发货按钮
+    public static String delivery_goods = baseurl +"order/update";
 
 
 }

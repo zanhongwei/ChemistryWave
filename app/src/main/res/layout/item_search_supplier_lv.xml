@@ -35,7 +35,7 @@
 
             <TextView
                 android:id="@+id/tv_shop_grade"
-                android:layout_width="wrap_content"
+                android:layout_width="0px"
                 android:layout_height="wrap_content"
                 android:background="@drawable/dengji"
                 android:layout_alignLeft="@id/tv_shop_name"
@@ -43,7 +43,8 @@
                 android:layout_marginTop="25px"
                 android:text="4级"
                 android:gravity="center"
-                android:textSize="20px"/>
+                android:textSize="20px"
+                android:visibility="invisible"/>
 
             <TextView
                 android:id="@+id/tv_sale_num"

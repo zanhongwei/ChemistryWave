@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/f2"
+    tools:context="com.zhw.chemistrywave.activity.TianxiewuliuxinxiActivity">
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="130px">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="90px">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:paddingLeft="35px"
+                android:paddingRight="39px"
+                android:src="@drawable/fanhui_heise"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:textSize="38px"
+                android:textColor="@color/t333"
+                android:text="Fill in logistics information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginTop="30px"
+        android:orientation="vertical"
+        android:paddingLeft="35px"
+
+        android:paddingTop="30px"
+        android:paddingBottom="100px"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="527px">
+        <TextView
+            android:textColor="@color/a66"
+            android:textSize="30px"
+            android:text="Logistics company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_company"
+            android:paddingLeft="20px"
+            android:layout_marginTop="30px"
+            android:background="@drawable/wuliugongsi_bj"
+            android:layout_width="680px"
+            android:layout_height="90px" />
+        <TextView
+            android:layout_marginTop="40px"
+            android:layout_marginBottom="40px"
+            android:background="@color/e6"
+            android:layout_width="680px"
+            android:layout_height="1px" />
+        <TextView
+
+            android:textColor="@color/a66"
+            android:textSize="30px"
+            android:text="Tracking number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:paddingLeft="20px"
+            android:id="@+id/et_number"
+            android:layout_width="680px"
+            android:layout_height="90px"
+            android:layout_marginTop="30px"
+            android:background="@drawable/wuliugongsi_bj" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_marginTop="300px"
+        android:gravity="center"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:textSize="30px"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_yellowbutton"
+        android:layout_width="391px"
+        android:layout_height="76px" />
+</LinearLayout>

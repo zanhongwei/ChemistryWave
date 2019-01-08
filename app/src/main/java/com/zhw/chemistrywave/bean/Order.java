@@ -147,7 +147,7 @@ public class Order implements Serializable{
             private int goods_id;
             private String status;
             private String goods_name;
-            private String goods_price;
+            private double goods_price;
             private int goods_num;
             private String contract;
             private String goods_unit;
@@ -300,11 +300,11 @@ public class Order implements Serializable{
                 this.goods_name = goods_name;
             }
 
-            public String getGoods_price() {
+            public double getGoods_price() {
                 return goods_price;
             }
 
-            public void setGoods_price(String goods_price) {
+            public void setGoods_price(double goods_price) {
                 this.goods_price = goods_price;
             }
 
@@ -362,6 +362,11 @@ public class Order implements Serializable{
 
             public void setUser_name(String user_name) {
                 this.user_name = user_name;
+            }
+
+            @Override
+            public String toString() {
+                return super.toString();
             }
         }
     }

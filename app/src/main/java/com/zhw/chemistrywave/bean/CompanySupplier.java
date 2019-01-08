@@ -72,25 +72,25 @@ public class CompanySupplier {
         private String user_password;
         private String user_code;
         private String user_type;
-        private Object user_email;
+        private String user_email;
         private String company_name;
         private String company_address;
-        private Object company_landline;
-        private Object trade_tendency;
-        private Object u_QQ;
-        private Object u_wechat;
-        private Object u_weibo;
+        private String company_landline;
+        private String trade_tendency;
+        private String u_QQ;
+        private String u_wechat;
+        private String u_weibo;
         private String register_time;
         private String user_state;
-        private Object user_photo;
+        private String user_photo;
         private String user_gender;
         private String user_area;
         private String domestic;
-        private Object real_name;
+        private String real_name;
         private String biz_type;
-        private Object cardo_src;
-        private Object cardn_src;
-        private Object cardh_src;
+        private String cardo_src;
+        private String cardn_src;
+        private String cardh_src;
         private String contact_name;
         private String contact_phone;
         private String attachment;
@@ -107,7 +107,7 @@ public class CompanySupplier {
         }
 
         public String getUser_name() {
-            return user_name;
+            return user_name == null ? "" : user_name;
         }
 
         public void setUser_name(String user_name) {
@@ -115,7 +115,7 @@ public class CompanySupplier {
         }
 
         public String getUser_phone() {
-            return user_phone;
+            return user_phone == null ? "" : user_phone;
         }
 
         public void setUser_phone(String user_phone) {
@@ -123,7 +123,7 @@ public class CompanySupplier {
         }
 
         public String getUser_password() {
-            return user_password;
+            return user_password == null ? "" : user_password;
         }
 
         public void setUser_password(String user_password) {
@@ -131,7 +131,7 @@ public class CompanySupplier {
         }
 
         public String getUser_code() {
-            return user_code;
+            return user_code == null ? "" : user_code;
         }
 
         public void setUser_code(String user_code) {
@@ -139,23 +139,23 @@ public class CompanySupplier {
         }
 
         public String getUser_type() {
-            return user_type;
+            return user_type == null ? "" : user_type;
         }
 
         public void setUser_type(String user_type) {
             this.user_type = user_type;
         }
 
-        public Object getUser_email() {
-            return user_email;
+        public String getUser_email() {
+            return user_email == null ? "" : user_email;
         }
 
-        public void setUser_email(Object user_email) {
+        public void setUser_email(String user_email) {
             this.user_email = user_email;
         }
 
         public String getCompany_name() {
-            return company_name;
+            return company_name == null ? "" : company_name;
         }
 
         public void setCompany_name(String company_name) {
@@ -163,55 +163,55 @@ public class CompanySupplier {
         }
 
         public String getCompany_address() {
-            return company_address;
+            return company_address == null ? "" : company_address;
         }
 
         public void setCompany_address(String company_address) {
             this.company_address = company_address;
         }
 
-        public Object getCompany_landline() {
-            return company_landline;
+        public String getCompany_landline() {
+            return company_landline == null ? "" : company_landline;
         }
 
-        public void setCompany_landline(Object company_landline) {
+        public void setCompany_landline(String company_landline) {
             this.company_landline = company_landline;
         }
 
-        public Object getTrade_tendency() {
-            return trade_tendency;
+        public String getTrade_tendency() {
+            return trade_tendency == null ? "" : trade_tendency;
         }
 
-        public void setTrade_tendency(Object trade_tendency) {
+        public void setTrade_tendency(String trade_tendency) {
             this.trade_tendency = trade_tendency;
         }
 
-        public Object getU_QQ() {
-            return u_QQ;
+        public String getU_QQ() {
+            return u_QQ == null ? "" : u_QQ;
         }
 
-        public void setU_QQ(Object u_QQ) {
+        public void setU_QQ(String u_QQ) {
             this.u_QQ = u_QQ;
         }
 
-        public Object getU_wechat() {
-            return u_wechat;
+        public String getU_wechat() {
+            return u_wechat == null ? "" : u_wechat;
         }
 
-        public void setU_wechat(Object u_wechat) {
+        public void setU_wechat(String u_wechat) {
             this.u_wechat = u_wechat;
         }
 
-        public Object getU_weibo() {
-            return u_weibo;
+        public String getU_weibo() {
+            return u_weibo == null ? "" : u_weibo;
         }
 
-        public void setU_weibo(Object u_weibo) {
+        public void setU_weibo(String u_weibo) {
             this.u_weibo = u_weibo;
         }
 
         public String getRegister_time() {
-            return register_time;
+            return register_time == null ? "" : register_time;
         }
 
         public void setRegister_time(String register_time) {
@@ -219,23 +219,23 @@ public class CompanySupplier {
         }
 
         public String getUser_state() {
-            return user_state;
+            return user_state == null ? "" : user_state;
         }
 
         public void setUser_state(String user_state) {
             this.user_state = user_state;
         }
 
-        public Object getUser_photo() {
-            return user_photo;
+        public String getUser_photo() {
+            return user_photo == null ? "" : user_photo;
         }
 
-        public void setUser_photo(Object user_photo) {
+        public void setUser_photo(String user_photo) {
             this.user_photo = user_photo;
         }
 
         public String getUser_gender() {
-            return user_gender;
+            return user_gender == null ? "" : user_gender;
         }
 
         public void setUser_gender(String user_gender) {
@@ -243,7 +243,7 @@ public class CompanySupplier {
         }
 
         public String getUser_area() {
-            return user_area;
+            return user_area == null ? "" : user_area;
         }
 
         public void setUser_area(String user_area) {
@@ -251,55 +251,55 @@ public class CompanySupplier {
         }
 
         public String getDomestic() {
-            return domestic;
+            return domestic == null ? "" : domestic;
         }
 
         public void setDomestic(String domestic) {
             this.domestic = domestic;
         }
 
-        public Object getReal_name() {
-            return real_name;
+        public String getReal_name() {
+            return real_name == null ? "" : real_name;
         }
 
-        public void setReal_name(Object real_name) {
+        public void setReal_name(String real_name) {
             this.real_name = real_name;
         }
 
         public String getBiz_type() {
-            return biz_type;
+            return biz_type == null ? "" : biz_type;
         }
 
         public void setBiz_type(String biz_type) {
             this.biz_type = biz_type;
         }
 
-        public Object getCardo_src() {
-            return cardo_src;
+        public String getCardo_src() {
+            return cardo_src == null ? "" : cardo_src;
         }
 
-        public void setCardo_src(Object cardo_src) {
+        public void setCardo_src(String cardo_src) {
             this.cardo_src = cardo_src;
         }
 
-        public Object getCardn_src() {
-            return cardn_src;
+        public String getCardn_src() {
+            return cardn_src == null ? "" : cardn_src;
         }
 
-        public void setCardn_src(Object cardn_src) {
+        public void setCardn_src(String cardn_src) {
             this.cardn_src = cardn_src;
         }
 
-        public Object getCardh_src() {
-            return cardh_src;
+        public String getCardh_src() {
+            return cardh_src == null ? "" : cardh_src;
         }
 
-        public void setCardh_src(Object cardh_src) {
+        public void setCardh_src(String cardh_src) {
             this.cardh_src = cardh_src;
         }
 
         public String getContact_name() {
-            return contact_name;
+            return contact_name == null ? "" : contact_name;
         }
 
         public void setContact_name(String contact_name) {
@@ -307,7 +307,7 @@ public class CompanySupplier {
         }
 
         public String getContact_phone() {
-            return contact_phone;
+            return contact_phone == null ? "" : contact_phone;
         }
 
         public void setContact_phone(String contact_phone) {
@@ -315,7 +315,7 @@ public class CompanySupplier {
         }
 
         public String getAttachment() {
-            return attachment;
+            return attachment == null ? "" : attachment;
         }
 
         public void setAttachment(String attachment) {
@@ -323,7 +323,7 @@ public class CompanySupplier {
         }
 
         public String getLicense_src() {
-            return license_src;
+            return license_src == null ? "" : license_src;
         }
 
         public void setLicense_src(String license_src) {

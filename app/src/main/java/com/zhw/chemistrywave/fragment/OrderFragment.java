@@ -67,7 +67,6 @@ public class OrderFragment extends Fragment {
     }
 
 
-
     /**
      * 初始化数据源
      */
@@ -77,13 +76,50 @@ public class OrderFragment extends Fragment {
         initFragment();
     }
 
+    private void initFragment() {
+        mCaiGouOrderFragment = new CaiGouOrderFragment();
+        mGonghuoOrderFragment = new GonghuoOrderFragment();
+        //添加到fragment数组
+        mFragments = new Fragment[]{mCaiGouOrderFragment, mGonghuoOrderFragment};
+        //开启事务
+        FragmentTransaction ft;
+
+        ft = this.getChildFragmentManager().beginTransaction();
+        //添加首页
+        ft.add(R.id.fl_orderf_container, mCaiGouOrderFragment).commit();
+        //设置默认为第0个
+        if (user_state.equals("0")) {//采购商身份
+            setIndexSelected(0);
+        } else {//供货商身份
+            setIndexSelected(1);
+        }
+
+    }
+
+    public void setIndexSelected(int index) {
+
+        if (mIndex == index) {
+            return;
+        }
+        FragmentManager fragmentManager = this.getChildFragmentManager();
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+        //隐藏当前fragment
+        ft.hide(mFragments[mIndex]);
+        if (!mFragments[index].isAdded()) {
+            ft.add(R.id.fl_orderf_container, mFragments[index]).show(mFragments[index]);
+        } else {
+            ft.show(mFragments[index]);
+        }
+        ft.commit();
+        //再次赋值
+        mIndex = index;
+    }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
     }
-
 
     @SuppressLint("NewApi")
     @OnClick({R.id.tv_orderf_caigoudingdan, R.id.tv_orderf_gonghuodingdan})
@@ -104,45 +140,5 @@ public class OrderFragment extends Fragment {
                 setIndexSelected(1);
                 break;
         }
-    }
-
-    private void initFragment() {
-        mCaiGouOrderFragment = new CaiGouOrderFragment();
-        mGonghuoOrderFragment = new GonghuoOrderFragment();
-        //添加到fragment数组
-        mFragments = new Fragment[]{mCaiGouOrderFragment, mGonghuoOrderFragment};
-        //开启事务
-        FragmentTransaction ft;
-
-        ft = this.getChildFragmentManager().beginTransaction();
-        //添加首页
-        ft.add(R.id.fl_orderf_container, mCaiGouOrderFragment).commit();
-        //设置默认为第0个
-        if (user_state.equals("0")){
-            setIndexSelected(0);
-        }else {
-            setIndexSelected(1);
-        }
-
-    }
-
-
-    public void setIndexSelected(int index) {
-
-        if (mIndex == index) {
-            return;
-        }
-        FragmentManager fragmentManager = this.getChildFragmentManager();
-        FragmentTransaction ft = fragmentManager.beginTransaction();
-        //隐藏当前fragment
-        ft.hide(mFragments[mIndex]);
-        if (!mFragments[index].isAdded()) {
-            ft.add(R.id.fl_orderf_container, mFragments[index]).show(mFragments[index]);
-        } else {
-            ft.show(mFragments[index]);
-        }
-        ft.commit();
-        //再次赋值
-        mIndex = index;
     }
 }
